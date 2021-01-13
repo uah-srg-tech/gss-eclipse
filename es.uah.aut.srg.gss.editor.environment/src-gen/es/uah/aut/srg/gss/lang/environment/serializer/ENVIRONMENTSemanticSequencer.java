@@ -32,7 +32,6 @@ import es.uah.aut.srg.gss.scenario.GSSScenarioIntervalRange;
 import es.uah.aut.srg.gss.scenario.GSSScenarioLevelIn;
 import es.uah.aut.srg.gss.scenario.GSSScenarioLevelInOut;
 import es.uah.aut.srg.gss.scenario.GSSScenarioLevelOut;
-import es.uah.aut.srg.gss.scenario.GSSScenarioMainInterface;
 import es.uah.aut.srg.gss.scenario.GSSScenarioModify;
 import es.uah.aut.srg.gss.scenario.GSSScenarioMonitors;
 import es.uah.aut.srg.gss.scenario.GSSScenarioOptions;
@@ -125,8 +124,15 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 				sequence_GSSScenarioGSSInfoPrint(context, (GSSScenarioInfoPrint) semanticObject); 
 				return; 
 			case scenarioPackage.GSS_SCENARIO_INTERFACE:
-				sequence_GSSScenarioInterface(context, (GSSScenarioInterface) semanticObject); 
-				return; 
+				if (rule == grammarAccess.getGSSScenarioInterfaceRule()) {
+					sequence_GSSScenarioInterface(context, (GSSScenarioInterface) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getGSSScenarioMainInterfaceRule()) {
+					sequence_GSSScenarioMainInterface(context, (GSSScenarioInterface) semanticObject); 
+					return; 
+				}
+				else break;
 			case scenarioPackage.GSS_SCENARIO_INTERFACES:
 				sequence_GSSScenarioInterfaces(context, (GSSScenarioInterfaces) semanticObject); 
 				return; 
@@ -141,9 +147,6 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 				return; 
 			case scenarioPackage.GSS_SCENARIO_LEVEL_OUT:
 				sequence_GSSScenarioLevelOut(context, (GSSScenarioLevelOut) semanticObject); 
-				return; 
-			case scenarioPackage.GSS_SCENARIO_MAIN_INTERFACE:
-				sequence_GSSScenarioMainInterface(context, (GSSScenarioMainInterface) semanticObject); 
 				return; 
 			case scenarioPackage.GSS_SCENARIO_MODIFY:
 				sequence_GSSScenarioModify(context, (GSSScenarioModify) semanticObject); 
@@ -584,7 +587,7 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Contexts:
-	 *     GSSScenarioMainInterface returns GSSScenarioMainInterface
+	 *     GSSScenarioMainInterface returns GSSScenarioInterface
 	 *
 	 * Constraint:
 	 *     (
@@ -597,7 +600,7 @@ public class ENVIRONMENTSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *         LevelInOut+=GSSScenarioLevelInOut+
 	 *     )
 	 */
-	protected void sequence_GSSScenarioMainInterface(ISerializationContext context, GSSScenarioMainInterface semanticObject) {
+	protected void sequence_GSSScenarioMainInterface(ISerializationContext context, GSSScenarioInterface semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

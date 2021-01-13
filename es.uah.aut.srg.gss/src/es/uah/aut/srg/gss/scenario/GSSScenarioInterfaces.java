@@ -70,12 +70,12 @@ public interface GSSScenarioInterfaces extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Main Interface</em>' containment reference.
-	 * @see #setMainInterface(GSSScenarioMainInterface)
+	 * @see #setMainInterface(GSSScenarioInterface)
 	 * @see es.uah.aut.srg.gss.scenario.scenarioPackage#getGSSScenarioInterfaces_MainInterface()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSScenarioMainInterface getMainInterface();
+	GSSScenarioInterface getMainInterface();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioInterfaces#getMainInterface <em>Main Interface</em>}' containment reference.
@@ -85,7 +85,7 @@ public interface GSSScenarioInterfaces extends EObject {
 	 * @see #getMainInterface()
 	 * @generated
 	 */
-	void setMainInterface(GSSScenarioMainInterface value);
+	void setMainInterface(GSSScenarioInterface value);
 
 	/**
 	 * Returns the value of the '<em><b>Interface</b></em>' containment reference list.

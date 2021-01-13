@@ -89,11 +89,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioInterfaces">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ProtocolPacketsFile" eType="ecore:EClass protocol_packets.ecore#//GSSProtocolPacketsProtocolPackets"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="MainInterface" lowerBound="1"
-        eType="#//GSSScenarioMainInterface" containment="true"/>
+        eType="#//GSSScenarioInterface" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Interface" upperBound="7"
         eType="#//GSSScenarioInterface" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSScenarioMainInterface" eSuperTypes="#//GSSScenarioInterface"/>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSScenarioInterfaceType">
     <eLiterals name="SpW"/>
     <eLiterals name="SpW_TC" value="1"/>

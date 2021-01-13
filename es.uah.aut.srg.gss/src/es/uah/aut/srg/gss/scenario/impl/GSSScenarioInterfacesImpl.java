@@ -14,7 +14,6 @@ import es.uah.aut.srg.gss.protocol_packets.GSSProtocolPacketsProtocolPackets;
 
 import es.uah.aut.srg.gss.scenario.GSSScenarioInterface;
 import es.uah.aut.srg.gss.scenario.GSSScenarioInterfaces;
-import es.uah.aut.srg.gss.scenario.GSSScenarioMainInterface;
 import es.uah.aut.srg.gss.scenario.scenarioPackage;
 
 import java.util.Collection;
@@ -67,7 +66,7 @@ public class GSSScenarioInterfacesImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSScenarioMainInterface mainInterface;
+	protected GSSScenarioInterface mainInterface;
 
 	/**
 	 * The cached value of the '{@link #getInterface() <em>Interface</em>}' containment reference list.
@@ -141,7 +140,7 @@ public class GSSScenarioInterfacesImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSScenarioMainInterface getMainInterface() {
+	public GSSScenarioInterface getMainInterface() {
 		return mainInterface;
 	}
 
@@ -150,8 +149,8 @@ public class GSSScenarioInterfacesImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMainInterface(GSSScenarioMainInterface newMainInterface, NotificationChain msgs) {
-		GSSScenarioMainInterface oldMainInterface = mainInterface;
+	public NotificationChain basicSetMainInterface(GSSScenarioInterface newMainInterface, NotificationChain msgs) {
+		GSSScenarioInterface oldMainInterface = mainInterface;
 		mainInterface = newMainInterface;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, scenarioPackage.GSS_SCENARIO_INTERFACES__MAIN_INTERFACE, oldMainInterface, newMainInterface);
@@ -165,7 +164,7 @@ public class GSSScenarioInterfacesImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMainInterface(GSSScenarioMainInterface newMainInterface) {
+	public void setMainInterface(GSSScenarioInterface newMainInterface) {
 		if (newMainInterface != mainInterface) {
 			NotificationChain msgs = null;
 			if (mainInterface != null)
@@ -239,7 +238,7 @@ public class GSSScenarioInterfacesImpl extends MinimalEObjectImpl.Container impl
 				setProtocolPacketsFile((GSSProtocolPacketsProtocolPackets)newValue);
 				return;
 			case scenarioPackage.GSS_SCENARIO_INTERFACES__MAIN_INTERFACE:
-				setMainInterface((GSSScenarioMainInterface)newValue);
+				setMainInterface((GSSScenarioInterface)newValue);
 				return;
 			case scenarioPackage.GSS_SCENARIO_INTERFACES__INTERFACE:
 				getInterface().clear();
@@ -261,7 +260,7 @@ public class GSSScenarioInterfacesImpl extends MinimalEObjectImpl.Container impl
 				setProtocolPacketsFile((GSSProtocolPacketsProtocolPackets)null);
 				return;
 			case scenarioPackage.GSS_SCENARIO_INTERFACES__MAIN_INTERFACE:
-				setMainInterface((GSSScenarioMainInterface)null);
+				setMainInterface((GSSScenarioInterface)null);
 				return;
 			case scenarioPackage.GSS_SCENARIO_INTERFACES__INTERFACE:
 				getInterface().clear();

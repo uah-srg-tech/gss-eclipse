@@ -139,14 +139,6 @@ public class scenarioSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case scenarioPackage.GSS_SCENARIO_MAIN_INTERFACE: {
-				GSSScenarioMainInterface gssScenarioMainInterface = (GSSScenarioMainInterface)theEObject;
-				T result = caseGSSScenarioMainInterface(gssScenarioMainInterface);
-				if (result == null) result = caseGSSScenarioInterface(gssScenarioMainInterface);
-				if (result == null) result = caseTMTCIFScenarioInterface(gssScenarioMainInterface);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case scenarioPackage.GSS_SCENARIO_INTERFACE: {
 				GSSScenarioInterface gssScenarioInterface = (GSSScenarioInterface)theEObject;
 				T result = caseGSSScenarioInterface(gssScenarioInterface);
@@ -505,21 +497,6 @@ public class scenarioSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSScenarioInterfaces(GSSScenarioInterfaces object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Scenario Main Interface</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Scenario Main Interface</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSScenarioMainInterface(GSSScenarioMainInterface object) {
 		return null;
 	}
 

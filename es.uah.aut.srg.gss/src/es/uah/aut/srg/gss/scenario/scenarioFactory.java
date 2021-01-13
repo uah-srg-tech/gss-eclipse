@@ -120,15 +120,6 @@ public interface scenarioFactory extends EFactory {
 	GSSScenarioInterfaces createGSSScenarioInterfaces();
 
 	/**
-	 * Returns a new object of class '<em>GSS Scenario Main Interface</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Scenario Main Interface</em>'.
-	 * @generated
-	 */
-	GSSScenarioMainInterface createGSSScenarioMainInterface();
-
-	/**
 	 * Returns a new object of class '<em>GSS Scenario Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

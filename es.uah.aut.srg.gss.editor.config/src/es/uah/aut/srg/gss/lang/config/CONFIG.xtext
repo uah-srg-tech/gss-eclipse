@@ -163,7 +163,7 @@ GSSScenarioProtocolSubtype returns scenario::GSSScenarioProtocolType:
 	'}' ';'
 ;
 
-GSSScenarioMainInterface returns scenario::GSSScenarioMainInterface:
+GSSScenarioMainInterface returns scenario::GSSScenarioInterface:
 	'GSSScenarioMainInterface' '{'
 		'id' ':=' id=INTEGER ';'
 		'name' ':=' name=STRING ';'

@@ -1389,7 +1389,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_24 = (Keyword)cGroup.eContents().get(24);
 		private final Keyword cSemicolonKeyword_25 = (Keyword)cGroup.eContents().get(25);
 		
-		//GSSScenarioMainInterface scenario::GSSScenarioMainInterface:
+		//GSSScenarioMainInterface scenario::GSSScenarioInterface:
 		//	'GSSScenarioMainInterface' '{'
 		//	'id' ':=' id=INTEGER ';'
 		//	'name' ':=' name=STRING ';'
@@ -6004,7 +6004,7 @@ public class ENVIRONMENTGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSScenarioProtocolSubtypeAccess().getRule();
 	}
 	
-	//GSSScenarioMainInterface scenario::GSSScenarioMainInterface:
+	//GSSScenarioMainInterface scenario::GSSScenarioInterface:
 	//	'GSSScenarioMainInterface' '{'
 	//	'id' ':=' id=INTEGER ';'
 	//	'name' ':=' name=STRING ';'

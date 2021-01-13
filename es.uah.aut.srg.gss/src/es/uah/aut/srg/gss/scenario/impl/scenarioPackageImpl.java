@@ -46,7 +46,6 @@ import es.uah.aut.srg.gss.scenario.GSSScenarioIntervalRange;
 import es.uah.aut.srg.gss.scenario.GSSScenarioLevelIn;
 import es.uah.aut.srg.gss.scenario.GSSScenarioLevelInOut;
 import es.uah.aut.srg.gss.scenario.GSSScenarioLevelOut;
-import es.uah.aut.srg.gss.scenario.GSSScenarioMainInterface;
 import es.uah.aut.srg.gss.scenario.GSSScenarioModify;
 import es.uah.aut.srg.gss.scenario.GSSScenarioModifyType;
 import es.uah.aut.srg.gss.scenario.GSSScenarioMonitor;
@@ -163,13 +162,6 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 * @generated
 	 */
 	private EClass gssScenarioInterfacesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gssScenarioMainInterfaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -955,15 +947,6 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 	 */
 	public EReference getGSSScenarioInterfaces_Interface() {
 		return (EReference)gssScenarioInterfacesEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGSSScenarioMainInterface() {
-		return gssScenarioMainInterfaceEClass;
 	}
 
 	/**
@@ -2302,8 +2285,6 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 		createEReference(gssScenarioInterfacesEClass, GSS_SCENARIO_INTERFACES__MAIN_INTERFACE);
 		createEReference(gssScenarioInterfacesEClass, GSS_SCENARIO_INTERFACES__INTERFACE);
 
-		gssScenarioMainInterfaceEClass = createEClass(GSS_SCENARIO_MAIN_INTERFACE);
-
 		gssScenarioInterfaceEClass = createEClass(GSS_SCENARIO_INTERFACE);
 		createEAttribute(gssScenarioInterfaceEClass, GSS_SCENARIO_INTERFACE__ID);
 		createEAttribute(gssScenarioInterfaceEClass, GSS_SCENARIO_INTERFACE__IF_TYPE);
@@ -2517,7 +2498,6 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 
 		// Add supertypes to classes
 		gssScenarioScenarioEClass.getESuperTypes().add(thescenarioPackage_1.getTMTCIFScenario());
-		gssScenarioMainInterfaceEClass.getESuperTypes().add(this.getGSSScenarioInterface());
 		gssScenarioInterfaceEClass.getESuperTypes().add(thescenarioPackage_1.getTMTCIFScenarioInterface());
 		gssScenarioSpecialPacketEClass.getESuperTypes().add(thescenarioPackage_1.getTMTCIFScenarioPacketConfig());
 		gssScenarioPeriodicTCLevel2EClass.getESuperTypes().add(this.getGSSScenarioPeriodicTC());
@@ -2589,10 +2569,8 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 
 		initEClass(gssScenarioInterfacesEClass, GSSScenarioInterfaces.class, "GSSScenarioInterfaces", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGSSScenarioInterfaces_ProtocolPacketsFile(), theprotocol_packetsPackage.getGSSProtocolPacketsProtocolPackets(), null, "ProtocolPacketsFile", null, 0, 1, GSSScenarioInterfaces.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSScenarioInterfaces_MainInterface(), this.getGSSScenarioMainInterface(), null, "MainInterface", null, 1, 1, GSSScenarioInterfaces.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSScenarioInterfaces_MainInterface(), this.getGSSScenarioInterface(), null, "MainInterface", null, 1, 1, GSSScenarioInterfaces.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSScenarioInterfaces_Interface(), this.getGSSScenarioInterface(), null, "Interface", null, 0, 7, GSSScenarioInterfaces.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gssScenarioMainInterfaceEClass, GSSScenarioMainInterface.class, "GSSScenarioMainInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(gssScenarioInterfaceEClass, GSSScenarioInterface.class, "GSSScenarioInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSScenarioInterface_Id(), ecorePackage.getEString(), "id", null, 1, 1, GSSScenarioInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -75,7 +75,6 @@ public class scenarioFactoryImpl extends EFactoryImpl implements scenarioFactory
 			case scenarioPackage.GSS_SCENARIO_PROTOCOL: return createGSSScenarioProtocol();
 			case scenarioPackage.GSS_SCENARIO_PROTOCOL_TYPE: return createGSSScenarioProtocolType();
 			case scenarioPackage.GSS_SCENARIO_INTERFACES: return createGSSScenarioInterfaces();
-			case scenarioPackage.GSS_SCENARIO_MAIN_INTERFACE: return createGSSScenarioMainInterface();
 			case scenarioPackage.GSS_SCENARIO_INTERFACE: return createGSSScenarioInterface();
 			case scenarioPackage.GSS_SCENARIO_LEVEL_IN_OUT: return createGSSScenarioLevelInOut();
 			case scenarioPackage.GSS_SCENARIO_LEVEL_IN: return createGSSScenarioLevelIn();
@@ -273,16 +272,6 @@ public class scenarioFactoryImpl extends EFactoryImpl implements scenarioFactory
 	public GSSScenarioInterfaces createGSSScenarioInterfaces() {
 		GSSScenarioInterfacesImpl gssScenarioInterfaces = new GSSScenarioInterfacesImpl();
 		return gssScenarioInterfaces;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSScenarioMainInterface createGSSScenarioMainInterface() {
-		GSSScenarioMainInterfaceImpl gssScenarioMainInterface = new GSSScenarioMainInterfaceImpl();
-		return gssScenarioMainInterface;
 	}
 
 	/**

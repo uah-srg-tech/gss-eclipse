@@ -722,7 +722,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioInterface()
 	 * @generated
 	 */
-	int GSS_SCENARIO_INTERFACE = 11;
+	int GSS_SCENARIO_INTERFACE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -824,115 +824,6 @@ public interface scenarioPackage extends EPackage {
 	int GSS_SCENARIO_INTERFACE_OPERATION_COUNT = es.uah.aut.srg.tmtcif.scenario.scenarioPackage.TMTCIF_SCENARIO_INTERFACE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMainInterfaceImpl <em>GSS Scenario Main Interface</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioMainInterfaceImpl
-	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioMainInterface()
-	 * @generated
-	 */
-	int GSS_SCENARIO_MAIN_INTERFACE = 10;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MAIN_INTERFACE__NAME = GSS_SCENARIO_INTERFACE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MAIN_INTERFACE__ID = GSS_SCENARIO_INTERFACE__ID;
-
-	/**
-	 * The feature id for the '<em><b>If Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MAIN_INTERFACE__IF_TYPE = GSS_SCENARIO_INTERFACE__IF_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>If Config</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MAIN_INTERFACE__IF_CONFIG = GSS_SCENARIO_INTERFACE__IF_CONFIG;
-
-	/**
-	 * The feature id for the '<em><b>Io Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MAIN_INTERFACE__IO_TYPE = GSS_SCENARIO_INTERFACE__IO_TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Protocol ID</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MAIN_INTERFACE__PROTOCOL_ID = GSS_SCENARIO_INTERFACE__PROTOCOL_ID;
-
-	/**
-	 * The feature id for the '<em><b>Level In Out</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MAIN_INTERFACE__LEVEL_IN_OUT = GSS_SCENARIO_INTERFACE__LEVEL_IN_OUT;
-
-	/**
-	 * The feature id for the '<em><b>Level In</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MAIN_INTERFACE__LEVEL_IN = GSS_SCENARIO_INTERFACE__LEVEL_IN;
-
-	/**
-	 * The feature id for the '<em><b>Level Out</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MAIN_INTERFACE__LEVEL_OUT = GSS_SCENARIO_INTERFACE__LEVEL_OUT;
-
-	/**
-	 * The number of structural features of the '<em>GSS Scenario Main Interface</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MAIN_INTERFACE_FEATURE_COUNT = GSS_SCENARIO_INTERFACE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>GSS Scenario Main Interface</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GSS_SCENARIO_MAIN_INTERFACE_OPERATION_COUNT = GSS_SCENARIO_INTERFACE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioLevelInOutImpl <em>GSS Scenario Level In Out</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -940,7 +831,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioLevelInOut()
 	 * @generated
 	 */
-	int GSS_SCENARIO_LEVEL_IN_OUT = 12;
+	int GSS_SCENARIO_LEVEL_IN_OUT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1031,7 +922,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioLevelIn()
 	 * @generated
 	 */
-	int GSS_SCENARIO_LEVEL_IN = 13;
+	int GSS_SCENARIO_LEVEL_IN = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1095,7 +986,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioLevelOut()
 	 * @generated
 	 */
-	int GSS_SCENARIO_LEVEL_OUT = 14;
+	int GSS_SCENARIO_LEVEL_OUT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1168,7 +1059,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioSpecialPackets()
 	 * @generated
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKETS = 15;
+	int GSS_SCENARIO_SPECIAL_PACKETS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Special Packet</b></em>' containment reference list.
@@ -1205,7 +1096,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioSpecialPacket()
 	 * @generated
 	 */
-	int GSS_SCENARIO_SPECIAL_PACKET = 16;
+	int GSS_SCENARIO_SPECIAL_PACKET = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1332,7 +1223,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioUpperLevels()
 	 * @generated
 	 */
-	int GSS_SCENARIO_UPPER_LEVELS = 17;
+	int GSS_SCENARIO_UPPER_LEVELS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Upper Level</b></em>' containment reference list.
@@ -1369,7 +1260,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioUpperLevel()
 	 * @generated
 	 */
-	int GSS_SCENARIO_UPPER_LEVEL = 18;
+	int GSS_SCENARIO_UPPER_LEVEL = 17;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -1433,7 +1324,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioPrintingData()
 	 * @generated
 	 */
-	int GSS_SCENARIO_PRINTING_DATA = 19;
+	int GSS_SCENARIO_PRINTING_DATA = 18;
 
 	/**
 	 * The feature id for the '<em><b>Print Status</b></em>' attribute.
@@ -1479,7 +1370,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioStructuredData()
 	 * @generated
 	 */
-	int GSS_SCENARIO_STRUCTURED_DATA = 20;
+	int GSS_SCENARIO_STRUCTURED_DATA = 19;
 
 	/**
 	 * The feature id for the '<em><b>Level Ref</b></em>' attribute.
@@ -1525,7 +1416,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioPeriod()
 	 * @generated
 	 */
-	int GSS_SCENARIO_PERIOD = 21;
+	int GSS_SCENARIO_PERIOD = 20;
 
 	/**
 	 * The feature id for the '<em><b>Min value</b></em>' attribute.
@@ -1589,7 +1480,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioIntervalRange()
 	 * @generated
 	 */
-	int GSS_SCENARIO_INTERVAL_RANGE = 22;
+	int GSS_SCENARIO_INTERVAL_RANGE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' attribute.
@@ -1653,7 +1544,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioPeriodicTCs()
 	 * @generated
 	 */
-	int GSS_SCENARIO_PERIODIC_TCS = 23;
+	int GSS_SCENARIO_PERIODIC_TCS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Periodic TC</b></em>' containment reference list.
@@ -1690,7 +1581,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioPeriodicTC()
 	 * @generated
 	 */
-	int GSS_SCENARIO_PERIODIC_TC = 24;
+	int GSS_SCENARIO_PERIODIC_TC = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1763,7 +1654,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioPeriodicTCLevel2()
 	 * @generated
 	 */
-	int GSS_SCENARIO_PERIODIC_TC_LEVEL2 = 25;
+	int GSS_SCENARIO_PERIODIC_TC_LEVEL2 = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1890,7 +1781,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioPeriodicTCLevel1()
 	 * @generated
 	 */
-	int GSS_SCENARIO_PERIODIC_TC_LEVEL1 = 26;
+	int GSS_SCENARIO_PERIODIC_TC_LEVEL1 = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1999,7 +1890,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioPeriodicTCLevel0()
 	 * @generated
 	 */
-	int GSS_SCENARIO_PERIODIC_TC_LEVEL0 = 27;
+	int GSS_SCENARIO_PERIODIC_TC_LEVEL0 = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2090,7 +1981,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGlobalVars()
 	 * @generated
 	 */
-	int GSS_SCENARIO_GLOBAL_VARS = 28;
+	int GSS_SCENARIO_GLOBAL_VARS = 27;
 
 	/**
 	 * The feature id for the '<em><b>Global Var</b></em>' containment reference list.
@@ -2127,7 +2018,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGlobalVar()
 	 * @generated
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR = 29;
+	int GSS_SCENARIO_GLOBAL_VAR = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2200,7 +2091,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioReference()
 	 * @generated
 	 */
-	int GSS_SCENARIO_REFERENCE = 30;
+	int GSS_SCENARIO_REFERENCE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -2264,7 +2155,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioReferenceField()
 	 * @generated
 	 */
-	int GSS_SCENARIO_REFERENCE_FIELD = 31;
+	int GSS_SCENARIO_REFERENCE_FIELD = 30;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -2346,7 +2237,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioReferencePeriodicTC()
 	 * @generated
 	 */
-	int GSS_SCENARIO_REFERENCE_PERIODIC_TC = 32;
+	int GSS_SCENARIO_REFERENCE_PERIODIC_TC = 31;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -2419,7 +2310,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioReferenceSpecialPacket()
 	 * @generated
 	 */
-	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET = 33;
+	int GSS_SCENARIO_REFERENCE_SPECIAL_PACKET = 32;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -2492,7 +2383,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioMonitors()
 	 * @generated
 	 */
-	int GSS_SCENARIO_MONITORS = 34;
+	int GSS_SCENARIO_MONITORS = 33;
 
 	/**
 	 * The feature id for the '<em><b>Charts File</b></em>' reference.
@@ -2538,7 +2429,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioMonitor()
 	 * @generated
 	 */
-	int GSS_SCENARIO_MONITOR = 35;
+	int GSS_SCENARIO_MONITOR = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2584,7 +2475,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioPlot()
 	 * @generated
 	 */
-	int GSS_SCENARIO_PLOT = 36;
+	int GSS_SCENARIO_PLOT = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2639,7 +2530,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioAlarmMsg()
 	 * @generated
 	 */
-	int GSS_SCENARIO_ALARM_MSG = 37;
+	int GSS_SCENARIO_ALARM_MSG = 36;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2703,7 +2594,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioModify()
 	 * @generated
 	 */
-	int GSS_SCENARIO_MODIFY = 38;
+	int GSS_SCENARIO_MODIFY = 37;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2767,7 +2658,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioAlarmVal()
 	 * @generated
 	 */
-	int GSS_SCENARIO_ALARM_VAL = 39;
+	int GSS_SCENARIO_ALARM_VAL = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2822,7 +2713,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGVRef()
 	 * @generated
 	 */
-	int GSS_SCENARIO_GV_REF = 40;
+	int GSS_SCENARIO_GV_REF = 39;
 
 	/**
 	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
@@ -2859,7 +2750,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGVFiltered()
 	 * @generated
 	 */
-	int GSS_SCENARIO_GV_FILTERED = 41;
+	int GSS_SCENARIO_GV_FILTERED = 40;
 
 	/**
 	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
@@ -2905,7 +2796,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGVPeriodic()
 	 * @generated
 	 */
-	int GSS_SCENARIO_GV_PERIODIC = 42;
+	int GSS_SCENARIO_GV_PERIODIC = 41;
 
 	/**
 	 * The feature id for the '<em><b>Global Var Ref</b></em>' reference.
@@ -2960,7 +2851,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioEnableDisable()
 	 * @generated
 	 */
-	int GSS_SCENARIO_ENABLE_DISABLE = 43;
+	int GSS_SCENARIO_ENABLE_DISABLE = 42;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioInterfaceType <em>GSS Scenario Interface Type</em>}' enum.
@@ -2970,7 +2861,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioInterfaceType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_INTERFACE_TYPE = 44;
+	int GSS_SCENARIO_INTERFACE_TYPE = 43;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioInterfaceIOType <em>GSS Scenario Interface IO Type</em>}' enum.
@@ -2980,7 +2871,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioInterfaceIOType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_INTERFACE_IO_TYPE = 45;
+	int GSS_SCENARIO_INTERFACE_IO_TYPE = 44;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioUpperLevelLevel <em>GSS Scenario Upper Level Level</em>}' enum.
@@ -2990,7 +2881,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioUpperLevelLevel()
 	 * @generated
 	 */
-	int GSS_SCENARIO_UPPER_LEVEL_LEVEL = 46;
+	int GSS_SCENARIO_UPPER_LEVEL_LEVEL = 45;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioUnit <em>GSS Scenario Unit</em>}' enum.
@@ -3000,7 +2891,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioUnit()
 	 * @generated
 	 */
-	int GSS_SCENARIO_UNIT = 47;
+	int GSS_SCENARIO_UNIT = 46;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioGlobalVarType <em>GSS Scenario Global Var Type</em>}' enum.
@@ -3010,7 +2901,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioGlobalVarType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_GLOBAL_VAR_TYPE = 48;
+	int GSS_SCENARIO_GLOBAL_VAR_TYPE = 47;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioReferenceFieldType <em>GSS Scenario Reference Field Type</em>}' enum.
@@ -3020,7 +2911,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioReferenceFieldType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_REFERENCE_FIELD_TYPE = 49;
+	int GSS_SCENARIO_REFERENCE_FIELD_TYPE = 48;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmMsgType <em>GSS Scenario Alarm Msg Type</em>}' enum.
@@ -3030,7 +2921,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioAlarmMsgType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_ALARM_MSG_TYPE = 50;
+	int GSS_SCENARIO_ALARM_MSG_TYPE = 49;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioModifyType <em>GSS Scenario Modify Type</em>}' enum.
@@ -3040,7 +2931,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioModifyType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_MODIFY_TYPE = 51;
+	int GSS_SCENARIO_MODIFY_TYPE = 50;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.scenario.GSSScenarioAlarmValType <em>GSS Scenario Alarm Val Type</em>}' enum.
@@ -3050,7 +2941,7 @@ public interface scenarioPackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioAlarmValType()
 	 * @generated
 	 */
-	int GSS_SCENARIO_ALARM_VAL_TYPE = 52;
+	int GSS_SCENARIO_ALARM_VAL_TYPE = 51;
 
 
 	/**
@@ -3559,16 +3450,6 @@ public interface scenarioPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGSSScenarioInterfaces_Interface();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMainInterface <em>GSS Scenario Main Interface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Scenario Main Interface</em>'.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMainInterface
-	 * @generated
-	 */
-	EClass getGSSScenarioMainInterface();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioInterface <em>GSS Scenario Interface</em>}'.
@@ -5475,16 +5356,6 @@ public interface scenarioPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GSS_SCENARIO_INTERFACES__INTERFACE = eINSTANCE.getGSSScenarioInterfaces_Interface();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioMainInterfaceImpl <em>GSS Scenario Main Interface</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.scenario.impl.GSSScenarioMainInterfaceImpl
-		 * @see es.uah.aut.srg.gss.scenario.impl.scenarioPackageImpl#getGSSScenarioMainInterface()
-		 * @generated
-		 */
-		EClass GSS_SCENARIO_MAIN_INTERFACE = eINSTANCE.getGSSScenarioMainInterface();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.scenario.impl.GSSScenarioInterfaceImpl <em>GSS Scenario Interface</em>}' class.

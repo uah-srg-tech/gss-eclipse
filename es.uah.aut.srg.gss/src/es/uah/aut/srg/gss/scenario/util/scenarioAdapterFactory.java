@@ -120,10 +120,6 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 				return createGSSScenarioInterfacesAdapter();
 			}
 			@Override
-			public Adapter caseGSSScenarioMainInterface(GSSScenarioMainInterface object) {
-				return createGSSScenarioMainInterfaceAdapter();
-			}
-			@Override
 			public Adapter caseGSSScenarioInterface(GSSScenarioInterface object) {
 				return createGSSScenarioInterfaceAdapter();
 			}
@@ -424,20 +420,6 @@ public class scenarioAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSScenarioInterfacesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.scenario.GSSScenarioMainInterface <em>GSS Scenario Main Interface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.scenario.GSSScenarioMainInterface
-	 * @generated
-	 */
-	public Adapter createGSSScenarioMainInterfaceAdapter() {
 		return null;
 	}
 
