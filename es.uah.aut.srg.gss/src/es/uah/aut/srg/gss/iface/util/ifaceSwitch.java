@@ -109,9 +109,23 @@ public class ifaceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL: {
-				GSSIfaceUartProtocol gssIfaceUartProtocol = (GSSIfaceUartProtocol)theEObject;
-				T result = caseGSSIfaceUartProtocol(gssIfaceUartProtocol);
+			case ifacePackage.GSS_IFACE_SOCKET_SRV_PORT: {
+				GSSIfaceSocketSrvPort gssIfaceSocketSrvPort = (GSSIfaceSocketSrvPort)theEObject;
+				T result = caseGSSIfaceSocketSrvPort(gssIfaceSocketSrvPort);
+				if (result == null) result = caseGSSIfacePort(gssIfaceSocketSrvPort);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ifacePackage.GSS_IFACE_SOCKET_CLI_PORT: {
+				GSSIfaceSocketCliPort gssIfaceSocketCliPort = (GSSIfaceSocketCliPort)theEObject;
+				T result = caseGSSIfaceSocketCliPort(gssIfaceSocketCliPort);
+				if (result == null) result = caseGSSIfacePort(gssIfaceSocketCliPort);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL: {
+				GSSIfacePortProtocol gssIfacePortProtocol = (GSSIfacePortProtocol)theEObject;
+				T result = caseGSSIfacePortProtocol(gssIfacePortProtocol);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -206,6 +220,51 @@ public class ifaceSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Iface Socket Srv Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Iface Socket Srv Port</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSIfaceSocketSrvPort(GSSIfaceSocketSrvPort object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Iface Socket Cli Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Iface Socket Cli Port</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSIfaceSocketCliPort(GSSIfaceSocketCliPort object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Iface Port Protocol</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Iface Port Protocol</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSIfacePortProtocol(GSSIfacePortProtocol object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>GSS Iface Sp WTC Port</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -247,21 +306,6 @@ public class ifaceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSIfaceReadingPort(GSSIfaceReadingPort object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GSS Iface Uart Protocol</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GSS Iface Uart Protocol</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGSSIfaceUartProtocol(GSSIfaceUartProtocol object) {
 		return null;
 	}
 

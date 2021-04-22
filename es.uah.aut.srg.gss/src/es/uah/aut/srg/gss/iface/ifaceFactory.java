@@ -57,6 +57,33 @@ public interface ifaceFactory extends EFactory {
 	GSSIfaceUartPort createGSSIfaceUartPort();
 
 	/**
+	 * Returns a new object of class '<em>GSS Iface Socket Srv Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Iface Socket Srv Port</em>'.
+	 * @generated
+	 */
+	GSSIfaceSocketSrvPort createGSSIfaceSocketSrvPort();
+
+	/**
+	 * Returns a new object of class '<em>GSS Iface Socket Cli Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Iface Socket Cli Port</em>'.
+	 * @generated
+	 */
+	GSSIfaceSocketCliPort createGSSIfaceSocketCliPort();
+
+	/**
+	 * Returns a new object of class '<em>GSS Iface Port Protocol</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>GSS Iface Port Protocol</em>'.
+	 * @generated
+	 */
+	GSSIfacePortProtocol createGSSIfacePortProtocol();
+
+	/**
 	 * Returns a new object of class '<em>GSS Iface Sp WTC Port</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,15 +109,6 @@ public interface ifaceFactory extends EFactory {
 	 * @generated
 	 */
 	GSSIfaceReadingPort createGSSIfaceReadingPort();
-
-	/**
-	 * Returns a new object of class '<em>GSS Iface Uart Protocol</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GSS Iface Uart Protocol</em>'.
-	 * @generated
-	 */
-	GSSIfaceUartProtocol createGSSIfaceUartProtocol();
 
 	/**
 	 * Returns a new object of class '<em>GSS Iface Size</em>'.

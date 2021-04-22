@@ -7390,10 +7390,26 @@ ruleGSSScenarioInterfaceType returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_4='dummy'
+			enumLiteral_4='socketSrv'
 			{
-				$current = grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_4, grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_4());
+				$current = grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketSrvEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_4, grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketSrvEnumLiteralDeclaration_4());
+			}
+		)
+		    |
+		(
+			enumLiteral_5='socketCli'
+			{
+				$current = grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketCliEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_5, grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketCliEnumLiteralDeclaration_5());
+			}
+		)
+		    |
+		(
+			enumLiteral_6='dummy'
+			{
+				$current = grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_6, grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_6());
 			}
 		)
 	)

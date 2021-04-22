@@ -193,14 +193,18 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cGSSIfaceSpWPortParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cGSSIfaceUartPortParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cGSSIfaceSpWTCPortParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cGSSIfaceDummyPortParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cGSSIfaceSocketSrvPortParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cGSSIfaceSocketCliPortParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cGSSIfaceSpWTCPortParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cGSSIfaceDummyPortParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
 		//GSSIfacePort:
-		//	GSSIfaceSpWPort | GSSIfaceUartPort | GSSIfaceSpWTCPort | GSSIfaceDummyPort;
+		//	GSSIfaceSpWPort | GSSIfaceUartPort | GSSIfaceSocketSrvPort | GSSIfaceSocketCliPort | GSSIfaceSpWTCPort |
+		//	GSSIfaceDummyPort;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//GSSIfaceSpWPort | GSSIfaceUartPort | GSSIfaceSpWTCPort | GSSIfaceDummyPort
+		//GSSIfaceSpWPort | GSSIfaceUartPort | GSSIfaceSocketSrvPort | GSSIfaceSocketCliPort | GSSIfaceSpWTCPort |
+		//GSSIfaceDummyPort
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//GSSIfaceSpWPort
@@ -209,11 +213,17 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//GSSIfaceUartPort
 		public RuleCall getGSSIfaceUartPortParserRuleCall_1() { return cGSSIfaceUartPortParserRuleCall_1; }
 		
+		//GSSIfaceSocketSrvPort
+		public RuleCall getGSSIfaceSocketSrvPortParserRuleCall_2() { return cGSSIfaceSocketSrvPortParserRuleCall_2; }
+		
+		//GSSIfaceSocketCliPort
+		public RuleCall getGSSIfaceSocketCliPortParserRuleCall_3() { return cGSSIfaceSocketCliPortParserRuleCall_3; }
+		
 		//GSSIfaceSpWTCPort
-		public RuleCall getGSSIfaceSpWTCPortParserRuleCall_2() { return cGSSIfaceSpWTCPortParserRuleCall_2; }
+		public RuleCall getGSSIfaceSpWTCPortParserRuleCall_4() { return cGSSIfaceSpWTCPortParserRuleCall_4; }
 		
 		//GSSIfaceDummyPort
-		public RuleCall getGSSIfaceDummyPortParserRuleCall_3() { return cGSSIfaceDummyPortParserRuleCall_3; }
+		public RuleCall getGSSIfaceDummyPortParserRuleCall_5() { return cGSSIfaceDummyPortParserRuleCall_5; }
 	}
 	public class GSSIfaceSpWPortElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSpWPort");
@@ -400,8 +410,8 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cFlowControlAssignment_24 = (Assignment)cGroup.eContents().get(24);
 		private final RuleCall cFlowControlGSSIfaceUartPortFlowControlEnumRuleCall_24_0 = (RuleCall)cFlowControlAssignment_24.eContents().get(0);
 		private final Keyword cSemicolonKeyword_25 = (Keyword)cGroup.eContents().get(25);
-		private final Assignment cUartProtocolAssignment_26 = (Assignment)cGroup.eContents().get(26);
-		private final RuleCall cUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0 = (RuleCall)cUartProtocolAssignment_26.eContents().get(0);
+		private final Assignment cPortProtocolAssignment_26 = (Assignment)cGroup.eContents().get(26);
+		private final RuleCall cPortProtocolGSSIfacePortProtocolParserRuleCall_26_0 = (RuleCall)cPortProtocolAssignment_26.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_27 = (Keyword)cGroup.eContents().get(27);
 		private final Keyword cSemicolonKeyword_28 = (Keyword)cGroup.eContents().get(28);
 		
@@ -413,14 +423,14 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//	'dataBits' ':=' dataBits=GSSIfaceUartPortDataBits ';'
 		//	'stopBits' ':=' stopBits=GSSIfaceUartPortStopBits ';'
 		//	'flowControl' ':=' flowControl=GSSIfaceUartPortFlowControl ';'
-		//	uartProtocol=GSSIfaceUartProtocol
+		//	portProtocol=GSSIfacePortProtocol
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'uartPort' '{' 'number' ':=' number=INTEGER ';' 'baudRate' ':=' baudRate=GSSIfaceUartPortBaudRate ';' 'parity' ':='
 		//parity=GSSIfaceUartPortParity ';' 'dataBits' ':=' dataBits=GSSIfaceUartPortDataBits ';' 'stopBits' ':='
 		//stopBits=GSSIfaceUartPortStopBits ';' 'flowControl' ':=' flowControl=GSSIfaceUartPortFlowControl ';'
-		//uartProtocol=GSSIfaceUartProtocol '}' ';'
+		//portProtocol=GSSIfacePortProtocol '}' ';'
 		public Group getGroup() { return cGroup; }
 		
 		//'uartPort'
@@ -519,11 +529,11 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_25() { return cSemicolonKeyword_25; }
 		
-		//uartProtocol=GSSIfaceUartProtocol
-		public Assignment getUartProtocolAssignment_26() { return cUartProtocolAssignment_26; }
+		//portProtocol=GSSIfacePortProtocol
+		public Assignment getPortProtocolAssignment_26() { return cPortProtocolAssignment_26; }
 		
-		//GSSIfaceUartProtocol
-		public RuleCall getUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0() { return cUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0; }
+		//GSSIfacePortProtocol
+		public RuleCall getPortProtocolGSSIfacePortProtocolParserRuleCall_26_0() { return cPortProtocolGSSIfacePortProtocolParserRuleCall_26_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_27() { return cRightCurlyBracketKeyword_27; }
@@ -531,20 +541,158 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_28() { return cSemicolonKeyword_28; }
 	}
-	public class GSSIfaceUartProtocolElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocol");
+	public class GSSIfaceSocketSrvPortElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSocketSrvPort");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cUartProtocolKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cSocketSrvPortKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cPortNumberKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cPortNumberAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPortNumberINTEGERParserRuleCall_4_0 = (RuleCall)cPortNumberAssignment_4.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cPortProtocolAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cPortProtocolGSSIfacePortProtocolParserRuleCall_6_0 = (RuleCall)cPortProtocolAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		
+		//GSSIfaceSocketSrvPort:
+		//	'socketSrvPort' '{'
+		//	'portNumber' ':=' portNumber=INTEGER ';'
+		//	portProtocol=GSSIfacePortProtocol
+		//	'}' ';';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'socketSrvPort' '{' 'portNumber' ':=' portNumber=INTEGER ';' portProtocol=GSSIfacePortProtocol '}' ';'
+		public Group getGroup() { return cGroup; }
+		
+		//'socketSrvPort'
+		public Keyword getSocketSrvPortKeyword_0() { return cSocketSrvPortKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//'portNumber'
+		public Keyword getPortNumberKeyword_2() { return cPortNumberKeyword_2; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
+		
+		//portNumber=INTEGER
+		public Assignment getPortNumberAssignment_4() { return cPortNumberAssignment_4; }
+		
+		//INTEGER
+		public RuleCall getPortNumberINTEGERParserRuleCall_4_0() { return cPortNumberINTEGERParserRuleCall_4_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		
+		//portProtocol=GSSIfacePortProtocol
+		public Assignment getPortProtocolAssignment_6() { return cPortProtocolAssignment_6; }
+		
+		//GSSIfacePortProtocol
+		public RuleCall getPortProtocolGSSIfacePortProtocolParserRuleCall_6_0() { return cPortProtocolGSSIfacePortProtocolParserRuleCall_6_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
+	}
+	public class GSSIfaceSocketCliPortElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceSocketCliPort");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSocketCliPortKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cIpAddressKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cIpAddressAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cIpAddressSTRINGTerminalRuleCall_4_0 = (RuleCall)cIpAddressAssignment_4.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cPortNumberKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cPortNumberAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cPortNumberINTEGERParserRuleCall_8_0 = (RuleCall)cPortNumberAssignment_8.eContents().get(0);
+		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cPortProtocolAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cPortProtocolGSSIfacePortProtocolParserRuleCall_10_0 = (RuleCall)cPortProtocolAssignment_10.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cSemicolonKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		
+		//GSSIfaceSocketCliPort:
+		//	'socketCliPort' '{'
+		//	'ipAddress' ':=' ipAddress=STRING ';'
+		//	'portNumber' ':=' portNumber=INTEGER ';'
+		//	portProtocol=GSSIfacePortProtocol
+		//	'}' ';';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'socketCliPort' '{' 'ipAddress' ':=' ipAddress=STRING ';' 'portNumber' ':=' portNumber=INTEGER ';'
+		//portProtocol=GSSIfacePortProtocol '}' ';'
+		public Group getGroup() { return cGroup; }
+		
+		//'socketCliPort'
+		public Keyword getSocketCliPortKeyword_0() { return cSocketCliPortKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//'ipAddress'
+		public Keyword getIpAddressKeyword_2() { return cIpAddressKeyword_2; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
+		
+		//ipAddress=STRING
+		public Assignment getIpAddressAssignment_4() { return cIpAddressAssignment_4; }
+		
+		//STRING
+		public RuleCall getIpAddressSTRINGTerminalRuleCall_4_0() { return cIpAddressSTRINGTerminalRuleCall_4_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
+		
+		//'portNumber'
+		public Keyword getPortNumberKeyword_6() { return cPortNumberKeyword_6; }
+		
+		//':='
+		public Keyword getColonEqualsSignKeyword_7() { return cColonEqualsSignKeyword_7; }
+		
+		//portNumber=INTEGER
+		public Assignment getPortNumberAssignment_8() { return cPortNumberAssignment_8; }
+		
+		//INTEGER
+		public RuleCall getPortNumberINTEGERParserRuleCall_8_0() { return cPortNumberINTEGERParserRuleCall_8_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
+		
+		//portProtocol=GSSIfacePortProtocol
+		public Assignment getPortProtocolAssignment_10() { return cPortProtocolAssignment_10; }
+		
+		//GSSIfacePortProtocol
+		public RuleCall getPortProtocolGSSIfacePortProtocolParserRuleCall_10_0() { return cPortProtocolGSSIfacePortProtocolParserRuleCall_10_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_12() { return cSemicolonKeyword_12; }
+	}
+	public class GSSIfacePortProtocolElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocol");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPortProtocolKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cUnitKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cColonEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cUnitAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cUnitGSSIfaceUartProtocolUnitEnumRuleCall_4_0 = (RuleCall)cUnitAssignment_4.eContents().get(0);
+		private final RuleCall cUnitGSSIfacePortProtocolUnitEnumRuleCall_4_0 = (RuleCall)cUnitAssignment_4.eContents().get(0);
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Keyword cPowerKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cColonEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cPowerAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cPowerGSSIfaceUartProtocolPowerEnumRuleCall_8_0 = (RuleCall)cPowerAssignment_8.eContents().get(0);
+		private final RuleCall cPowerGSSIfacePortProtocolPowerEnumRuleCall_8_0 = (RuleCall)cPowerAssignment_8.eContents().get(0);
 		private final Keyword cSemicolonKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Assignment cConstSizeAssignment_10 = (Assignment)cGroup.eContents().get(10);
 		private final RuleCall cConstSizeGSSIfaceConstSizeParserRuleCall_10_0 = (RuleCall)cConstSizeAssignment_10.eContents().get(0);
@@ -557,10 +705,10 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cSemicolonKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
-		//GSSIfaceUartProtocol:
-		//	'uartProtocol' '{'
-		//	'unit' ':=' unit=GSSIfaceUartProtocolUnit ';'
-		//	'power' ':=' power=GSSIfaceUartProtocolPower ';'
+		//GSSIfacePortProtocol:
+		//	'portProtocol' '{'
+		//	'unit' ':=' unit=GSSIfacePortProtocolUnit ';'
+		//	'power' ':=' power=GSSIfacePortProtocolPower ';'
 		//	constSize=GSSIfaceConstSize
 		//	sizeFieldOffset=GSSIfaceSizeFieldOffset
 		//	sizeFieldTrim=GSSIfaceSizeFieldTrim
@@ -568,13 +716,13 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//	'}' ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'uartProtocol' '{' 'unit' ':=' unit=GSSIfaceUartProtocolUnit ';' 'power' ':=' power=GSSIfaceUartProtocolPower ';'
+		//'portProtocol' '{' 'unit' ':=' unit=GSSIfacePortProtocolUnit ';' 'power' ':=' power=GSSIfacePortProtocolPower ';'
 		//constSize=GSSIfaceConstSize sizeFieldOffset=GSSIfaceSizeFieldOffset sizeFieldTrim=GSSIfaceSizeFieldTrim
 		//syncPattern=GSSIfaceSyncPattern? '}' ';'
 		public Group getGroup() { return cGroup; }
 		
-		//'uartProtocol'
-		public Keyword getUartProtocolKeyword_0() { return cUartProtocolKeyword_0; }
+		//'portProtocol'
+		public Keyword getPortProtocolKeyword_0() { return cPortProtocolKeyword_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
@@ -585,11 +733,11 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_3() { return cColonEqualsSignKeyword_3; }
 		
-		//unit=GSSIfaceUartProtocolUnit
+		//unit=GSSIfacePortProtocolUnit
 		public Assignment getUnitAssignment_4() { return cUnitAssignment_4; }
 		
-		//GSSIfaceUartProtocolUnit
-		public RuleCall getUnitGSSIfaceUartProtocolUnitEnumRuleCall_4_0() { return cUnitGSSIfaceUartProtocolUnitEnumRuleCall_4_0; }
+		//GSSIfacePortProtocolUnit
+		public RuleCall getUnitGSSIfacePortProtocolUnitEnumRuleCall_4_0() { return cUnitGSSIfacePortProtocolUnitEnumRuleCall_4_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_5() { return cSemicolonKeyword_5; }
@@ -600,11 +748,11 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//':='
 		public Keyword getColonEqualsSignKeyword_7() { return cColonEqualsSignKeyword_7; }
 		
-		//power=GSSIfaceUartProtocolPower
+		//power=GSSIfacePortProtocolPower
 		public Assignment getPowerAssignment_8() { return cPowerAssignment_8; }
 		
-		//GSSIfaceUartProtocolPower
-		public RuleCall getPowerGSSIfaceUartProtocolPowerEnumRuleCall_8_0() { return cPowerGSSIfaceUartProtocolPowerEnumRuleCall_8_0; }
+		//GSSIfacePortProtocolPower
+		public RuleCall getPowerGSSIfacePortProtocolPowerEnumRuleCall_8_0() { return cPowerGSSIfacePortProtocolPowerEnumRuleCall_8_0; }
 		
 		//';'
 		public Keyword getSemicolonKeyword_9() { return cSemicolonKeyword_9; }
@@ -1392,15 +1540,15 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//'xon_xoff'
 		public Keyword getXon_xoffXon_xoffKeyword_1_0() { return cXon_xoffXon_xoffKeyword_1_0; }
 	}
-	public class GSSIfaceUartProtocolUnitElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocolUnit");
+	public class GSSIfacePortProtocolUnitElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocolUnit");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cBytesEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cBytesBytesKeyword_0_0 = (Keyword)cBytesEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cBitsEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cBitsBitsKeyword_1_0 = (Keyword)cBitsEnumLiteralDeclaration_1.eContents().get(0);
 		
-		//enum GSSIfaceUartProtocolUnit:
+		//enum GSSIfacePortProtocolUnit:
 		//	bytes | bits;
 		public EnumRule getRule() { return rule; }
 		
@@ -1419,8 +1567,8 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		//'bits'
 		public Keyword getBitsBitsKeyword_1_0() { return cBitsBitsKeyword_1_0; }
 	}
-	public class GSSIfaceUartProtocolPowerElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocolPower");
+	public class GSSIfacePortProtocolPowerElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocolPower");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cNoEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cNoNoKeyword_0_0 = (Keyword)cNoEnumLiteralDeclaration_0.eContents().get(0);
@@ -1429,7 +1577,7 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration c_2_with_0EnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword c_2_with_02_with_0Keyword_2_0 = (Keyword)c_2_with_0EnumLiteralDeclaration_2.eContents().get(0);
 		
-		//enum GSSIfaceUartProtocolPower:
+		//enum GSSIfacePortProtocolPower:
 		//	no | _2='2bits' | _2_with_0='2_with_0';
 		public EnumRule getRule() { return rule; }
 		
@@ -1467,14 +1615,16 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 	private final GSSIfaceUartPortParityElements eGSSIfaceUartPortParity;
 	private final GSSIfaceUartPortDataBitsElements eGSSIfaceUartPortDataBits;
 	private final GSSIfaceUartPortStopBitsElements eGSSIfaceUartPortStopBits;
+	private final GSSIfaceSocketSrvPortElements pGSSIfaceSocketSrvPort;
+	private final GSSIfaceSocketCliPortElements pGSSIfaceSocketCliPort;
 	private final GSSIfaceUartPortFlowControlElements eGSSIfaceUartPortFlowControl;
-	private final GSSIfaceUartProtocolElements pGSSIfaceUartProtocol;
+	private final GSSIfacePortProtocolElements pGSSIfacePortProtocol;
 	private final GSSIfaceConstSizeElements pGSSIfaceConstSize;
 	private final GSSIfaceSizeFieldOffsetElements pGSSIfaceSizeFieldOffset;
 	private final GSSIfaceSizeFieldTrimElements pGSSIfaceSizeFieldTrim;
 	private final GSSIfaceSyncPatternElements pGSSIfaceSyncPattern;
-	private final GSSIfaceUartProtocolUnitElements eGSSIfaceUartProtocolUnit;
-	private final GSSIfaceUartProtocolPowerElements eGSSIfaceUartProtocolPower;
+	private final GSSIfacePortProtocolUnitElements eGSSIfacePortProtocolUnit;
+	private final GSSIfacePortProtocolPowerElements eGSSIfacePortProtocolPower;
 	private final GSSIfaceSpWTCPortElements pGSSIfaceSpWTCPort;
 	private final GSSIfaceDummyPortElements pGSSIfaceDummyPort;
 	private final QualifiedNameElements pQualifiedName;
@@ -1506,14 +1656,16 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		this.eGSSIfaceUartPortParity = new GSSIfaceUartPortParityElements();
 		this.eGSSIfaceUartPortDataBits = new GSSIfaceUartPortDataBitsElements();
 		this.eGSSIfaceUartPortStopBits = new GSSIfaceUartPortStopBitsElements();
+		this.pGSSIfaceSocketSrvPort = new GSSIfaceSocketSrvPortElements();
+		this.pGSSIfaceSocketCliPort = new GSSIfaceSocketCliPortElements();
 		this.eGSSIfaceUartPortFlowControl = new GSSIfaceUartPortFlowControlElements();
-		this.pGSSIfaceUartProtocol = new GSSIfaceUartProtocolElements();
+		this.pGSSIfacePortProtocol = new GSSIfacePortProtocolElements();
 		this.pGSSIfaceConstSize = new GSSIfaceConstSizeElements();
 		this.pGSSIfaceSizeFieldOffset = new GSSIfaceSizeFieldOffsetElements();
 		this.pGSSIfaceSizeFieldTrim = new GSSIfaceSizeFieldTrimElements();
 		this.pGSSIfaceSyncPattern = new GSSIfaceSyncPatternElements();
-		this.eGSSIfaceUartProtocolUnit = new GSSIfaceUartProtocolUnitElements();
-		this.eGSSIfaceUartProtocolPower = new GSSIfaceUartProtocolPowerElements();
+		this.eGSSIfacePortProtocolUnit = new GSSIfacePortProtocolUnitElements();
+		this.eGSSIfacePortProtocolPower = new GSSIfacePortProtocolPowerElements();
 		this.pGSSIfaceSpWTCPort = new GSSIfaceSpWTCPortElements();
 		this.pGSSIfaceDummyPort = new GSSIfaceDummyPortElements();
 		this.pQualifiedName = new QualifiedNameElements();
@@ -1587,7 +1739,8 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//GSSIfacePort:
-	//	GSSIfaceSpWPort | GSSIfaceUartPort | GSSIfaceSpWTCPort | GSSIfaceDummyPort;
+	//	GSSIfaceSpWPort | GSSIfaceUartPort | GSSIfaceSocketSrvPort | GSSIfaceSocketCliPort | GSSIfaceSpWTCPort |
+	//	GSSIfaceDummyPort;
 	public GSSIfacePortElements getGSSIfacePortAccess() {
 		return pGSSIfacePort;
 	}
@@ -1642,7 +1795,7 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 	//	'dataBits' ':=' dataBits=GSSIfaceUartPortDataBits ';'
 	//	'stopBits' ':=' stopBits=GSSIfaceUartPortStopBits ';'
 	//	'flowControl' ':=' flowControl=GSSIfaceUartPortFlowControl ';'
-	//	uartProtocol=GSSIfaceUartProtocol
+	//	portProtocol=GSSIfacePortProtocol
 	//	'}' ';';
 	public GSSIfaceUartPortElements getGSSIfaceUartPortAccess() {
 		return pGSSIfaceUartPort;
@@ -1694,6 +1847,33 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSIfaceUartPortStopBitsAccess().getRule();
 	}
 	
+	//GSSIfaceSocketSrvPort:
+	//	'socketSrvPort' '{'
+	//	'portNumber' ':=' portNumber=INTEGER ';'
+	//	portProtocol=GSSIfacePortProtocol
+	//	'}' ';';
+	public GSSIfaceSocketSrvPortElements getGSSIfaceSocketSrvPortAccess() {
+		return pGSSIfaceSocketSrvPort;
+	}
+	
+	public ParserRule getGSSIfaceSocketSrvPortRule() {
+		return getGSSIfaceSocketSrvPortAccess().getRule();
+	}
+	
+	//GSSIfaceSocketCliPort:
+	//	'socketCliPort' '{'
+	//	'ipAddress' ':=' ipAddress=STRING ';'
+	//	'portNumber' ':=' portNumber=INTEGER ';'
+	//	portProtocol=GSSIfacePortProtocol
+	//	'}' ';';
+	public GSSIfaceSocketCliPortElements getGSSIfaceSocketCliPortAccess() {
+		return pGSSIfaceSocketCliPort;
+	}
+	
+	public ParserRule getGSSIfaceSocketCliPortRule() {
+		return getGSSIfaceSocketCliPortAccess().getRule();
+	}
+	
 	//enum GSSIfaceUartPortFlowControl:
 	//	rts_cts | xon_xoff;
 	public GSSIfaceUartPortFlowControlElements getGSSIfaceUartPortFlowControlAccess() {
@@ -1704,21 +1884,21 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSIfaceUartPortFlowControlAccess().getRule();
 	}
 	
-	//GSSIfaceUartProtocol:
-	//	'uartProtocol' '{'
-	//	'unit' ':=' unit=GSSIfaceUartProtocolUnit ';'
-	//	'power' ':=' power=GSSIfaceUartProtocolPower ';'
+	//GSSIfacePortProtocol:
+	//	'portProtocol' '{'
+	//	'unit' ':=' unit=GSSIfacePortProtocolUnit ';'
+	//	'power' ':=' power=GSSIfacePortProtocolPower ';'
 	//	constSize=GSSIfaceConstSize
 	//	sizeFieldOffset=GSSIfaceSizeFieldOffset
 	//	sizeFieldTrim=GSSIfaceSizeFieldTrim
 	//	syncPattern=GSSIfaceSyncPattern?
 	//	'}' ';';
-	public GSSIfaceUartProtocolElements getGSSIfaceUartProtocolAccess() {
-		return pGSSIfaceUartProtocol;
+	public GSSIfacePortProtocolElements getGSSIfacePortProtocolAccess() {
+		return pGSSIfacePortProtocol;
 	}
 	
-	public ParserRule getGSSIfaceUartProtocolRule() {
-		return getGSSIfaceUartProtocolAccess().getRule();
+	public ParserRule getGSSIfacePortProtocolRule() {
+		return getGSSIfacePortProtocolAccess().getRule();
 	}
 	
 	//GSSIfaceConstSize GSSIfaceSize:
@@ -1772,24 +1952,24 @@ public class IFACEGrammarAccess extends AbstractGrammarElementFinder {
 		return getGSSIfaceSyncPatternAccess().getRule();
 	}
 	
-	//enum GSSIfaceUartProtocolUnit:
+	//enum GSSIfacePortProtocolUnit:
 	//	bytes | bits;
-	public GSSIfaceUartProtocolUnitElements getGSSIfaceUartProtocolUnitAccess() {
-		return eGSSIfaceUartProtocolUnit;
+	public GSSIfacePortProtocolUnitElements getGSSIfacePortProtocolUnitAccess() {
+		return eGSSIfacePortProtocolUnit;
 	}
 	
-	public EnumRule getGSSIfaceUartProtocolUnitRule() {
-		return getGSSIfaceUartProtocolUnitAccess().getRule();
+	public EnumRule getGSSIfacePortProtocolUnitRule() {
+		return getGSSIfacePortProtocolUnitAccess().getRule();
 	}
 	
-	//enum GSSIfaceUartProtocolPower:
+	//enum GSSIfacePortProtocolPower:
 	//	no | _2='2bits' | _2_with_0='2_with_0';
-	public GSSIfaceUartProtocolPowerElements getGSSIfaceUartProtocolPowerAccess() {
-		return eGSSIfaceUartProtocolPower;
+	public GSSIfacePortProtocolPowerElements getGSSIfacePortProtocolPowerAccess() {
+		return eGSSIfacePortProtocolPower;
 	}
 	
-	public EnumRule getGSSIfaceUartProtocolPowerRule() {
-		return getGSSIfaceUartProtocolPowerAccess().getRule();
+	public EnumRule getGSSIfacePortProtocolPowerRule() {
+		return getGSSIfacePortProtocolPowerAccess().getRule();
 	}
 	
 	//GSSIfaceSpWTCPort:

@@ -99,6 +99,8 @@
     <eLiterals name="SpW_Error" value="2"/>
     <eLiterals name="uart" value="3"/>
     <eLiterals name="dummy" value="4"/>
+    <eLiterals name="socketSrv" value="5" literal="socketSrv"/>
+    <eLiterals name="socketCli" value="6" literal="socketCli"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="GSSScenarioInterfaceIOType">
     <eLiterals name="in_out"/>

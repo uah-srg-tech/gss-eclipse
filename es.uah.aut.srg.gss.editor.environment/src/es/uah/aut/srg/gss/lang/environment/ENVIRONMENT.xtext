@@ -220,7 +220,7 @@ GSSScenarioLevelOut returns scenario::GSSScenarioLevelOut:
 
 enum GSSScenarioInterfaceType returns scenario::GSSScenarioInterfaceType:
 	SpW = 'SpW' | SpW_TC = 'SpW_TC' | SpW_Error = 'SpW_Error' |
-	uart = 'uart' | dummy = 'dummy'
+	uart = 'uart' | socketSrv = 'socketSrv'| socketCli = 'socketCli'| dummy = 'dummy'
 ;
 
 enum GSSScenarioInterfaceIOType returns scenario::GSSScenarioInterfaceIOType:

@@ -69,7 +69,9 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 			case ifacePackage.GSS_IFACE_SP_WPORT: return createGSSIfaceSpWPort();
 			case ifacePackage.GSS_IFACE_READING_PORT: return createGSSIfaceReadingPort();
 			case ifacePackage.GSS_IFACE_UART_PORT: return createGSSIfaceUartPort();
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL: return createGSSIfaceUartProtocol();
+			case ifacePackage.GSS_IFACE_SOCKET_SRV_PORT: return createGSSIfaceSocketSrvPort();
+			case ifacePackage.GSS_IFACE_SOCKET_CLI_PORT: return createGSSIfaceSocketCliPort();
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL: return createGSSIfacePortProtocol();
 			case ifacePackage.GSS_IFACE_SIZE: return createGSSIfaceSize();
 			case ifacePackage.GSS_IFACE_SYNC_PATTERN: return createGSSIfaceSyncPattern();
 			case ifacePackage.GSS_IFACE_SP_WTC_PORT: return createGSSIfaceSpWTCPort();
@@ -99,10 +101,10 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 				return createGSSIfaceUartPortStopBitsFromString(eDataType, initialValue);
 			case ifacePackage.GSS_IFACE_UART_PORT_FLOW_CONTROL:
 				return createGSSIfaceUartPortFlowControlFromString(eDataType, initialValue);
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL_UNIT:
-				return createGSSIfaceUartProtocolUnitFromString(eDataType, initialValue);
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL_POWER:
-				return createGSSIfaceUartProtocolPowerFromString(eDataType, initialValue);
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL_UNIT:
+				return createGSSIfacePortProtocolUnitFromString(eDataType, initialValue);
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL_POWER:
+				return createGSSIfacePortProtocolPowerFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -128,10 +130,10 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 				return convertGSSIfaceUartPortStopBitsToString(eDataType, instanceValue);
 			case ifacePackage.GSS_IFACE_UART_PORT_FLOW_CONTROL:
 				return convertGSSIfaceUartPortFlowControlToString(eDataType, instanceValue);
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL_UNIT:
-				return convertGSSIfaceUartProtocolUnitToString(eDataType, instanceValue);
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL_POWER:
-				return convertGSSIfaceUartProtocolPowerToString(eDataType, instanceValue);
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL_UNIT:
+				return convertGSSIfacePortProtocolUnitToString(eDataType, instanceValue);
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL_POWER:
+				return convertGSSIfacePortProtocolPowerToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -172,6 +174,36 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public GSSIfaceSocketSrvPort createGSSIfaceSocketSrvPort() {
+		GSSIfaceSocketSrvPortImpl gssIfaceSocketSrvPort = new GSSIfaceSocketSrvPortImpl();
+		return gssIfaceSocketSrvPort;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSIfaceSocketCliPort createGSSIfaceSocketCliPort() {
+		GSSIfaceSocketCliPortImpl gssIfaceSocketCliPort = new GSSIfaceSocketCliPortImpl();
+		return gssIfaceSocketCliPort;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GSSIfacePortProtocol createGSSIfacePortProtocol() {
+		GSSIfacePortProtocolImpl gssIfacePortProtocol = new GSSIfacePortProtocolImpl();
+		return gssIfacePortProtocol;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GSSIfaceSpWTCPort createGSSIfaceSpWTCPort() {
 		GSSIfaceSpWTCPortImpl gssIfaceSpWTCPort = new GSSIfaceSpWTCPortImpl();
 		return gssIfaceSpWTCPort;
@@ -195,16 +227,6 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 	public GSSIfaceReadingPort createGSSIfaceReadingPort() {
 		GSSIfaceReadingPortImpl gssIfaceReadingPort = new GSSIfaceReadingPortImpl();
 		return gssIfaceReadingPort;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GSSIfaceUartProtocol createGSSIfaceUartProtocol() {
-		GSSIfaceUartProtocolImpl gssIfaceUartProtocol = new GSSIfaceUartProtocolImpl();
-		return gssIfaceUartProtocol;
 	}
 
 	/**
@@ -352,8 +374,8 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSIfaceUartProtocolUnit createGSSIfaceUartProtocolUnitFromString(EDataType eDataType, String initialValue) {
-		GSSIfaceUartProtocolUnit result = GSSIfaceUartProtocolUnit.get(initialValue);
+	public GSSIfacePortProtocolUnit createGSSIfacePortProtocolUnitFromString(EDataType eDataType, String initialValue) {
+		GSSIfacePortProtocolUnit result = GSSIfacePortProtocolUnit.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -363,7 +385,7 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertGSSIfaceUartProtocolUnitToString(EDataType eDataType, Object instanceValue) {
+	public String convertGSSIfacePortProtocolUnitToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -372,8 +394,8 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSIfaceUartProtocolPower createGSSIfaceUartProtocolPowerFromString(EDataType eDataType, String initialValue) {
-		GSSIfaceUartProtocolPower result = GSSIfaceUartProtocolPower.get(initialValue);
+	public GSSIfacePortProtocolPower createGSSIfacePortProtocolPowerFromString(EDataType eDataType, String initialValue) {
+		GSSIfacePortProtocolPower result = GSSIfacePortProtocolPower.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -383,7 +405,7 @@ public class ifaceFactoryImpl extends EFactoryImpl implements ifaceFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertGSSIfaceUartProtocolPowerToString(EDataType eDataType, Object instanceValue) {
+	public String convertGSSIfacePortProtocolPowerToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

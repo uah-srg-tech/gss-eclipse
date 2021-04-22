@@ -1903,9 +1903,21 @@ rule__GSSScenarioInterfaceType__Alternatives
 	)
 	|
 	(
-		{ before(grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_4()); }
+		{ before(grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketSrvEnumLiteralDeclaration_4()); }
+		('socketSrv')
+		{ after(grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketSrvEnumLiteralDeclaration_4()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketCliEnumLiteralDeclaration_5()); }
+		('socketCli')
+		{ after(grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketCliEnumLiteralDeclaration_5()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_6()); }
 		('dummy')
-		{ after(grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_4()); }
+		{ after(grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_6()); }
 	)
 ;
 finally {

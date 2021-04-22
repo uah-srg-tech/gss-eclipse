@@ -98,8 +98,16 @@ public class ifaceAdapterFactory extends AdapterFactoryImpl {
 				return createGSSIfaceUartPortAdapter();
 			}
 			@Override
-			public Adapter caseGSSIfaceUartProtocol(GSSIfaceUartProtocol object) {
-				return createGSSIfaceUartProtocolAdapter();
+			public Adapter caseGSSIfaceSocketSrvPort(GSSIfaceSocketSrvPort object) {
+				return createGSSIfaceSocketSrvPortAdapter();
+			}
+			@Override
+			public Adapter caseGSSIfaceSocketCliPort(GSSIfaceSocketCliPort object) {
+				return createGSSIfaceSocketCliPortAdapter();
+			}
+			@Override
+			public Adapter caseGSSIfacePortProtocol(GSSIfacePortProtocol object) {
+				return createGSSIfacePortProtocolAdapter();
 			}
 			@Override
 			public Adapter caseGSSIfaceSize(GSSIfaceSize object) {
@@ -198,6 +206,48 @@ public class ifaceAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSocketSrvPort <em>GSS Iface Socket Srv Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSocketSrvPort
+	 * @generated
+	 */
+	public Adapter createGSSIfaceSocketSrvPortAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSocketCliPort <em>GSS Iface Socket Cli Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSocketCliPort
+	 * @generated
+	 */
+	public Adapter createGSSIfaceSocketCliPortAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocol <em>GSS Iface Port Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocol
+	 * @generated
+	 */
+	public Adapter createGSSIfacePortProtocolAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSpWTCPort <em>GSS Iface Sp WTC Port</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -236,20 +286,6 @@ public class ifaceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSIfaceReadingPortAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol <em>GSS Iface Uart Protocol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol
-	 * @generated
-	 */
-	public Adapter createGSSIfaceUartProtocolAdapter() {
 		return null;
 	}
 

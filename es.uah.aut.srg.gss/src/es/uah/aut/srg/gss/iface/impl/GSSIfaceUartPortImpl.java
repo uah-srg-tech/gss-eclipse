@@ -10,13 +10,13 @@
  */
 package es.uah.aut.srg.gss.iface.impl;
 
+import es.uah.aut.srg.gss.iface.GSSIfacePortProtocol;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortBaudRate;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortDataBits;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortParity;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPortStopBits;
-import es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol;
 import es.uah.aut.srg.gss.iface.ifacePackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -41,7 +41,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartPortImpl#getDataBits <em>Data Bits</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartPortImpl#getStopBits <em>Stop Bits</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartPortImpl#getFlowControl <em>Flow Control</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartPortImpl#getUartProtocol <em>Uart Protocol</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartPortImpl#getPortProtocol <em>Port Protocol</em>}</li>
  * </ul>
  *
  * @generated
@@ -213,14 +213,14 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	protected boolean flowControlESet;
 
 	/**
-	 * The cached value of the '{@link #getUartProtocol() <em>Uart Protocol</em>}' containment reference.
+	 * The cached value of the '{@link #getPortProtocol() <em>Port Protocol</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUartProtocol()
+	 * @see #getPortProtocol()
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSIfaceUartProtocol uartProtocol;
+	protected GSSIfacePortProtocol portProtocol;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -497,8 +497,8 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSIfaceUartProtocol getUartProtocol() {
-		return uartProtocol;
+	public GSSIfacePortProtocol getPortProtocol() {
+		return portProtocol;
 	}
 
 	/**
@@ -506,11 +506,11 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetUartProtocol(GSSIfaceUartProtocol newUartProtocol, NotificationChain msgs) {
-		GSSIfaceUartProtocol oldUartProtocol = uartProtocol;
-		uartProtocol = newUartProtocol;
+	public NotificationChain basicSetPortProtocol(GSSIfacePortProtocol newPortProtocol, NotificationChain msgs) {
+		GSSIfacePortProtocol oldPortProtocol = portProtocol;
+		portProtocol = newPortProtocol;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL, oldUartProtocol, newUartProtocol);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__PORT_PROTOCOL, oldPortProtocol, newPortProtocol);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -521,18 +521,18 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUartProtocol(GSSIfaceUartProtocol newUartProtocol) {
-		if (newUartProtocol != uartProtocol) {
+	public void setPortProtocol(GSSIfacePortProtocol newPortProtocol) {
+		if (newPortProtocol != portProtocol) {
 			NotificationChain msgs = null;
-			if (uartProtocol != null)
-				msgs = ((InternalEObject)uartProtocol).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL, null, msgs);
-			if (newUartProtocol != null)
-				msgs = ((InternalEObject)newUartProtocol).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL, null, msgs);
-			msgs = basicSetUartProtocol(newUartProtocol, msgs);
+			if (portProtocol != null)
+				msgs = ((InternalEObject)portProtocol).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_UART_PORT__PORT_PROTOCOL, null, msgs);
+			if (newPortProtocol != null)
+				msgs = ((InternalEObject)newPortProtocol).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_UART_PORT__PORT_PROTOCOL, null, msgs);
+			msgs = basicSetPortProtocol(newPortProtocol, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL, newUartProtocol, newUartProtocol));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PORT__PORT_PROTOCOL, newPortProtocol, newPortProtocol));
 	}
 
 	/**
@@ -543,8 +543,8 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL:
-				return basicSetUartProtocol(null, msgs);
+			case ifacePackage.GSS_IFACE_UART_PORT__PORT_PROTOCOL:
+				return basicSetPortProtocol(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -569,8 +569,8 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 				return getStopBits();
 			case ifacePackage.GSS_IFACE_UART_PORT__FLOW_CONTROL:
 				return getFlowControl();
-			case ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL:
-				return getUartProtocol();
+			case ifacePackage.GSS_IFACE_UART_PORT__PORT_PROTOCOL:
+				return getPortProtocol();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -601,8 +601,8 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 			case ifacePackage.GSS_IFACE_UART_PORT__FLOW_CONTROL:
 				setFlowControl((GSSIfaceUartPortFlowControl)newValue);
 				return;
-			case ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL:
-				setUartProtocol((GSSIfaceUartProtocol)newValue);
+			case ifacePackage.GSS_IFACE_UART_PORT__PORT_PROTOCOL:
+				setPortProtocol((GSSIfacePortProtocol)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -634,8 +634,8 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 			case ifacePackage.GSS_IFACE_UART_PORT__FLOW_CONTROL:
 				unsetFlowControl();
 				return;
-			case ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL:
-				setUartProtocol((GSSIfaceUartProtocol)null);
+			case ifacePackage.GSS_IFACE_UART_PORT__PORT_PROTOCOL:
+				setPortProtocol((GSSIfacePortProtocol)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -661,8 +661,8 @@ public class GSSIfaceUartPortImpl extends GSSIfacePortImpl implements GSSIfaceUa
 				return isSetStopBits();
 			case ifacePackage.GSS_IFACE_UART_PORT__FLOW_CONTROL:
 				return isSetFlowControl();
-			case ifacePackage.GSS_IFACE_UART_PORT__UART_PROTOCOL:
-				return uartProtocol != null;
+			case ifacePackage.GSS_IFACE_UART_PORT__PORT_PROTOCOL:
+				return portProtocol != null;
 		}
 		return super.eIsSet(featureID);
 	}

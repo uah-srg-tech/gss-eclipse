@@ -26,7 +26,7 @@ package es.uah.aut.srg.gss.iface;
  *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getDataBits <em>Data Bits</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getStopBits <em>Stop Bits</em>}</li>
  *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getFlowControl <em>Flow Control</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getUartProtocol <em>Uart Protocol</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getPortProtocol <em>Port Protocol</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartPort()
@@ -341,29 +341,29 @@ public interface GSSIfaceUartPort extends GSSIfacePort {
 	boolean isSetFlowControl();
 
 	/**
-	 * Returns the value of the '<em><b>Uart Protocol</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Port Protocol</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Uart Protocol</em>' reference isn't clear,
+	 * If the meaning of the '<em>Port Protocol</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uart Protocol</em>' containment reference.
-	 * @see #setUartProtocol(GSSIfaceUartProtocol)
-	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartPort_UartProtocol()
+	 * @return the value of the '<em>Port Protocol</em>' containment reference.
+	 * @see #setPortProtocol(GSSIfacePortProtocol)
+	 * @see es.uah.aut.srg.gss.iface.ifacePackage#getGSSIfaceUartPort_PortProtocol()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	GSSIfaceUartProtocol getUartProtocol();
+	GSSIfacePortProtocol getPortProtocol();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getUartProtocol <em>Uart Protocol</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getPortProtocol <em>Port Protocol</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Uart Protocol</em>' containment reference.
-	 * @see #getUartProtocol()
+	 * @param value the new value of the '<em>Port Protocol</em>' containment reference.
+	 * @see #getPortProtocol()
 	 * @generated
 	 */
-	void setUartProtocol(GSSIfaceUartProtocol value);
+	void setPortProtocol(GSSIfacePortProtocol value);
 
 } // GSSIfaceUartPort

@@ -10,41 +10,41 @@
  */
 package es.uah.aut.srg.gss.iface.impl;
 
+import es.uah.aut.srg.gss.iface.GSSIfacePortProtocol;
+import es.uah.aut.srg.gss.iface.GSSIfacePortProtocolPower;
+import es.uah.aut.srg.gss.iface.GSSIfacePortProtocolUnit;
 import es.uah.aut.srg.gss.iface.GSSIfaceSize;
 import es.uah.aut.srg.gss.iface.GSSIfaceSyncPattern;
-import es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol;
-import es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolPower;
-import es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit;
 import es.uah.aut.srg.gss.iface.ifacePackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>GSS Iface Uart Protocol</b></em>'.
+ * An implementation of the model object '<em><b>GSS Iface Port Protocol</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartProtocolImpl#getUnit <em>Unit</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartProtocolImpl#getPower <em>Power</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartProtocolImpl#getConstSize <em>Const Size</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartProtocolImpl#getSizeFieldOffset <em>Size Field Offset</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartProtocolImpl#getSizeFieldTrim <em>Size Field Trim</em>}</li>
- *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartProtocolImpl#getSyncPattern <em>Sync Pattern</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfacePortProtocolImpl#getUnit <em>Unit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfacePortProtocolImpl#getPower <em>Power</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfacePortProtocolImpl#getConstSize <em>Const Size</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfacePortProtocolImpl#getSizeFieldOffset <em>Size Field Offset</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfacePortProtocolImpl#getSizeFieldTrim <em>Size Field Trim</em>}</li>
+ *   <li>{@link es.uah.aut.srg.gss.iface.impl.GSSIfacePortProtocolImpl#getSyncPattern <em>Sync Pattern</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container implements GSSIfaceUartProtocol {
+public class GSSIfacePortProtocolImpl extends MinimalEObjectImpl.Container implements GSSIfacePortProtocol {
 	/**
 	 * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -53,7 +53,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GSSIfaceUartProtocolUnit UNIT_EDEFAULT = GSSIfaceUartProtocolUnit.BYTES;
+	protected static final GSSIfacePortProtocolUnit UNIT_EDEFAULT = GSSIfacePortProtocolUnit.BYTES;
 
 	/**
 	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
@@ -63,7 +63,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSIfaceUartProtocolUnit unit = UNIT_EDEFAULT;
+	protected GSSIfacePortProtocolUnit unit = UNIT_EDEFAULT;
 
 	/**
 	 * This is true if the Unit attribute has been set.
@@ -82,7 +82,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected static final GSSIfaceUartProtocolPower POWER_EDEFAULT = GSSIfaceUartProtocolPower.NO;
+	protected static final GSSIfacePortProtocolPower POWER_EDEFAULT = GSSIfacePortProtocolPower.NO;
 
 	/**
 	 * The cached value of the '{@link #getPower() <em>Power</em>}' attribute.
@@ -92,7 +92,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected GSSIfaceUartProtocolPower power = POWER_EDEFAULT;
+	protected GSSIfacePortProtocolPower power = POWER_EDEFAULT;
 
 	/**
 	 * This is true if the Power attribute has been set.
@@ -148,7 +148,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GSSIfaceUartProtocolImpl() {
+	protected GSSIfacePortProtocolImpl() {
 		super();
 	}
 
@@ -159,7 +159,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ifacePackage.Literals.GSS_IFACE_UART_PROTOCOL;
+		return ifacePackage.Literals.GSS_IFACE_PORT_PROTOCOL;
 	}
 
 	/**
@@ -167,7 +167,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSIfaceUartProtocolUnit getUnit() {
+	public GSSIfacePortProtocolUnit getUnit() {
 		return unit;
 	}
 
@@ -176,13 +176,13 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUnit(GSSIfaceUartProtocolUnit newUnit) {
-		GSSIfaceUartProtocolUnit oldUnit = unit;
+	public void setUnit(GSSIfacePortProtocolUnit newUnit) {
+		GSSIfacePortProtocolUnit oldUnit = unit;
 		unit = newUnit == null ? UNIT_EDEFAULT : newUnit;
 		boolean oldUnitESet = unitESet;
 		unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__UNIT, oldUnit, unit, !oldUnitESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_PROTOCOL__UNIT, oldUnit, unit, !oldUnitESet));
 	}
 
 	/**
@@ -191,12 +191,12 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	public void unsetUnit() {
-		GSSIfaceUartProtocolUnit oldUnit = unit;
+		GSSIfacePortProtocolUnit oldUnit = unit;
 		boolean oldUnitESet = unitESet;
 		unit = UNIT_EDEFAULT;
 		unitESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, ifacePackage.GSS_IFACE_UART_PROTOCOL__UNIT, oldUnit, UNIT_EDEFAULT, oldUnitESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, ifacePackage.GSS_IFACE_PORT_PROTOCOL__UNIT, oldUnit, UNIT_EDEFAULT, oldUnitESet));
 	}
 
 	/**
@@ -213,7 +213,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GSSIfaceUartProtocolPower getPower() {
+	public GSSIfacePortProtocolPower getPower() {
 		return power;
 	}
 
@@ -222,13 +222,13 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPower(GSSIfaceUartProtocolPower newPower) {
-		GSSIfaceUartProtocolPower oldPower = power;
+	public void setPower(GSSIfacePortProtocolPower newPower) {
+		GSSIfacePortProtocolPower oldPower = power;
 		power = newPower == null ? POWER_EDEFAULT : newPower;
 		boolean oldPowerESet = powerESet;
 		powerESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__POWER, oldPower, power, !oldPowerESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_PROTOCOL__POWER, oldPower, power, !oldPowerESet));
 	}
 
 	/**
@@ -237,12 +237,12 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	public void unsetPower() {
-		GSSIfaceUartProtocolPower oldPower = power;
+		GSSIfacePortProtocolPower oldPower = power;
 		boolean oldPowerESet = powerESet;
 		power = POWER_EDEFAULT;
 		powerESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, ifacePackage.GSS_IFACE_UART_PROTOCOL__POWER, oldPower, POWER_EDEFAULT, oldPowerESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, ifacePackage.GSS_IFACE_PORT_PROTOCOL__POWER, oldPower, POWER_EDEFAULT, oldPowerESet));
 	}
 
 	/**
@@ -272,7 +272,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 		GSSIfaceSize oldConstSize = constSize;
 		constSize = newConstSize;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE, oldConstSize, newConstSize);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_PROTOCOL__CONST_SIZE, oldConstSize, newConstSize);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -287,14 +287,14 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 		if (newConstSize != constSize) {
 			NotificationChain msgs = null;
 			if (constSize != null)
-				msgs = ((InternalEObject)constSize).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE, null, msgs);
+				msgs = ((InternalEObject)constSize).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_PORT_PROTOCOL__CONST_SIZE, null, msgs);
 			if (newConstSize != null)
-				msgs = ((InternalEObject)newConstSize).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE, null, msgs);
+				msgs = ((InternalEObject)newConstSize).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_PORT_PROTOCOL__CONST_SIZE, null, msgs);
 			msgs = basicSetConstSize(newConstSize, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE, newConstSize, newConstSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_PROTOCOL__CONST_SIZE, newConstSize, newConstSize));
 	}
 
 	/**
@@ -315,7 +315,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 		GSSIfaceSize oldSizeFieldOffset = sizeFieldOffset;
 		sizeFieldOffset = newSizeFieldOffset;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET, oldSizeFieldOffset, newSizeFieldOffset);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_OFFSET, oldSizeFieldOffset, newSizeFieldOffset);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -330,14 +330,14 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 		if (newSizeFieldOffset != sizeFieldOffset) {
 			NotificationChain msgs = null;
 			if (sizeFieldOffset != null)
-				msgs = ((InternalEObject)sizeFieldOffset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET, null, msgs);
+				msgs = ((InternalEObject)sizeFieldOffset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_OFFSET, null, msgs);
 			if (newSizeFieldOffset != null)
-				msgs = ((InternalEObject)newSizeFieldOffset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET, null, msgs);
+				msgs = ((InternalEObject)newSizeFieldOffset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_OFFSET, null, msgs);
 			msgs = basicSetSizeFieldOffset(newSizeFieldOffset, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET, newSizeFieldOffset, newSizeFieldOffset));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_OFFSET, newSizeFieldOffset, newSizeFieldOffset));
 	}
 
 	/**
@@ -358,7 +358,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 		GSSIfaceSize oldSizeFieldTrim = sizeFieldTrim;
 		sizeFieldTrim = newSizeFieldTrim;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM, oldSizeFieldTrim, newSizeFieldTrim);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_TRIM, oldSizeFieldTrim, newSizeFieldTrim);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -373,14 +373,14 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 		if (newSizeFieldTrim != sizeFieldTrim) {
 			NotificationChain msgs = null;
 			if (sizeFieldTrim != null)
-				msgs = ((InternalEObject)sizeFieldTrim).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM, null, msgs);
+				msgs = ((InternalEObject)sizeFieldTrim).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_TRIM, null, msgs);
 			if (newSizeFieldTrim != null)
-				msgs = ((InternalEObject)newSizeFieldTrim).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM, null, msgs);
+				msgs = ((InternalEObject)newSizeFieldTrim).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_TRIM, null, msgs);
 			msgs = basicSetSizeFieldTrim(newSizeFieldTrim, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM, newSizeFieldTrim, newSizeFieldTrim));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_TRIM, newSizeFieldTrim, newSizeFieldTrim));
 	}
 
 	/**
@@ -401,7 +401,7 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 		GSSIfaceSyncPattern oldSyncPattern = syncPattern;
 		syncPattern = newSyncPattern;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN, oldSyncPattern, newSyncPattern);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_PROTOCOL__SYNC_PATTERN, oldSyncPattern, newSyncPattern);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -416,14 +416,14 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 		if (newSyncPattern != syncPattern) {
 			NotificationChain msgs = null;
 			if (syncPattern != null)
-				msgs = ((InternalEObject)syncPattern).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN, null, msgs);
+				msgs = ((InternalEObject)syncPattern).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_PORT_PROTOCOL__SYNC_PATTERN, null, msgs);
 			if (newSyncPattern != null)
-				msgs = ((InternalEObject)newSyncPattern).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN, null, msgs);
+				msgs = ((InternalEObject)newSyncPattern).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ifacePackage.GSS_IFACE_PORT_PROTOCOL__SYNC_PATTERN, null, msgs);
 			msgs = basicSetSyncPattern(newSyncPattern, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN, newSyncPattern, newSyncPattern));
+			eNotify(new ENotificationImpl(this, Notification.SET, ifacePackage.GSS_IFACE_PORT_PROTOCOL__SYNC_PATTERN, newSyncPattern, newSyncPattern));
 	}
 
 	/**
@@ -434,13 +434,13 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__CONST_SIZE:
 				return basicSetConstSize(null, msgs);
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_OFFSET:
 				return basicSetSizeFieldOffset(null, msgs);
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_TRIM:
 				return basicSetSizeFieldTrim(null, msgs);
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SYNC_PATTERN:
 				return basicSetSyncPattern(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -454,17 +454,17 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__UNIT:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__UNIT:
 				return getUnit();
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__POWER:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__POWER:
 				return getPower();
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__CONST_SIZE:
 				return getConstSize();
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_OFFSET:
 				return getSizeFieldOffset();
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_TRIM:
 				return getSizeFieldTrim();
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SYNC_PATTERN:
 				return getSyncPattern();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -478,22 +478,22 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__UNIT:
-				setUnit((GSSIfaceUartProtocolUnit)newValue);
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__UNIT:
+				setUnit((GSSIfacePortProtocolUnit)newValue);
 				return;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__POWER:
-				setPower((GSSIfaceUartProtocolPower)newValue);
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__POWER:
+				setPower((GSSIfacePortProtocolPower)newValue);
 				return;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__CONST_SIZE:
 				setConstSize((GSSIfaceSize)newValue);
 				return;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_OFFSET:
 				setSizeFieldOffset((GSSIfaceSize)newValue);
 				return;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_TRIM:
 				setSizeFieldTrim((GSSIfaceSize)newValue);
 				return;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SYNC_PATTERN:
 				setSyncPattern((GSSIfaceSyncPattern)newValue);
 				return;
 		}
@@ -508,22 +508,22 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__UNIT:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__UNIT:
 				unsetUnit();
 				return;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__POWER:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__POWER:
 				unsetPower();
 				return;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__CONST_SIZE:
 				setConstSize((GSSIfaceSize)null);
 				return;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_OFFSET:
 				setSizeFieldOffset((GSSIfaceSize)null);
 				return;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_TRIM:
 				setSizeFieldTrim((GSSIfaceSize)null);
 				return;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SYNC_PATTERN:
 				setSyncPattern((GSSIfaceSyncPattern)null);
 				return;
 		}
@@ -538,17 +538,17 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__UNIT:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__UNIT:
 				return isSetUnit();
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__POWER:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__POWER:
 				return isSetPower();
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__CONST_SIZE:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__CONST_SIZE:
 				return constSize != null;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_OFFSET:
 				return sizeFieldOffset != null;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_TRIM:
 				return sizeFieldTrim != null;
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN:
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL__SYNC_PATTERN:
 				return syncPattern != null;
 		}
 		return super.eIsSet(featureID);
@@ -572,4 +572,4 @@ public class GSSIfaceUartProtocolImpl extends MinimalEObjectImpl.Container imple
 		return result.toString();
 	}
 
-} //GSSIfaceUartProtocolImpl
+} //GSSIfacePortProtocolImpl

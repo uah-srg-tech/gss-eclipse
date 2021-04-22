@@ -250,7 +250,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSpWTCPort()
 	 * @generated
 	 */
-	int GSS_IFACE_SP_WTC_PORT = 8;
+	int GSS_IFACE_SP_WTC_PORT = 10;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceDummyPortImpl <em>GSS Iface Dummy Port</em>}' class.
@@ -260,7 +260,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceDummyPort()
 	 * @generated
 	 */
-	int GSS_IFACE_DUMMY_PORT = 9;
+	int GSS_IFACE_DUMMY_PORT = 11;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceReadingPortImpl <em>GSS Iface Reading Port</em>}' class.
@@ -354,13 +354,13 @@ public interface ifacePackage extends EPackage {
 	int GSS_IFACE_UART_PORT__FLOW_CONTROL = GSS_IFACE_PORT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Uart Protocol</b></em>' containment reference.
+	 * The feature id for the '<em><b>Port Protocol</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_UART_PORT__UART_PROTOCOL = GSS_IFACE_PORT_FEATURE_COUNT + 6;
+	int GSS_IFACE_UART_PORT__PORT_PROTOCOL = GSS_IFACE_PORT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>GSS Iface Uart Port</em>' class.
@@ -381,14 +381,115 @@ public interface ifacePackage extends EPackage {
 	int GSS_IFACE_UART_PORT_OPERATION_COUNT = GSS_IFACE_PORT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartProtocolImpl <em>GSS Iface Uart Protocol</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSocketSrvPortImpl <em>GSS Iface Socket Srv Port</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceUartProtocolImpl
-	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartProtocol()
+	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceSocketSrvPortImpl
+	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSocketSrvPort()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PROTOCOL = 5;
+	int GSS_IFACE_SOCKET_SRV_PORT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Port Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_SOCKET_SRV_PORT__PORT_NUMBER = GSS_IFACE_PORT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Port Protocol</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_SOCKET_SRV_PORT__PORT_PROTOCOL = GSS_IFACE_PORT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>GSS Iface Socket Srv Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_SOCKET_SRV_PORT_FEATURE_COUNT = GSS_IFACE_PORT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>GSS Iface Socket Srv Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_SOCKET_SRV_PORT_OPERATION_COUNT = GSS_IFACE_PORT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSocketCliPortImpl <em>GSS Iface Socket Cli Port</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceSocketCliPortImpl
+	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSocketCliPort()
+	 * @generated
+	 */
+	int GSS_IFACE_SOCKET_CLI_PORT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Ip Address</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_SOCKET_CLI_PORT__IP_ADDRESS = GSS_IFACE_PORT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Port Number</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_SOCKET_CLI_PORT__PORT_NUMBER = GSS_IFACE_PORT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Port Protocol</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_SOCKET_CLI_PORT__PORT_PROTOCOL = GSS_IFACE_PORT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>GSS Iface Socket Cli Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_SOCKET_CLI_PORT_FEATURE_COUNT = GSS_IFACE_PORT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>GSS Iface Socket Cli Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GSS_IFACE_SOCKET_CLI_PORT_OPERATION_COUNT = GSS_IFACE_PORT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfacePortProtocolImpl <em>GSS Iface Port Protocol</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.gss.iface.impl.GSSIfacePortProtocolImpl
+	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfacePortProtocol()
+	 * @generated
+	 */
+	int GSS_IFACE_PORT_PROTOCOL = 7;
 
 	/**
 	 * The feature id for the '<em><b>Unit</b></em>' attribute.
@@ -397,7 +498,7 @@ public interface ifacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_UART_PROTOCOL__UNIT = 0;
+	int GSS_IFACE_PORT_PROTOCOL__UNIT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Power</b></em>' attribute.
@@ -406,7 +507,7 @@ public interface ifacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_UART_PROTOCOL__POWER = 1;
+	int GSS_IFACE_PORT_PROTOCOL__POWER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Const Size</b></em>' containment reference.
@@ -415,7 +516,7 @@ public interface ifacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_UART_PROTOCOL__CONST_SIZE = 2;
+	int GSS_IFACE_PORT_PROTOCOL__CONST_SIZE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Size Field Offset</b></em>' containment reference.
@@ -424,7 +525,7 @@ public interface ifacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET = 3;
+	int GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_OFFSET = 3;
 
 	/**
 	 * The feature id for the '<em><b>Size Field Trim</b></em>' containment reference.
@@ -433,7 +534,7 @@ public interface ifacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM = 4;
+	int GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_TRIM = 4;
 
 	/**
 	 * The feature id for the '<em><b>Sync Pattern</b></em>' containment reference.
@@ -442,25 +543,25 @@ public interface ifacePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN = 5;
+	int GSS_IFACE_PORT_PROTOCOL__SYNC_PATTERN = 5;
 
 	/**
-	 * The number of structural features of the '<em>GSS Iface Uart Protocol</em>' class.
+	 * The number of structural features of the '<em>GSS Iface Port Protocol</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_UART_PROTOCOL_FEATURE_COUNT = 6;
+	int GSS_IFACE_PORT_PROTOCOL_FEATURE_COUNT = 6;
 
 	/**
-	 * The number of operations of the '<em>GSS Iface Uart Protocol</em>' class.
+	 * The number of operations of the '<em>GSS Iface Port Protocol</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GSS_IFACE_UART_PROTOCOL_OPERATION_COUNT = 0;
+	int GSS_IFACE_PORT_PROTOCOL_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeImpl <em>GSS Iface Size</em>}' class.
@@ -470,7 +571,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSize()
 	 * @generated
 	 */
-	int GSS_IFACE_SIZE = 6;
+	int GSS_IFACE_SIZE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Bytes</b></em>' attribute.
@@ -516,7 +617,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSyncPattern()
 	 * @generated
 	 */
-	int GSS_IFACE_SYNC_PATTERN = 7;
+	int GSS_IFACE_SYNC_PATTERN = 9;
 
 	/**
 	 * The feature id for the '<em><b>Hex Value</b></em>' attribute.
@@ -598,7 +699,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSpWPortType()
 	 * @generated
 	 */
-	int GSS_IFACE_SP_WPORT_TYPE = 10;
+	int GSS_IFACE_SP_WPORT_TYPE = 12;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortBaudRate <em>GSS Iface Uart Port Baud Rate</em>}' enum.
@@ -608,7 +709,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPortBaudRate()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PORT_BAUD_RATE = 11;
+	int GSS_IFACE_UART_PORT_BAUD_RATE = 13;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortParity <em>GSS Iface Uart Port Parity</em>}' enum.
@@ -618,7 +719,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPortParity()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PORT_PARITY = 12;
+	int GSS_IFACE_UART_PORT_PARITY = 14;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortDataBits <em>GSS Iface Uart Port Data Bits</em>}' enum.
@@ -628,7 +729,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPortDataBits()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PORT_DATA_BITS = 13;
+	int GSS_IFACE_UART_PORT_DATA_BITS = 15;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortStopBits <em>GSS Iface Uart Port Stop Bits</em>}' enum.
@@ -638,7 +739,7 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPortStopBits()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PORT_STOP_BITS = 14;
+	int GSS_IFACE_UART_PORT_STOP_BITS = 16;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPortFlowControl <em>GSS Iface Uart Port Flow Control</em>}' enum.
@@ -648,28 +749,27 @@ public interface ifacePackage extends EPackage {
 	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartPortFlowControl()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PORT_FLOW_CONTROL = 15;
+	int GSS_IFACE_UART_PORT_FLOW_CONTROL = 17;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit <em>GSS Iface Uart Protocol Unit</em>}' enum.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocolUnit <em>GSS Iface Port Protocol Unit</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit
-	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartProtocolUnit()
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocolUnit
+	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfacePortProtocolUnit()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PROTOCOL_UNIT = 16;
+	int GSS_IFACE_PORT_PROTOCOL_UNIT = 18;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolPower <em>GSS Iface Uart Protocol Power</em>}' enum.
+	 * The meta object id for the '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocolPower <em>GSS Iface Port Protocol Power</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolPower
-	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartProtocolPower()
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocolPower
+	 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfacePortProtocolPower()
 	 * @generated
 	 */
-	int GSS_IFACE_UART_PROTOCOL_POWER = 17;
-
+	int GSS_IFACE_PORT_PROTOCOL_POWER = 19;
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfacePortConfig <em>GSS Iface Port Config</em>}'.
@@ -833,15 +933,166 @@ public interface ifacePackage extends EPackage {
 	EAttribute getGSSIfaceUartPort_FlowControl();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getUartProtocol <em>Uart Protocol</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getPortProtocol <em>Port Protocol</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Uart Protocol</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getUartProtocol()
+	 * @return the meta object for the containment reference '<em>Port Protocol</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartPort#getPortProtocol()
 	 * @see #getGSSIfaceUartPort()
 	 * @generated
 	 */
-	EReference getGSSIfaceUartPort_UartProtocol();
+	EReference getGSSIfaceUartPort_PortProtocol();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSocketSrvPort <em>GSS Iface Socket Srv Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Iface Socket Srv Port</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSocketSrvPort
+	 * @generated
+	 */
+	EClass getGSSIfaceSocketSrvPort();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceSocketSrvPort#getPortNumber <em>Port Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Port Number</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSocketSrvPort#getPortNumber()
+	 * @see #getGSSIfaceSocketSrvPort()
+	 * @generated
+	 */
+	EAttribute getGSSIfaceSocketSrvPort_PortNumber();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfaceSocketSrvPort#getPortProtocol <em>Port Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Port Protocol</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSocketSrvPort#getPortProtocol()
+	 * @see #getGSSIfaceSocketSrvPort()
+	 * @generated
+	 */
+	EReference getGSSIfaceSocketSrvPort_PortProtocol();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSocketCliPort <em>GSS Iface Socket Cli Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Iface Socket Cli Port</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSocketCliPort
+	 * @generated
+	 */
+	EClass getGSSIfaceSocketCliPort();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceSocketCliPort#getIpAddress <em>Ip Address</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ip Address</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSocketCliPort#getIpAddress()
+	 * @see #getGSSIfaceSocketCliPort()
+	 * @generated
+	 */
+	EAttribute getGSSIfaceSocketCliPort_IpAddress();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceSocketCliPort#getPortNumber <em>Port Number</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Port Number</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSocketCliPort#getPortNumber()
+	 * @see #getGSSIfaceSocketCliPort()
+	 * @generated
+	 */
+	EAttribute getGSSIfaceSocketCliPort_PortNumber();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfaceSocketCliPort#getPortProtocol <em>Port Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Port Protocol</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSocketCliPort#getPortProtocol()
+	 * @see #getGSSIfaceSocketCliPort()
+	 * @generated
+	 */
+	EReference getGSSIfaceSocketCliPort_PortProtocol();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocol <em>GSS Iface Port Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>GSS Iface Port Protocol</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocol
+	 * @generated
+	 */
+	EClass getGSSIfacePortProtocol();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocol#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocol#getUnit()
+	 * @see #getGSSIfacePortProtocol()
+	 * @generated
+	 */
+	EAttribute getGSSIfacePortProtocol_Unit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocol#getPower <em>Power</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Power</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocol#getPower()
+	 * @see #getGSSIfacePortProtocol()
+	 * @generated
+	 */
+	EAttribute getGSSIfacePortProtocol_Power();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocol#getConstSize <em>Const Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Const Size</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocol#getConstSize()
+	 * @see #getGSSIfacePortProtocol()
+	 * @generated
+	 */
+	EReference getGSSIfacePortProtocol_ConstSize();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocol#getSizeFieldOffset <em>Size Field Offset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Size Field Offset</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocol#getSizeFieldOffset()
+	 * @see #getGSSIfacePortProtocol()
+	 * @generated
+	 */
+	EReference getGSSIfacePortProtocol_SizeFieldOffset();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocol#getSizeFieldTrim <em>Size Field Trim</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Size Field Trim</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocol#getSizeFieldTrim()
+	 * @see #getGSSIfacePortProtocol()
+	 * @generated
+	 */
+	EReference getGSSIfacePortProtocol_SizeFieldTrim();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocol#getSyncPattern <em>Sync Pattern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Sync Pattern</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocol#getSyncPattern()
+	 * @see #getGSSIfacePortProtocol()
+	 * @generated
+	 */
+	EReference getGSSIfacePortProtocol_SyncPattern();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSpWTCPort <em>GSS Iface Sp WTC Port</em>}'.
@@ -894,82 +1145,6 @@ public interface ifacePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getGSSIfaceReadingPort_Port();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol <em>GSS Iface Uart Protocol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GSS Iface Uart Protocol</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol
-	 * @generated
-	 */
-	EClass getGSSIfaceUartProtocol();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getUnit <em>Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unit</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getUnit()
-	 * @see #getGSSIfaceUartProtocol()
-	 * @generated
-	 */
-	EAttribute getGSSIfaceUartProtocol_Unit();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getPower <em>Power</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Power</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getPower()
-	 * @see #getGSSIfaceUartProtocol()
-	 * @generated
-	 */
-	EAttribute getGSSIfaceUartProtocol_Power();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getConstSize <em>Const Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Const Size</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getConstSize()
-	 * @see #getGSSIfaceUartProtocol()
-	 * @generated
-	 */
-	EReference getGSSIfaceUartProtocol_ConstSize();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getSizeFieldOffset <em>Size Field Offset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Size Field Offset</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getSizeFieldOffset()
-	 * @see #getGSSIfaceUartProtocol()
-	 * @generated
-	 */
-	EReference getGSSIfaceUartProtocol_SizeFieldOffset();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getSizeFieldTrim <em>Size Field Trim</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Size Field Trim</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getSizeFieldTrim()
-	 * @see #getGSSIfaceUartProtocol()
-	 * @generated
-	 */
-	EReference getGSSIfaceUartProtocol_SizeFieldTrim();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getSyncPattern <em>Sync Pattern</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Sync Pattern</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol#getSyncPattern()
-	 * @see #getGSSIfaceUartProtocol()
-	 * @generated
-	 */
-	EReference getGSSIfaceUartProtocol_SyncPattern();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSize <em>GSS Iface Size</em>}'.
@@ -1085,24 +1260,24 @@ public interface ifacePackage extends EPackage {
 	EEnum getGSSIfaceUartPortFlowControl();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit <em>GSS Iface Uart Protocol Unit</em>}'.
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocolUnit <em>GSS Iface Port Protocol Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GSS Iface Uart Protocol Unit</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit
+	 * @return the meta object for enum '<em>GSS Iface Port Protocol Unit</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocolUnit
 	 * @generated
 	 */
-	EEnum getGSSIfaceUartProtocolUnit();
+	EEnum getGSSIfacePortProtocolUnit();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolPower <em>GSS Iface Uart Protocol Power</em>}'.
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocolPower <em>GSS Iface Port Protocol Power</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>GSS Iface Uart Protocol Power</em>'.
-	 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolPower
+	 * @return the meta object for enum '<em>GSS Iface Port Protocol Power</em>'.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocolPower
 	 * @generated
 	 */
-	EEnum getGSSIfaceUartProtocolPower();
+	EEnum getGSSIfacePortProtocolPower();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1256,12 +1431,130 @@ public interface ifacePackage extends EPackage {
 		EAttribute GSS_IFACE_UART_PORT__FLOW_CONTROL = eINSTANCE.getGSSIfaceUartPort_FlowControl();
 
 		/**
-		 * The meta object literal for the '<em><b>Uart Protocol</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Port Protocol</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GSS_IFACE_UART_PORT__UART_PROTOCOL = eINSTANCE.getGSSIfaceUartPort_UartProtocol();
+		EReference GSS_IFACE_UART_PORT__PORT_PROTOCOL = eINSTANCE.getGSSIfaceUartPort_PortProtocol();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSocketSrvPortImpl <em>GSS Iface Socket Srv Port</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceSocketSrvPortImpl
+		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSocketSrvPort()
+		 * @generated
+		 */
+		EClass GSS_IFACE_SOCKET_SRV_PORT = eINSTANCE.getGSSIfaceSocketSrvPort();
+
+		/**
+		 * The meta object literal for the '<em><b>Port Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_IFACE_SOCKET_SRV_PORT__PORT_NUMBER = eINSTANCE.getGSSIfaceSocketSrvPort_PortNumber();
+
+		/**
+		 * The meta object literal for the '<em><b>Port Protocol</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_IFACE_SOCKET_SRV_PORT__PORT_PROTOCOL = eINSTANCE.getGSSIfaceSocketSrvPort_PortProtocol();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSocketCliPortImpl <em>GSS Iface Socket Cli Port</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceSocketCliPortImpl
+		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceSocketCliPort()
+		 * @generated
+		 */
+		EClass GSS_IFACE_SOCKET_CLI_PORT = eINSTANCE.getGSSIfaceSocketCliPort();
+
+		/**
+		 * The meta object literal for the '<em><b>Ip Address</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_IFACE_SOCKET_CLI_PORT__IP_ADDRESS = eINSTANCE.getGSSIfaceSocketCliPort_IpAddress();
+
+		/**
+		 * The meta object literal for the '<em><b>Port Number</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_IFACE_SOCKET_CLI_PORT__PORT_NUMBER = eINSTANCE.getGSSIfaceSocketCliPort_PortNumber();
+
+		/**
+		 * The meta object literal for the '<em><b>Port Protocol</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_IFACE_SOCKET_CLI_PORT__PORT_PROTOCOL = eINSTANCE.getGSSIfaceSocketCliPort_PortProtocol();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfacePortProtocolImpl <em>GSS Iface Port Protocol</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.gss.iface.impl.GSSIfacePortProtocolImpl
+		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfacePortProtocol()
+		 * @generated
+		 */
+		EClass GSS_IFACE_PORT_PROTOCOL = eINSTANCE.getGSSIfacePortProtocol();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_IFACE_PORT_PROTOCOL__UNIT = eINSTANCE.getGSSIfacePortProtocol_Unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Power</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GSS_IFACE_PORT_PROTOCOL__POWER = eINSTANCE.getGSSIfacePortProtocol_Power();
+
+		/**
+		 * The meta object literal for the '<em><b>Const Size</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_IFACE_PORT_PROTOCOL__CONST_SIZE = eINSTANCE.getGSSIfacePortProtocol_ConstSize();
+
+		/**
+		 * The meta object literal for the '<em><b>Size Field Offset</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_OFFSET = eINSTANCE.getGSSIfacePortProtocol_SizeFieldOffset();
+
+		/**
+		 * The meta object literal for the '<em><b>Size Field Trim</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_IFACE_PORT_PROTOCOL__SIZE_FIELD_TRIM = eINSTANCE.getGSSIfacePortProtocol_SizeFieldTrim();
+
+		/**
+		 * The meta object literal for the '<em><b>Sync Pattern</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GSS_IFACE_PORT_PROTOCOL__SYNC_PATTERN = eINSTANCE.getGSSIfacePortProtocol_SyncPattern();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSpWTCPortImpl <em>GSS Iface Sp WTC Port</em>}' class.
@@ -1308,64 +1601,6 @@ public interface ifacePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GSS_IFACE_READING_PORT__PORT = eINSTANCE.getGSSIfaceReadingPort_Port();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceUartProtocolImpl <em>GSS Iface Uart Protocol</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.iface.impl.GSSIfaceUartProtocolImpl
-		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartProtocol()
-		 * @generated
-		 */
-		EClass GSS_IFACE_UART_PROTOCOL = eINSTANCE.getGSSIfaceUartProtocol();
-
-		/**
-		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_IFACE_UART_PROTOCOL__UNIT = eINSTANCE.getGSSIfaceUartProtocol_Unit();
-
-		/**
-		 * The meta object literal for the '<em><b>Power</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GSS_IFACE_UART_PROTOCOL__POWER = eINSTANCE.getGSSIfaceUartProtocol_Power();
-
-		/**
-		 * The meta object literal for the '<em><b>Const Size</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_IFACE_UART_PROTOCOL__CONST_SIZE = eINSTANCE.getGSSIfaceUartProtocol_ConstSize();
-
-		/**
-		 * The meta object literal for the '<em><b>Size Field Offset</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_OFFSET = eINSTANCE.getGSSIfaceUartProtocol_SizeFieldOffset();
-
-		/**
-		 * The meta object literal for the '<em><b>Size Field Trim</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_IFACE_UART_PROTOCOL__SIZE_FIELD_TRIM = eINSTANCE.getGSSIfaceUartProtocol_SizeFieldTrim();
-
-		/**
-		 * The meta object literal for the '<em><b>Sync Pattern</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GSS_IFACE_UART_PROTOCOL__SYNC_PATTERN = eINSTANCE.getGSSIfaceUartProtocol_SyncPattern();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.impl.GSSIfaceSizeImpl <em>GSS Iface Size</em>}' class.
@@ -1472,24 +1707,24 @@ public interface ifacePackage extends EPackage {
 		EEnum GSS_IFACE_UART_PORT_FLOW_CONTROL = eINSTANCE.getGSSIfaceUartPortFlowControl();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit <em>GSS Iface Uart Protocol Unit</em>}' enum.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocolUnit <em>GSS Iface Port Protocol Unit</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolUnit
-		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartProtocolUnit()
+		 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocolUnit
+		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfacePortProtocolUnit()
 		 * @generated
 		 */
-		EEnum GSS_IFACE_UART_PROTOCOL_UNIT = eINSTANCE.getGSSIfaceUartProtocolUnit();
+		EEnum GSS_IFACE_PORT_PROTOCOL_UNIT = eINSTANCE.getGSSIfacePortProtocolUnit();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolPower <em>GSS Iface Uart Protocol Power</em>}' enum.
+		 * The meta object literal for the '{@link es.uah.aut.srg.gss.iface.GSSIfacePortProtocolPower <em>GSS Iface Port Protocol Power</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.gss.iface.GSSIfaceUartProtocolPower
-		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfaceUartProtocolPower()
+		 * @see es.uah.aut.srg.gss.iface.GSSIfacePortProtocolPower
+		 * @see es.uah.aut.srg.gss.iface.impl.ifacePackageImpl#getGSSIfacePortProtocolPower()
 		 * @generated
 		 */
-		EEnum GSS_IFACE_UART_PROTOCOL_POWER = eINSTANCE.getGSSIfaceUartProtocolPower();
+		EEnum GSS_IFACE_PORT_PROTOCOL_POWER = eINSTANCE.getGSSIfacePortProtocolPower();
 
 	}
 

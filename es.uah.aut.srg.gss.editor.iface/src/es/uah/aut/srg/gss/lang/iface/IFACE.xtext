@@ -25,6 +25,7 @@ GSSIfacePortConfig returns GSSIfacePortConfig:
 
 GSSIfacePort returns GSSIfacePort:
 	GSSIfaceSpWPort | GSSIfaceUartPort |
+	GSSIfaceSocketSrvPort | GSSIfaceSocketCliPort |
 	GSSIfaceSpWTCPort | GSSIfaceDummyPort
 ;
 
@@ -56,7 +57,7 @@ GSSIfaceUartPort returns GSSIfaceUartPort:
 		'dataBits' ':=' dataBits=GSSIfaceUartPortDataBits ';'
 		'stopBits' ':=' stopBits=GSSIfaceUartPortStopBits ';'
 		'flowControl' ':=' flowControl=GSSIfaceUartPortFlowControl ';'
-		uartProtocol=GSSIfaceUartProtocol
+		portProtocol=GSSIfacePortProtocol
 	'}' ';'
 ;
 
@@ -78,14 +79,29 @@ enum GSSIfaceUartPortStopBits returns GSSIfaceUartPortStopBits:
 	_1 = '1bit' | _2 = '2bits'
 ;
 
+GSSIfaceSocketSrvPort returns GSSIfaceSocketSrvPort:
+	'socketSrvPort' '{'
+		'portNumber' ':=' portNumber=INTEGER ';'
+		portProtocol=GSSIfacePortProtocol
+	'}' ';'
+;
+
+GSSIfaceSocketCliPort returns GSSIfaceSocketCliPort:
+	'socketCliPort' '{'
+		'ipAddress' ':=' ipAddress=STRING ';'
+		'portNumber' ':=' portNumber=INTEGER ';'
+		portProtocol=GSSIfacePortProtocol
+	'}' ';'
+;
+
 enum GSSIfaceUartPortFlowControl returns GSSIfaceUartPortFlowControl:
 	rts_cts = 'rts_cts' | xon_xoff = 'xon_xoff'
 ;
 
-GSSIfaceUartProtocol returns GSSIfaceUartProtocol:
-	'uartProtocol' '{'
-		'unit' ':=' unit=GSSIfaceUartProtocolUnit ';'
-		'power' ':=' power=GSSIfaceUartProtocolPower ';'
+GSSIfacePortProtocol returns GSSIfacePortProtocol:
+	'portProtocol' '{'
+		'unit' ':=' unit=GSSIfacePortProtocolUnit ';'
+		'power' ':=' power=GSSIfacePortProtocolPower ';'
 		constSize=GSSIfaceConstSize
 		sizeFieldOffset=GSSIfaceSizeFieldOffset
 		sizeFieldTrim=GSSIfaceSizeFieldTrim
@@ -120,11 +136,11 @@ GSSIfaceSyncPattern returns GSSIfaceSyncPattern:
 	'}' ';'
 ;
 
-enum GSSIfaceUartProtocolUnit returns GSSIfaceUartProtocolUnit:
+enum GSSIfacePortProtocolUnit returns GSSIfacePortProtocolUnit:
 	bytes = 'bytes' | bits = 'bits'
 ;
 
-enum GSSIfaceUartProtocolPower returns GSSIfaceUartProtocolPower:
+enum GSSIfacePortProtocolPower returns GSSIfacePortProtocolPower:
 	no = 'no' | _2 = '2bits' | _2_with_0 = '2_with_0'
 ;
 

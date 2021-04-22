@@ -2744,6 +2744,8 @@ public class scenarioPackageImpl extends EPackageImpl implements scenarioPackage
 		addEEnumLiteral(gssScenarioInterfaceTypeEEnum, GSSScenarioInterfaceType.SP_WERROR);
 		addEEnumLiteral(gssScenarioInterfaceTypeEEnum, GSSScenarioInterfaceType.UART);
 		addEEnumLiteral(gssScenarioInterfaceTypeEEnum, GSSScenarioInterfaceType.DUMMY);
+		addEEnumLiteral(gssScenarioInterfaceTypeEEnum, GSSScenarioInterfaceType.SOCKET_SRV);
+		addEEnumLiteral(gssScenarioInterfaceTypeEEnum, GSSScenarioInterfaceType.SOCKET_CLI);
 
 		initEEnum(gssScenarioInterfaceIOTypeEEnum, GSSScenarioInterfaceIOType.class, "GSSScenarioInterfaceIOType");
 		addEEnumLiteral(gssScenarioInterfaceIOTypeEEnum, GSSScenarioInterfaceIOType.IN_OUT);

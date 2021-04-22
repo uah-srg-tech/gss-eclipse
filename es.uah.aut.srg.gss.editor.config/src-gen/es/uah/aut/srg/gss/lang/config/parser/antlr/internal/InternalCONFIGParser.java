@@ -34,7 +34,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalCONFIGParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSConfigGSSConfig'", "'{'", "'uri'", "'version'", "'}'", "'GSSScenarioScenario'", "'GSSScenarioOptions'", "'GSSScenarioProtocols'", "'GSSScenarioInterfaces'", "'ProtocolPacketsFile'", "'GSSScenarioSpecialPackets'", "'GSSScenarioPeriodicTCs'", "'GSSScenarioGlobalVars'", "'GSSScenarioMonitors'", "'ChartsFile'", "'GSSScenarioInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSScenarioInfoPrint'", "'mainLog'", "'portLogs'", "'rawLog'", "'GSSScenarioPhyHeaderPrint'", "'gssTabs'", "'GSSScenarioDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSScenarioProtocol'", "'id'", "'name'", "'typeLevel'", "'GSSScenarioProtocolType'", "'offset'", "'GSSScenarioProtocolSubtype'", "'GSSScenarioMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSScenarioInterface'", "'GSSScenarioLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSScenarioLevelIn'", "'GSSScenarioLevelOut'", "'GSSScenarioSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSScenarioUpperLevels'", "'GSSScenarioPrintingData'", "'printStatus'", "'GSSScenarioPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSScenarioIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSScenarioUpperLevel'", "'level'", "'GSSScenarioStructuredData'", "'firstField'", "'GSSScenarioPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'level2'", "'app_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSScenarioPeriodicTCLevel1'", "'app_to_level1'", "'GSSScenarioPeriodicTCLevel0'", "'app_to_level0'", "'GSSScenarioGlobalVar'", "'type'", "'initial_value'", "'GSSScenarioReferenceField'", "'fieldRef'", "'size'", "'GSSScenarioReferencePeriodicTC'", "'idRef'", "'GSSScenarioReferenceSpecialPacket'", "'GSSScenarioPlot'", "'chartRef'", "'GSSScenarioAlarmMsg'", "'text'", "'GSSScenarioModify'", "'value'", "'GSSScenarioAlarmVal'", "'GSSScenarioGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSScenarioGVPeriodic'", "'GSSTestListTestList'", "'GSSTestListTestCase'", "'procedure'", "'prevMsg'", "'prevAction'", "'prevActionParam'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'+'", "'://'", "'disabled'", "'enabled'", "'SpW'", "'SpW_TC'", "'SpW_Error'", "'uart'", "'dummy'", "'in_out'", "'in'", "'out'", "'_1'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm1'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'", "'1'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSConfigGSSConfig'", "'{'", "'uri'", "'version'", "'}'", "'GSSScenarioScenario'", "'GSSScenarioOptions'", "'GSSScenarioProtocols'", "'GSSScenarioInterfaces'", "'ProtocolPacketsFile'", "'GSSScenarioSpecialPackets'", "'GSSScenarioPeriodicTCs'", "'GSSScenarioGlobalVars'", "'GSSScenarioMonitors'", "'ChartsFile'", "'GSSScenarioInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSScenarioInfoPrint'", "'mainLog'", "'portLogs'", "'rawLog'", "'GSSScenarioPhyHeaderPrint'", "'gssTabs'", "'GSSScenarioDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSScenarioProtocol'", "'id'", "'name'", "'typeLevel'", "'GSSScenarioProtocolType'", "'offset'", "'GSSScenarioProtocolSubtype'", "'GSSScenarioMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSScenarioInterface'", "'GSSScenarioLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSScenarioLevelIn'", "'GSSScenarioLevelOut'", "'GSSScenarioSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSScenarioUpperLevels'", "'GSSScenarioPrintingData'", "'printStatus'", "'GSSScenarioPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSScenarioIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSScenarioUpperLevel'", "'level'", "'GSSScenarioStructuredData'", "'firstField'", "'GSSScenarioPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'level2'", "'app_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSScenarioPeriodicTCLevel1'", "'app_to_level1'", "'GSSScenarioPeriodicTCLevel0'", "'app_to_level0'", "'GSSScenarioGlobalVar'", "'type'", "'initial_value'", "'GSSScenarioReferenceField'", "'fieldRef'", "'size'", "'GSSScenarioReferencePeriodicTC'", "'idRef'", "'GSSScenarioReferenceSpecialPacket'", "'GSSScenarioPlot'", "'chartRef'", "'GSSScenarioAlarmMsg'", "'text'", "'GSSScenarioModify'", "'value'", "'GSSScenarioAlarmVal'", "'GSSScenarioGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSScenarioGVPeriodic'", "'GSSTestListTestList'", "'GSSTestListTestCase'", "'procedure'", "'prevMsg'", "'prevAction'", "'prevActionParam'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'+'", "'://'", "'disabled'", "'enabled'", "'SpW'", "'SpW_TC'", "'SpW_Error'", "'uart'", "'socketSrv'", "'socketCli'", "'dummy'", "'in_out'", "'in'", "'out'", "'_1'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm1'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'", "'1'"
     };
     public static final int T__144=144;
     public static final int T__143=143;
@@ -82,6 +82,8 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
     public static final int T__128=128;
     public static final int T__65=65;
     public static final int T__127=127;
+    public static final int T__161=161;
+    public static final int T__160=160;
     public static final int T__37=37;
     public static final int T__38=38;
     public static final int T__39=39;
@@ -16730,11 +16732,11 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             if ( (LA51_0==RULE_INT) ) {
                 int LA51_1 = input.LA(2);
 
-                if ( (LA51_1==EOF||LA51_1==14||LA51_1==127||LA51_1==129) ) {
-                    alt51=1;
-                }
-                else if ( (LA51_1==RULE_ID) ) {
+                if ( (LA51_1==RULE_ID) ) {
                     alt51=2;
+                }
+                else if ( (LA51_1==EOF||LA51_1==14||LA51_1==127||LA51_1==129) ) {
+                    alt51=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -17973,7 +17975,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioInterfaceType"
-    // InternalCONFIG.g:7594:1: ruleGSSScenarioInterfaceType returns [Enumerator current=null] : ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) ) ;
+    // InternalCONFIG.g:7594:1: ruleGSSScenarioInterfaceType returns [Enumerator current=null] : ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'socketSrv' ) | (enumLiteral_5= 'socketCli' ) | (enumLiteral_6= 'dummy' ) ) ;
     public final Enumerator ruleGSSScenarioInterfaceType() throws RecognitionException {
         Enumerator current = null;
 
@@ -17982,16 +17984,18 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         Token enumLiteral_2=null;
         Token enumLiteral_3=null;
         Token enumLiteral_4=null;
+        Token enumLiteral_5=null;
+        Token enumLiteral_6=null;
 
 
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7600:2: ( ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) ) )
-            // InternalCONFIG.g:7601:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) )
+            // InternalCONFIG.g:7600:2: ( ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'socketSrv' ) | (enumLiteral_5= 'socketCli' ) | (enumLiteral_6= 'dummy' ) ) )
+            // InternalCONFIG.g:7601:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'socketSrv' ) | (enumLiteral_5= 'socketCli' ) | (enumLiteral_6= 'dummy' ) )
             {
-            // InternalCONFIG.g:7601:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) )
-            int alt65=5;
+            // InternalCONFIG.g:7601:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'socketSrv' ) | (enumLiteral_5= 'socketCli' ) | (enumLiteral_6= 'dummy' ) )
+            int alt65=7;
             switch ( input.LA(1) ) {
             case 137:
                 {
@@ -18016,6 +18020,16 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             case 141:
                 {
                 alt65=5;
+                }
+                break;
+            case 142:
+                {
+                alt65=6;
+                }
+                break;
+            case 143:
+                {
+                alt65=7;
                 }
                 break;
             default:
@@ -18104,16 +18118,54 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalCONFIG.g:7634:3: (enumLiteral_4= 'dummy' )
+                    // InternalCONFIG.g:7634:3: (enumLiteral_4= 'socketSrv' )
                     {
-                    // InternalCONFIG.g:7634:3: (enumLiteral_4= 'dummy' )
-                    // InternalCONFIG.g:7635:4: enumLiteral_4= 'dummy'
+                    // InternalCONFIG.g:7634:3: (enumLiteral_4= 'socketSrv' )
+                    // InternalCONFIG.g:7635:4: enumLiteral_4= 'socketSrv'
                     {
                     enumLiteral_4=(Token)match(input,141,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				current = grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_4, grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_4());
+                      				current = grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketSrvEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_4, grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketSrvEnumLiteralDeclaration_4());
+                      			
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 6 :
+                    // InternalCONFIG.g:7642:3: (enumLiteral_5= 'socketCli' )
+                    {
+                    // InternalCONFIG.g:7642:3: (enumLiteral_5= 'socketCli' )
+                    // InternalCONFIG.g:7643:4: enumLiteral_5= 'socketCli'
+                    {
+                    enumLiteral_5=(Token)match(input,142,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				current = grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketCliEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_5, grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketCliEnumLiteralDeclaration_5());
+                      			
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 7 :
+                    // InternalCONFIG.g:7650:3: (enumLiteral_6= 'dummy' )
+                    {
+                    // InternalCONFIG.g:7650:3: (enumLiteral_6= 'dummy' )
+                    // InternalCONFIG.g:7651:4: enumLiteral_6= 'dummy'
+                    {
+                    enumLiteral_6=(Token)match(input,143,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				current = grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_6, grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_6());
                       			
                     }
 
@@ -18147,7 +18199,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioInterfaceIOType"
-    // InternalCONFIG.g:7645:1: ruleGSSScenarioInterfaceIOType returns [Enumerator current=null] : ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) ) ;
+    // InternalCONFIG.g:7661:1: ruleGSSScenarioInterfaceIOType returns [Enumerator current=null] : ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) ) ;
     public final Enumerator ruleGSSScenarioInterfaceIOType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18159,23 +18211,23 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7651:2: ( ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) ) )
-            // InternalCONFIG.g:7652:2: ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) )
+            // InternalCONFIG.g:7667:2: ( ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) ) )
+            // InternalCONFIG.g:7668:2: ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) )
             {
-            // InternalCONFIG.g:7652:2: ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) )
+            // InternalCONFIG.g:7668:2: ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) )
             int alt66=3;
             switch ( input.LA(1) ) {
-            case 142:
+            case 144:
                 {
                 alt66=1;
                 }
                 break;
-            case 143:
+            case 145:
                 {
                 alt66=2;
                 }
                 break;
-            case 144:
+            case 146:
                 {
                 alt66=3;
                 }
@@ -18190,12 +18242,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             switch (alt66) {
                 case 1 :
-                    // InternalCONFIG.g:7653:3: (enumLiteral_0= 'in_out' )
+                    // InternalCONFIG.g:7669:3: (enumLiteral_0= 'in_out' )
                     {
-                    // InternalCONFIG.g:7653:3: (enumLiteral_0= 'in_out' )
-                    // InternalCONFIG.g:7654:4: enumLiteral_0= 'in_out'
+                    // InternalCONFIG.g:7669:3: (enumLiteral_0= 'in_out' )
+                    // InternalCONFIG.g:7670:4: enumLiteral_0= 'in_out'
                     {
-                    enumLiteral_0=(Token)match(input,142,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,144,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioInterfaceIOTypeAccess().getIn_outEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -18209,12 +18261,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7661:3: (enumLiteral_1= 'in' )
+                    // InternalCONFIG.g:7677:3: (enumLiteral_1= 'in' )
                     {
-                    // InternalCONFIG.g:7661:3: (enumLiteral_1= 'in' )
-                    // InternalCONFIG.g:7662:4: enumLiteral_1= 'in'
+                    // InternalCONFIG.g:7677:3: (enumLiteral_1= 'in' )
+                    // InternalCONFIG.g:7678:4: enumLiteral_1= 'in'
                     {
-                    enumLiteral_1=(Token)match(input,143,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,145,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioInterfaceIOTypeAccess().getInEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -18228,12 +18280,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalCONFIG.g:7669:3: (enumLiteral_2= 'out' )
+                    // InternalCONFIG.g:7685:3: (enumLiteral_2= 'out' )
                     {
-                    // InternalCONFIG.g:7669:3: (enumLiteral_2= 'out' )
-                    // InternalCONFIG.g:7670:4: enumLiteral_2= 'out'
+                    // InternalCONFIG.g:7685:3: (enumLiteral_2= 'out' )
+                    // InternalCONFIG.g:7686:4: enumLiteral_2= 'out'
                     {
-                    enumLiteral_2=(Token)match(input,144,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,146,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioInterfaceIOTypeAccess().getOutEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -18271,7 +18323,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioUpperLevelLevel"
-    // InternalCONFIG.g:7680:1: ruleGSSScenarioUpperLevelLevel returns [Enumerator current=null] : ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) ) ;
+    // InternalCONFIG.g:7696:1: ruleGSSScenarioUpperLevelLevel returns [Enumerator current=null] : ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) ) ;
     public final Enumerator ruleGSSScenarioUpperLevelLevel() throws RecognitionException {
         Enumerator current = null;
 
@@ -18283,23 +18335,23 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7686:2: ( ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) ) )
-            // InternalCONFIG.g:7687:2: ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) )
+            // InternalCONFIG.g:7702:2: ( ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) ) )
+            // InternalCONFIG.g:7703:2: ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) )
             {
-            // InternalCONFIG.g:7687:2: ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) )
+            // InternalCONFIG.g:7703:2: ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) )
             int alt67=3;
             switch ( input.LA(1) ) {
-            case 145:
+            case 147:
                 {
                 alt67=1;
                 }
                 break;
-            case 146:
+            case 148:
                 {
                 alt67=2;
                 }
                 break;
-            case 147:
+            case 149:
                 {
                 alt67=3;
                 }
@@ -18314,12 +18366,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             switch (alt67) {
                 case 1 :
-                    // InternalCONFIG.g:7688:3: (enumLiteral_0= '_1' )
+                    // InternalCONFIG.g:7704:3: (enumLiteral_0= '_1' )
                     {
-                    // InternalCONFIG.g:7688:3: (enumLiteral_0= '_1' )
-                    // InternalCONFIG.g:7689:4: enumLiteral_0= '_1'
+                    // InternalCONFIG.g:7704:3: (enumLiteral_0= '_1' )
+                    // InternalCONFIG.g:7705:4: enumLiteral_0= '_1'
                     {
-                    enumLiteral_0=(Token)match(input,145,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,147,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioUpperLevelLevelAccess().get_1EnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -18333,12 +18385,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7696:3: (enumLiteral_1= '_2' )
+                    // InternalCONFIG.g:7712:3: (enumLiteral_1= '_2' )
                     {
-                    // InternalCONFIG.g:7696:3: (enumLiteral_1= '_2' )
-                    // InternalCONFIG.g:7697:4: enumLiteral_1= '_2'
+                    // InternalCONFIG.g:7712:3: (enumLiteral_1= '_2' )
+                    // InternalCONFIG.g:7713:4: enumLiteral_1= '_2'
                     {
-                    enumLiteral_1=(Token)match(input,146,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,148,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioUpperLevelLevelAccess().get_2EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -18352,12 +18404,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalCONFIG.g:7704:3: (enumLiteral_2= '_3' )
+                    // InternalCONFIG.g:7720:3: (enumLiteral_2= '_3' )
                     {
-                    // InternalCONFIG.g:7704:3: (enumLiteral_2= '_3' )
-                    // InternalCONFIG.g:7705:4: enumLiteral_2= '_3'
+                    // InternalCONFIG.g:7720:3: (enumLiteral_2= '_3' )
+                    // InternalCONFIG.g:7721:4: enumLiteral_2= '_3'
                     {
-                    enumLiteral_2=(Token)match(input,147,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,149,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioUpperLevelLevelAccess().get_3EnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -18395,7 +18447,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioUnit"
-    // InternalCONFIG.g:7715:1: ruleGSSScenarioUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) ;
+    // InternalCONFIG.g:7731:1: ruleGSSScenarioUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) ;
     public final Enumerator ruleGSSScenarioUnit() throws RecognitionException {
         Enumerator current = null;
 
@@ -18406,17 +18458,17 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7721:2: ( ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) )
-            // InternalCONFIG.g:7722:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
+            // InternalCONFIG.g:7737:2: ( ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) )
+            // InternalCONFIG.g:7738:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
             {
-            // InternalCONFIG.g:7722:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
+            // InternalCONFIG.g:7738:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
             int alt68=2;
             int LA68_0 = input.LA(1);
 
-            if ( (LA68_0==148) ) {
+            if ( (LA68_0==150) ) {
                 alt68=1;
             }
-            else if ( (LA68_0==149) ) {
+            else if ( (LA68_0==151) ) {
                 alt68=2;
             }
             else {
@@ -18428,12 +18480,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt68) {
                 case 1 :
-                    // InternalCONFIG.g:7723:3: (enumLiteral_0= 'miliseconds' )
+                    // InternalCONFIG.g:7739:3: (enumLiteral_0= 'miliseconds' )
                     {
-                    // InternalCONFIG.g:7723:3: (enumLiteral_0= 'miliseconds' )
-                    // InternalCONFIG.g:7724:4: enumLiteral_0= 'miliseconds'
+                    // InternalCONFIG.g:7739:3: (enumLiteral_0= 'miliseconds' )
+                    // InternalCONFIG.g:7740:4: enumLiteral_0= 'miliseconds'
                     {
-                    enumLiteral_0=(Token)match(input,148,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,150,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioUnitAccess().getMilisecondsEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -18447,12 +18499,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7731:3: (enumLiteral_1= 'seconds' )
+                    // InternalCONFIG.g:7747:3: (enumLiteral_1= 'seconds' )
                     {
-                    // InternalCONFIG.g:7731:3: (enumLiteral_1= 'seconds' )
-                    // InternalCONFIG.g:7732:4: enumLiteral_1= 'seconds'
+                    // InternalCONFIG.g:7747:3: (enumLiteral_1= 'seconds' )
+                    // InternalCONFIG.g:7748:4: enumLiteral_1= 'seconds'
                     {
-                    enumLiteral_1=(Token)match(input,149,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,151,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioUnitAccess().getSecondsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -18490,7 +18542,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioGlobalVarType"
-    // InternalCONFIG.g:7742:1: ruleGSSScenarioGlobalVarType returns [Enumerator current=null] : ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) ) ;
+    // InternalCONFIG.g:7758:1: ruleGSSScenarioGlobalVarType returns [Enumerator current=null] : ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) ) ;
     public final Enumerator ruleGSSScenarioGlobalVarType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18501,17 +18553,17 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7748:2: ( ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) ) )
-            // InternalCONFIG.g:7749:2: ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) )
+            // InternalCONFIG.g:7764:2: ( ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) ) )
+            // InternalCONFIG.g:7765:2: ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) )
             {
-            // InternalCONFIG.g:7749:2: ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) )
+            // InternalCONFIG.g:7765:2: ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) )
             int alt69=2;
             int LA69_0 = input.LA(1);
 
-            if ( (LA69_0==150) ) {
+            if ( (LA69_0==152) ) {
                 alt69=1;
             }
-            else if ( (LA69_0==151) ) {
+            else if ( (LA69_0==153) ) {
                 alt69=2;
             }
             else {
@@ -18523,12 +18575,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt69) {
                 case 1 :
-                    // InternalCONFIG.g:7750:3: (enumLiteral_0= 'uint' )
+                    // InternalCONFIG.g:7766:3: (enumLiteral_0= 'uint' )
                     {
-                    // InternalCONFIG.g:7750:3: (enumLiteral_0= 'uint' )
-                    // InternalCONFIG.g:7751:4: enumLiteral_0= 'uint'
+                    // InternalCONFIG.g:7766:3: (enumLiteral_0= 'uint' )
+                    // InternalCONFIG.g:7767:4: enumLiteral_0= 'uint'
                     {
-                    enumLiteral_0=(Token)match(input,150,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,152,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioGlobalVarTypeAccess().getUintEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -18542,12 +18594,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7758:3: (enumLiteral_1= 'formula' )
+                    // InternalCONFIG.g:7774:3: (enumLiteral_1= 'formula' )
                     {
-                    // InternalCONFIG.g:7758:3: (enumLiteral_1= 'formula' )
-                    // InternalCONFIG.g:7759:4: enumLiteral_1= 'formula'
+                    // InternalCONFIG.g:7774:3: (enumLiteral_1= 'formula' )
+                    // InternalCONFIG.g:7775:4: enumLiteral_1= 'formula'
                     {
-                    enumLiteral_1=(Token)match(input,151,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,153,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioGlobalVarTypeAccess().getFormulaEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -18585,7 +18637,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioReferenceFieldType"
-    // InternalCONFIG.g:7769:1: ruleGSSScenarioReferenceFieldType returns [Enumerator current=null] : ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) ) ;
+    // InternalCONFIG.g:7785:1: ruleGSSScenarioReferenceFieldType returns [Enumerator current=null] : ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) ) ;
     public final Enumerator ruleGSSScenarioReferenceFieldType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18596,17 +18648,17 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7775:2: ( ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) ) )
-            // InternalCONFIG.g:7776:2: ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) )
+            // InternalCONFIG.g:7791:2: ( ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) ) )
+            // InternalCONFIG.g:7792:2: ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) )
             {
-            // InternalCONFIG.g:7776:2: ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) )
+            // InternalCONFIG.g:7792:2: ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) )
             int alt70=2;
             int LA70_0 = input.LA(1);
 
-            if ( (LA70_0==152) ) {
+            if ( (LA70_0==154) ) {
                 alt70=1;
             }
-            else if ( (LA70_0==153) ) {
+            else if ( (LA70_0==155) ) {
                 alt70=2;
             }
             else {
@@ -18618,12 +18670,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt70) {
                 case 1 :
-                    // InternalCONFIG.g:7777:3: (enumLiteral_0= 'tm' )
+                    // InternalCONFIG.g:7793:3: (enumLiteral_0= 'tm' )
                     {
-                    // InternalCONFIG.g:7777:3: (enumLiteral_0= 'tm' )
-                    // InternalCONFIG.g:7778:4: enumLiteral_0= 'tm'
+                    // InternalCONFIG.g:7793:3: (enumLiteral_0= 'tm' )
+                    // InternalCONFIG.g:7794:4: enumLiteral_0= 'tm'
                     {
-                    enumLiteral_0=(Token)match(input,152,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,154,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioReferenceFieldTypeAccess().getTmEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -18637,12 +18689,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7785:3: (enumLiteral_1= 'tc' )
+                    // InternalCONFIG.g:7801:3: (enumLiteral_1= 'tc' )
                     {
-                    // InternalCONFIG.g:7785:3: (enumLiteral_1= 'tc' )
-                    // InternalCONFIG.g:7786:4: enumLiteral_1= 'tc'
+                    // InternalCONFIG.g:7801:3: (enumLiteral_1= 'tc' )
+                    // InternalCONFIG.g:7802:4: enumLiteral_1= 'tc'
                     {
-                    enumLiteral_1=(Token)match(input,153,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,155,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioReferenceFieldTypeAccess().getTcEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -18680,7 +18732,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioAlarmMsgType"
-    // InternalCONFIG.g:7796:1: ruleGSSScenarioAlarmMsgType returns [Enumerator current=null] : ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) ) ;
+    // InternalCONFIG.g:7812:1: ruleGSSScenarioAlarmMsgType returns [Enumerator current=null] : ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) ) ;
     public final Enumerator ruleGSSScenarioAlarmMsgType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18692,23 +18744,23 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7802:2: ( ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) ) )
-            // InternalCONFIG.g:7803:2: ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) )
+            // InternalCONFIG.g:7818:2: ( ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) ) )
+            // InternalCONFIG.g:7819:2: ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) )
             {
-            // InternalCONFIG.g:7803:2: ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) )
+            // InternalCONFIG.g:7819:2: ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) )
             int alt71=3;
             switch ( input.LA(1) ) {
-            case 154:
+            case 156:
                 {
                 alt71=1;
                 }
                 break;
-            case 155:
+            case 157:
                 {
                 alt71=2;
                 }
                 break;
-            case 156:
+            case 158:
                 {
                 alt71=3;
                 }
@@ -18723,12 +18775,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
             switch (alt71) {
                 case 1 :
-                    // InternalCONFIG.g:7804:3: (enumLiteral_0= 'alarm1' )
+                    // InternalCONFIG.g:7820:3: (enumLiteral_0= 'alarm1' )
                     {
-                    // InternalCONFIG.g:7804:3: (enumLiteral_0= 'alarm1' )
-                    // InternalCONFIG.g:7805:4: enumLiteral_0= 'alarm1'
+                    // InternalCONFIG.g:7820:3: (enumLiteral_0= 'alarm1' )
+                    // InternalCONFIG.g:7821:4: enumLiteral_0= 'alarm1'
                     {
-                    enumLiteral_0=(Token)match(input,154,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,156,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioAlarmMsgTypeAccess().getAlarm1EnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -18742,12 +18794,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7812:3: (enumLiteral_1= 'alarm2' )
+                    // InternalCONFIG.g:7828:3: (enumLiteral_1= 'alarm2' )
                     {
-                    // InternalCONFIG.g:7812:3: (enumLiteral_1= 'alarm2' )
-                    // InternalCONFIG.g:7813:4: enumLiteral_1= 'alarm2'
+                    // InternalCONFIG.g:7828:3: (enumLiteral_1= 'alarm2' )
+                    // InternalCONFIG.g:7829:4: enumLiteral_1= 'alarm2'
                     {
-                    enumLiteral_1=(Token)match(input,155,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,157,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioAlarmMsgTypeAccess().getAlarm2EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -18761,12 +18813,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalCONFIG.g:7820:3: (enumLiteral_2= 'alarm3' )
+                    // InternalCONFIG.g:7836:3: (enumLiteral_2= 'alarm3' )
                     {
-                    // InternalCONFIG.g:7820:3: (enumLiteral_2= 'alarm3' )
-                    // InternalCONFIG.g:7821:4: enumLiteral_2= 'alarm3'
+                    // InternalCONFIG.g:7836:3: (enumLiteral_2= 'alarm3' )
+                    // InternalCONFIG.g:7837:4: enumLiteral_2= 'alarm3'
                     {
-                    enumLiteral_2=(Token)match(input,156,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,158,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioAlarmMsgTypeAccess().getAlarm3EnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -18804,7 +18856,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioModifyType"
-    // InternalCONFIG.g:7831:1: ruleGSSScenarioModifyType returns [Enumerator current=null] : ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) ) ;
+    // InternalCONFIG.g:7847:1: ruleGSSScenarioModifyType returns [Enumerator current=null] : ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) ) ;
     public final Enumerator ruleGSSScenarioModifyType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18815,17 +18867,17 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7837:2: ( ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) ) )
-            // InternalCONFIG.g:7838:2: ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) )
+            // InternalCONFIG.g:7853:2: ( ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) ) )
+            // InternalCONFIG.g:7854:2: ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) )
             {
-            // InternalCONFIG.g:7838:2: ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) )
+            // InternalCONFIG.g:7854:2: ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) )
             int alt72=2;
             int LA72_0 = input.LA(1);
 
-            if ( (LA72_0==157) ) {
+            if ( (LA72_0==159) ) {
                 alt72=1;
             }
-            else if ( (LA72_0==158) ) {
+            else if ( (LA72_0==160) ) {
                 alt72=2;
             }
             else {
@@ -18837,12 +18889,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
             }
             switch (alt72) {
                 case 1 :
-                    // InternalCONFIG.g:7839:3: (enumLiteral_0= 'increment' )
+                    // InternalCONFIG.g:7855:3: (enumLiteral_0= 'increment' )
                     {
-                    // InternalCONFIG.g:7839:3: (enumLiteral_0= 'increment' )
-                    // InternalCONFIG.g:7840:4: enumLiteral_0= 'increment'
+                    // InternalCONFIG.g:7855:3: (enumLiteral_0= 'increment' )
+                    // InternalCONFIG.g:7856:4: enumLiteral_0= 'increment'
                     {
-                    enumLiteral_0=(Token)match(input,157,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,159,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioModifyTypeAccess().getIncrementEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -18856,12 +18908,12 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalCONFIG.g:7847:3: (enumLiteral_1= 'increment1wrap' )
+                    // InternalCONFIG.g:7863:3: (enumLiteral_1= 'increment1wrap' )
                     {
-                    // InternalCONFIG.g:7847:3: (enumLiteral_1= 'increment1wrap' )
-                    // InternalCONFIG.g:7848:4: enumLiteral_1= 'increment1wrap'
+                    // InternalCONFIG.g:7863:3: (enumLiteral_1= 'increment1wrap' )
+                    // InternalCONFIG.g:7864:4: enumLiteral_1= 'increment1wrap'
                     {
-                    enumLiteral_1=(Token)match(input,158,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,160,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioModifyTypeAccess().getIncrement1wrapEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -18899,7 +18951,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioAlarmValType"
-    // InternalCONFIG.g:7858:1: ruleGSSScenarioAlarmValType returns [Enumerator current=null] : (enumLiteral_0= 'alarm1' ) ;
+    // InternalCONFIG.g:7874:1: ruleGSSScenarioAlarmValType returns [Enumerator current=null] : (enumLiteral_0= 'alarm1' ) ;
     public final Enumerator ruleGSSScenarioAlarmValType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18909,13 +18961,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7864:2: ( (enumLiteral_0= 'alarm1' ) )
-            // InternalCONFIG.g:7865:2: (enumLiteral_0= 'alarm1' )
+            // InternalCONFIG.g:7880:2: ( (enumLiteral_0= 'alarm1' ) )
+            // InternalCONFIG.g:7881:2: (enumLiteral_0= 'alarm1' )
             {
-            // InternalCONFIG.g:7865:2: (enumLiteral_0= 'alarm1' )
-            // InternalCONFIG.g:7866:3: enumLiteral_0= 'alarm1'
+            // InternalCONFIG.g:7881:2: (enumLiteral_0= 'alarm1' )
+            // InternalCONFIG.g:7882:3: enumLiteral_0= 'alarm1'
             {
-            enumLiteral_0=(Token)match(input,154,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,156,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current = grammarAccess.getGSSScenarioAlarmValTypeAccess().getAlarm1EnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -18947,7 +18999,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSTestListPrevAction"
-    // InternalCONFIG.g:7875:1: ruleGSSTestListPrevAction returns [Enumerator current=null] : (enumLiteral_0= '1' ) ;
+    // InternalCONFIG.g:7891:1: ruleGSSTestListPrevAction returns [Enumerator current=null] : (enumLiteral_0= '1' ) ;
     public final Enumerator ruleGSSTestListPrevAction() throws RecognitionException {
         Enumerator current = null;
 
@@ -18957,13 +19009,13 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalCONFIG.g:7881:2: ( (enumLiteral_0= '1' ) )
-            // InternalCONFIG.g:7882:2: (enumLiteral_0= '1' )
+            // InternalCONFIG.g:7897:2: ( (enumLiteral_0= '1' ) )
+            // InternalCONFIG.g:7898:2: (enumLiteral_0= '1' )
             {
-            // InternalCONFIG.g:7882:2: (enumLiteral_0= '1' )
-            // InternalCONFIG.g:7883:3: enumLiteral_0= '1'
+            // InternalCONFIG.g:7898:2: (enumLiteral_0= '1' )
+            // InternalCONFIG.g:7899:3: enumLiteral_0= '1'
             {
-            enumLiteral_0=(Token)match(input,159,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,161,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current = grammarAccess.getGSSTestListPrevActionAccess().getResetEnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -19208,10 +19260,10 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0008000000080000L});
         public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0004000000000000L});
         public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0020000000000000L});
-        public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000003E00L});
+        public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000000000000FE00L});
         public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0040000000000000L});
         public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0080000000000000L});
-        public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000000000001C000L});
+        public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000070000L});
         public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0500000000000000L});
         public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0500000000080000L});
         public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0500000000000000L,0x0000000000000003L});
@@ -19234,7 +19286,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000000000080000L,0x0000000000400000L});
         public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
         public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
-        public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000300000L});
+        public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000C00000L});
         public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
         public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
         public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
@@ -19242,7 +19294,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_87 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
         public static final BitSet FOLLOW_88 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
         public static final BitSet FOLLOW_89 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-        public static final BitSet FOLLOW_90 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x00000000000E0000L});
+        public static final BitSet FOLLOW_90 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000380000L});
         public static final BitSet FOLLOW_91 = new BitSet(new long[]{0xA800000000080000L});
         public static final BitSet FOLLOW_92 = new BitSet(new long[]{0xA000000000080000L});
         public static final BitSet FOLLOW_93 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
@@ -19259,20 +19311,20 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_104 = new BitSet(new long[]{0x0000000000000000L,0x0000001080000000L});
         public static final BitSet FOLLOW_105 = new BitSet(new long[]{0x0000000000000000L,0x0000001000000000L});
         public static final BitSet FOLLOW_106 = new BitSet(new long[]{0x0000000000000000L,0x0000004000000000L});
-        public static final BitSet FOLLOW_107 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000C00000L});
+        public static final BitSet FOLLOW_107 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000003000000L});
         public static final BitSet FOLLOW_108 = new BitSet(new long[]{0x0000000000000000L,0x0000008000000000L});
         public static final BitSet FOLLOW_109 = new BitSet(new long[]{0x0000000000000000L,0x0000290000000000L});
-        public static final BitSet FOLLOW_110 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000003000000L});
+        public static final BitSet FOLLOW_110 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000000000C000000L});
         public static final BitSet FOLLOW_111 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
         public static final BitSet FOLLOW_112 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
         public static final BitSet FOLLOW_113 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
         public static final BitSet FOLLOW_114 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
         public static final BitSet FOLLOW_115 = new BitSet(new long[]{0x0000000000000000L,0x0120000000000000L});
-        public static final BitSet FOLLOW_116 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000000001C000000L});
+        public static final BitSet FOLLOW_116 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000070000000L});
         public static final BitSet FOLLOW_117 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
-        public static final BitSet FOLLOW_118 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000060000000L});
+        public static final BitSet FOLLOW_118 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000180000000L});
         public static final BitSet FOLLOW_119 = new BitSet(new long[]{0x0000000000000000L,0x0008000000000000L});
-        public static final BitSet FOLLOW_120 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000004000000L});
+        public static final BitSet FOLLOW_120 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000010000000L});
         public static final BitSet FOLLOW_121 = new BitSet(new long[]{0x0000000000000000L,0x0040000000000000L});
         public static final BitSet FOLLOW_122 = new BitSet(new long[]{0x0000000000080000L,0x0080000000000000L});
         public static final BitSet FOLLOW_123 = new BitSet(new long[]{0x0000000000000000L,0x0400000000000000L});
@@ -19280,7 +19332,7 @@ public class InternalCONFIGParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_125 = new BitSet(new long[]{0x0000000000000000L,0x0800000000000000L});
         public static final BitSet FOLLOW_126 = new BitSet(new long[]{0x0000000000080000L,0x3000000000000000L});
         public static final BitSet FOLLOW_127 = new BitSet(new long[]{0x0000000000080000L,0x2000000000000000L});
-        public static final BitSet FOLLOW_128 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000080000000L});
+        public static final BitSet FOLLOW_128 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000200000000L});
         public static final BitSet FOLLOW_129 = new BitSet(new long[]{0x0000000000080000L,0x4000000000000000L});
         public static final BitSet FOLLOW_130 = new BitSet(new long[]{0x0000000000000002L,0x8000000000000000L});
         public static final BitSet FOLLOW_131 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000001L});

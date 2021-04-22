@@ -61,13 +61,27 @@
         eType="#//GSSIfaceUartPortStopBits" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="flowControl" lowerBound="1"
         eType="#//GSSIfaceUartPortFlowControl" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="uartProtocol" lowerBound="1"
-        eType="#//GSSIfaceUartProtocol" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portProtocol" lowerBound="1"
+        eType="#//GSSIfacePortProtocol" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceUartProtocol">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" lowerBound="1" eType="#//GSSIfaceUartProtocolUnit"
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSocketSrvPort" eSuperTypes="#//GSSIfacePort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="portNumber" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portProtocol" lowerBound="1"
+        eType="#//GSSIfacePortProtocol" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSocketCliPort" eSuperTypes="#//GSSIfacePort">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ipAddress" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="portNumber" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portProtocol" lowerBound="1"
+        eType="#//GSSIfacePortProtocol" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfacePortProtocol">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" lowerBound="1" eType="#//GSSIfacePortProtocolUnit"
         unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="power" lowerBound="1" eType="#//GSSIfaceUartProtocolPower"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="power" lowerBound="1" eType="#//GSSIfacePortProtocolPower"
         unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constSize" lowerBound="1"
         eType="#//GSSIfaceSize" containment="true"/>
@@ -78,11 +92,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="syncPattern" eType="#//GSSIfaceSyncPattern"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GSSIfaceUartProtocolUnit">
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSIfacePortProtocolUnit">
     <eLiterals name="bytes"/>
     <eLiterals name="bits" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="GSSIfaceUartProtocolPower">
+  <eClassifiers xsi:type="ecore:EEnum" name="GSSIfacePortProtocolPower">
     <eLiterals name="no" literal="no"/>
     <eLiterals name="_2" value="1" literal="2"/>
     <eLiterals name="_2_with_0" value="2" literal="2_with_0"/>

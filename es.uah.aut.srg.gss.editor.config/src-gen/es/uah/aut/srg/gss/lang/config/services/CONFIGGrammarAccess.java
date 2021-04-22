@@ -5455,15 +5455,19 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSpW_ErrorSpW_ErrorKeyword_2_0 = (Keyword)cSpW_ErrorEnumLiteralDeclaration_2.eContents().get(0);
 		private final EnumLiteralDeclaration cUartEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
 		private final Keyword cUartUartKeyword_3_0 = (Keyword)cUartEnumLiteralDeclaration_3.eContents().get(0);
-		private final EnumLiteralDeclaration cDummyEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
-		private final Keyword cDummyDummyKeyword_4_0 = (Keyword)cDummyEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cSocketSrvEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cSocketSrvSocketSrvKeyword_4_0 = (Keyword)cSocketSrvEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cSocketCliEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cSocketCliSocketCliKeyword_5_0 = (Keyword)cSocketCliEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cDummyEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cDummyDummyKeyword_6_0 = (Keyword)cDummyEnumLiteralDeclaration_6.eContents().get(0);
 		
 		//enum GSSScenarioInterfaceType returns scenario::GSSScenarioInterfaceType:
 		//	SpW | SpW_TC | SpW_Error |
-		//	uart | dummy;
+		//	uart | socketSrv | socketCli | dummy;
 		public EnumRule getRule() { return rule; }
 		
-		//SpW | SpW_TC | SpW_Error | uart | dummy
+		//SpW | SpW_TC | SpW_Error | uart | socketSrv | socketCli | dummy
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//SpW
@@ -5490,11 +5494,23 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 		//'uart'
 		public Keyword getUartUartKeyword_3_0() { return cUartUartKeyword_3_0; }
 		
+		//socketSrv
+		public EnumLiteralDeclaration getSocketSrvEnumLiteralDeclaration_4() { return cSocketSrvEnumLiteralDeclaration_4; }
+		
+		//'socketSrv'
+		public Keyword getSocketSrvSocketSrvKeyword_4_0() { return cSocketSrvSocketSrvKeyword_4_0; }
+		
+		//socketCli
+		public EnumLiteralDeclaration getSocketCliEnumLiteralDeclaration_5() { return cSocketCliEnumLiteralDeclaration_5; }
+		
+		//'socketCli'
+		public Keyword getSocketCliSocketCliKeyword_5_0() { return cSocketCliSocketCliKeyword_5_0; }
+		
 		//dummy
-		public EnumLiteralDeclaration getDummyEnumLiteralDeclaration_4() { return cDummyEnumLiteralDeclaration_4; }
+		public EnumLiteralDeclaration getDummyEnumLiteralDeclaration_6() { return cDummyEnumLiteralDeclaration_6; }
 		
 		//'dummy'
-		public Keyword getDummyDummyKeyword_4_0() { return cDummyDummyKeyword_4_0; }
+		public Keyword getDummyDummyKeyword_6_0() { return cDummyDummyKeyword_6_0; }
 	}
 	public class GSSScenarioInterfaceIOTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.gss.lang.config.CONFIG.GSSScenarioInterfaceIOType");
@@ -6263,7 +6279,7 @@ public class CONFIGGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//enum GSSScenarioInterfaceType returns scenario::GSSScenarioInterfaceType:
 	//	SpW | SpW_TC | SpW_Error |
-	//	uart | dummy;
+	//	uart | socketSrv | socketCli | dummy;
 	public GSSScenarioInterfaceTypeElements getGSSScenarioInterfaceTypeAccess() {
 		return eGSSScenarioInterfaceType;
 	}

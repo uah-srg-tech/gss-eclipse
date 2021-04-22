@@ -405,11 +405,11 @@ ruleGSSIfacePort returns [EObject current=null]
 			/* */
 		}
 		{
-			newCompositeNode(grammarAccess.getGSSIfacePortAccess().getGSSIfaceSpWTCPortParserRuleCall_2());
+			newCompositeNode(grammarAccess.getGSSIfacePortAccess().getGSSIfaceSocketSrvPortParserRuleCall_2());
 		}
-		this_GSSIfaceSpWTCPort_2=ruleGSSIfaceSpWTCPort
+		this_GSSIfaceSocketSrvPort_2=ruleGSSIfaceSocketSrvPort
 		{
-			$current = $this_GSSIfaceSpWTCPort_2.current;
+			$current = $this_GSSIfaceSocketSrvPort_2.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -417,11 +417,35 @@ ruleGSSIfacePort returns [EObject current=null]
 			/* */
 		}
 		{
-			newCompositeNode(grammarAccess.getGSSIfacePortAccess().getGSSIfaceDummyPortParserRuleCall_3());
+			newCompositeNode(grammarAccess.getGSSIfacePortAccess().getGSSIfaceSocketCliPortParserRuleCall_3());
 		}
-		this_GSSIfaceDummyPort_3=ruleGSSIfaceDummyPort
+		this_GSSIfaceSocketCliPort_3=ruleGSSIfaceSocketCliPort
 		{
-			$current = $this_GSSIfaceDummyPort_3.current;
+			$current = $this_GSSIfaceSocketCliPort_3.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSIfacePortAccess().getGSSIfaceSpWTCPortParserRuleCall_4());
+		}
+		this_GSSIfaceSpWTCPort_4=ruleGSSIfaceSpWTCPort
+		{
+			$current = $this_GSSIfaceSpWTCPort_4.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getGSSIfacePortAccess().getGSSIfaceDummyPortParserRuleCall_5());
+		}
+		this_GSSIfaceDummyPort_5=ruleGSSIfaceDummyPort
+		{
+			$current = $this_GSSIfaceDummyPort_5.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
@@ -853,18 +877,18 @@ ruleGSSIfaceUartPort returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0());
+					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getPortProtocolGSSIfacePortProtocolParserRuleCall_26_0());
 				}
-				lv_uartProtocol_26_0=ruleGSSIfaceUartProtocol
+				lv_portProtocol_26_0=ruleGSSIfacePortProtocol
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartPortRule());
 					}
 					set(
 						$current,
-						"uartProtocol",
-						lv_uartProtocol_26_0,
-						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocol");
+						"portProtocol",
+						lv_portProtocol_26_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocol");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -880,15 +904,15 @@ ruleGSSIfaceUartPort returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleGSSIfaceUartProtocol
-entryRuleGSSIfaceUartProtocol returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGSSIfaceUartProtocolRule()); }
-	iv_ruleGSSIfaceUartProtocol=ruleGSSIfaceUartProtocol
-	{ $current=$iv_ruleGSSIfaceUartProtocol.current; }
+// Entry rule entryRuleGSSIfaceSocketSrvPort
+entryRuleGSSIfaceSocketSrvPort returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSIfaceSocketSrvPortRule()); }
+	iv_ruleGSSIfaceSocketSrvPort=ruleGSSIfaceSocketSrvPort
+	{ $current=$iv_ruleGSSIfaceSocketSrvPort.current; }
 	EOF;
 
-// Rule GSSIfaceUartProtocol
-ruleGSSIfaceUartProtocol returns [EObject current=null]
+// Rule GSSIfaceSocketSrvPort
+ruleGSSIfaceSocketSrvPort returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -896,85 +920,285 @@ ruleGSSIfaceUartProtocol returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='uartProtocol'
+		otherlv_0='socketSrvPort'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGSSIfaceUartProtocolAccess().getUartProtocolKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getGSSIfaceSocketSrvPortAccess().getSocketSrvPortKeyword_0());
 		}
 		otherlv_1='{'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceUartProtocolAccess().getLeftCurlyBracketKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSocketSrvPortAccess().getLeftCurlyBracketKeyword_1());
 		}
-		otherlv_2='unit'
+		otherlv_2='portNumber'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceUartProtocolAccess().getUnitKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSocketSrvPortAccess().getPortNumberKeyword_2());
 		}
 		otherlv_3=':='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceUartProtocolAccess().getColonEqualsSignKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSocketSrvPortAccess().getColonEqualsSignKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getUnitGSSIfaceUartProtocolUnitEnumRuleCall_4_0());
+					newCompositeNode(grammarAccess.getGSSIfaceSocketSrvPortAccess().getPortNumberINTEGERParserRuleCall_4_0());
 				}
-				lv_unit_4_0=ruleGSSIfaceUartProtocolUnit
+				lv_portNumber_4_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSocketSrvPortRule());
 					}
 					set(
 						$current,
-						"unit",
-						lv_unit_4_0,
-						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocolUnit");
+						"portNumber",
+						lv_portNumber_4_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		otherlv_5=';'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_5());
-		}
-		otherlv_6='power'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceUartProtocolAccess().getPowerKeyword_6());
-		}
-		otherlv_7=':='
-		{
-			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceUartProtocolAccess().getColonEqualsSignKeyword_7());
+			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSocketSrvPortAccess().getSemicolonKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getPowerGSSIfaceUartProtocolPowerEnumRuleCall_8_0());
+					newCompositeNode(grammarAccess.getGSSIfaceSocketSrvPortAccess().getPortProtocolGSSIfacePortProtocolParserRuleCall_6_0());
 				}
-				lv_power_8_0=ruleGSSIfaceUartProtocolPower
+				lv_portProtocol_6_0=ruleGSSIfacePortProtocol
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSocketSrvPortRule());
 					}
 					set(
 						$current,
-						"power",
-						lv_power_8_0,
-						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocolPower");
+						"portProtocol",
+						lv_portProtocol_6_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocol");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_7='}'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSocketSrvPortAccess().getRightCurlyBracketKeyword_7());
+		}
+		otherlv_8=';'
+		{
+			newLeafNode(otherlv_8, grammarAccess.getGSSIfaceSocketSrvPortAccess().getSemicolonKeyword_8());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSIfaceSocketCliPort
+entryRuleGSSIfaceSocketCliPort returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSIfaceSocketCliPortRule()); }
+	iv_ruleGSSIfaceSocketCliPort=ruleGSSIfaceSocketCliPort
+	{ $current=$iv_ruleGSSIfaceSocketCliPort.current; }
+	EOF;
+
+// Rule GSSIfaceSocketCliPort
+ruleGSSIfaceSocketCliPort returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='socketCliPort'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getGSSIfaceSocketCliPortAccess().getSocketCliPortKeyword_0());
+		}
+		otherlv_1='{'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSocketCliPortAccess().getLeftCurlyBracketKeyword_1());
+		}
+		otherlv_2='ipAddress'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSocketCliPortAccess().getIpAddressKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSocketCliPortAccess().getColonEqualsSignKeyword_3());
+		}
+		(
+			(
+				lv_ipAddress_4_0=RULE_STRING
+				{
+					newLeafNode(lv_ipAddress_4_0, grammarAccess.getGSSIfaceSocketCliPortAccess().getIpAddressSTRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getGSSIfaceSocketCliPortRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"ipAddress",
+						lv_ipAddress_4_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_5=';'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSocketCliPortAccess().getSemicolonKeyword_5());
+		}
+		otherlv_6='portNumber'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSocketCliPortAccess().getPortNumberKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSocketCliPortAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfaceSocketCliPortAccess().getPortNumberINTEGERParserRuleCall_8_0());
+				}
+				lv_portNumber_8_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSocketCliPortRule());
+					}
+					set(
+						$current,
+						"portNumber",
+						lv_portNumber_8_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		otherlv_9=';'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_9());
+			newLeafNode(otherlv_9, grammarAccess.getGSSIfaceSocketCliPortAccess().getSemicolonKeyword_9());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getConstSizeGSSIfaceConstSizeParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getGSSIfaceSocketCliPortAccess().getPortProtocolGSSIfacePortProtocolParserRuleCall_10_0());
+				}
+				lv_portProtocol_10_0=ruleGSSIfacePortProtocol
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfaceSocketCliPortRule());
+					}
+					set(
+						$current,
+						"portProtocol",
+						lv_portProtocol_10_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocol");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_11='}'
+		{
+			newLeafNode(otherlv_11, grammarAccess.getGSSIfaceSocketCliPortAccess().getRightCurlyBracketKeyword_11());
+		}
+		otherlv_12=';'
+		{
+			newLeafNode(otherlv_12, grammarAccess.getGSSIfaceSocketCliPortAccess().getSemicolonKeyword_12());
+		}
+	)
+;
+
+// Entry rule entryRuleGSSIfacePortProtocol
+entryRuleGSSIfacePortProtocol returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getGSSIfacePortProtocolRule()); }
+	iv_ruleGSSIfacePortProtocol=ruleGSSIfacePortProtocol
+	{ $current=$iv_ruleGSSIfacePortProtocol.current; }
+	EOF;
+
+// Rule GSSIfacePortProtocol
+ruleGSSIfacePortProtocol returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='portProtocol'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getGSSIfacePortProtocolAccess().getPortProtocolKeyword_0());
+		}
+		otherlv_1='{'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGSSIfacePortProtocolAccess().getLeftCurlyBracketKeyword_1());
+		}
+		otherlv_2='unit'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getGSSIfacePortProtocolAccess().getUnitKeyword_2());
+		}
+		otherlv_3=':='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getGSSIfacePortProtocolAccess().getColonEqualsSignKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfacePortProtocolAccess().getUnitGSSIfacePortProtocolUnitEnumRuleCall_4_0());
+				}
+				lv_unit_4_0=ruleGSSIfacePortProtocolUnit
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfacePortProtocolRule());
+					}
+					set(
+						$current,
+						"unit",
+						lv_unit_4_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocolUnit");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5=';'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGSSIfacePortProtocolAccess().getSemicolonKeyword_5());
+		}
+		otherlv_6='power'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getGSSIfacePortProtocolAccess().getPowerKeyword_6());
+		}
+		otherlv_7=':='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getGSSIfacePortProtocolAccess().getColonEqualsSignKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfacePortProtocolAccess().getPowerGSSIfacePortProtocolPowerEnumRuleCall_8_0());
+				}
+				lv_power_8_0=ruleGSSIfacePortProtocolPower
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGSSIfacePortProtocolRule());
+					}
+					set(
+						$current,
+						"power",
+						lv_power_8_0,
+						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocolPower");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9=';'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getGSSIfacePortProtocolAccess().getSemicolonKeyword_9());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGSSIfacePortProtocolAccess().getConstSizeGSSIfaceConstSizeParserRuleCall_10_0());
 				}
 				lv_constSize_10_0=ruleGSSIfaceConstSize
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+						$current = createModelElementForParent(grammarAccess.getGSSIfacePortProtocolRule());
 					}
 					set(
 						$current,
@@ -988,12 +1212,12 @@ ruleGSSIfaceUartProtocol returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldOffsetGSSIfaceSizeFieldOffsetParserRuleCall_11_0());
+					newCompositeNode(grammarAccess.getGSSIfacePortProtocolAccess().getSizeFieldOffsetGSSIfaceSizeFieldOffsetParserRuleCall_11_0());
 				}
 				lv_sizeFieldOffset_11_0=ruleGSSIfaceSizeFieldOffset
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+						$current = createModelElementForParent(grammarAccess.getGSSIfacePortProtocolRule());
 					}
 					set(
 						$current,
@@ -1007,12 +1231,12 @@ ruleGSSIfaceUartProtocol returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldTrimGSSIfaceSizeFieldTrimParserRuleCall_12_0());
+					newCompositeNode(grammarAccess.getGSSIfacePortProtocolAccess().getSizeFieldTrimGSSIfaceSizeFieldTrimParserRuleCall_12_0());
 				}
 				lv_sizeFieldTrim_12_0=ruleGSSIfaceSizeFieldTrim
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+						$current = createModelElementForParent(grammarAccess.getGSSIfacePortProtocolRule());
 					}
 					set(
 						$current,
@@ -1026,12 +1250,12 @@ ruleGSSIfaceUartProtocol returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSyncPatternGSSIfaceSyncPatternParserRuleCall_13_0());
+					newCompositeNode(grammarAccess.getGSSIfacePortProtocolAccess().getSyncPatternGSSIfaceSyncPatternParserRuleCall_13_0());
 				}
 				lv_syncPattern_13_0=ruleGSSIfaceSyncPattern
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+						$current = createModelElementForParent(grammarAccess.getGSSIfacePortProtocolRule());
 					}
 					set(
 						$current,
@@ -1044,11 +1268,11 @@ ruleGSSIfaceUartProtocol returns [EObject current=null]
 		)?
 		otherlv_14='}'
 		{
-			newLeafNode(otherlv_14, grammarAccess.getGSSIfaceUartProtocolAccess().getRightCurlyBracketKeyword_14());
+			newLeafNode(otherlv_14, grammarAccess.getGSSIfacePortProtocolAccess().getRightCurlyBracketKeyword_14());
 		}
 		otherlv_15=';'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_15());
+			newLeafNode(otherlv_15, grammarAccess.getGSSIfacePortProtocolAccess().getSemicolonKeyword_15());
 		}
 	)
 ;
@@ -1944,8 +2168,8 @@ ruleGSSIfaceUartPortFlowControl returns [Enumerator current=null]
 	)
 ;
 
-// Rule GSSIfaceUartProtocolUnit
-ruleGSSIfaceUartProtocolUnit returns [Enumerator current=null]
+// Rule GSSIfacePortProtocolUnit
+ruleGSSIfacePortProtocolUnit returns [Enumerator current=null]
 @init {
 	enterRule();
 }
@@ -1956,23 +2180,23 @@ ruleGSSIfaceUartProtocolUnit returns [Enumerator current=null]
 		(
 			enumLiteral_0='bytes'
 			{
-				$current = grammarAccess.getGSSIfaceUartProtocolUnitAccess().getBytesEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getGSSIfaceUartProtocolUnitAccess().getBytesEnumLiteralDeclaration_0());
+				$current = grammarAccess.getGSSIfacePortProtocolUnitAccess().getBytesEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getGSSIfacePortProtocolUnitAccess().getBytesEnumLiteralDeclaration_0());
 			}
 		)
 		    |
 		(
 			enumLiteral_1='bits'
 			{
-				$current = grammarAccess.getGSSIfaceUartProtocolUnitAccess().getBitsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getGSSIfaceUartProtocolUnitAccess().getBitsEnumLiteralDeclaration_1());
+				$current = grammarAccess.getGSSIfacePortProtocolUnitAccess().getBitsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getGSSIfacePortProtocolUnitAccess().getBitsEnumLiteralDeclaration_1());
 			}
 		)
 	)
 ;
 
-// Rule GSSIfaceUartProtocolPower
-ruleGSSIfaceUartProtocolPower returns [Enumerator current=null]
+// Rule GSSIfacePortProtocolPower
+ruleGSSIfacePortProtocolPower returns [Enumerator current=null]
 @init {
 	enterRule();
 }
@@ -1983,24 +2207,24 @@ ruleGSSIfaceUartProtocolPower returns [Enumerator current=null]
 		(
 			enumLiteral_0='no'
 			{
-				$current = grammarAccess.getGSSIfaceUartProtocolPowerAccess().getNoEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getGSSIfaceUartProtocolPowerAccess().getNoEnumLiteralDeclaration_0());
+				$current = grammarAccess.getGSSIfacePortProtocolPowerAccess().getNoEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getGSSIfacePortProtocolPowerAccess().getNoEnumLiteralDeclaration_0());
 			}
 		)
 		    |
 		(
 			enumLiteral_1='2bits'
 			{
-				$current = grammarAccess.getGSSIfaceUartProtocolPowerAccess().get_2EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getGSSIfaceUartProtocolPowerAccess().get_2EnumLiteralDeclaration_1());
+				$current = grammarAccess.getGSSIfacePortProtocolPowerAccess().get_2EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getGSSIfacePortProtocolPowerAccess().get_2EnumLiteralDeclaration_1());
 			}
 		)
 		    |
 		(
 			enumLiteral_2='2_with_0'
 			{
-				$current = grammarAccess.getGSSIfaceUartProtocolPowerAccess().get_2_with_0EnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_2, grammarAccess.getGSSIfaceUartProtocolPowerAccess().get_2_with_0EnumLiteralDeclaration_2());
+				$current = grammarAccess.getGSSIfacePortProtocolPowerAccess().get_2_with_0EnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getGSSIfacePortProtocolPowerAccess().get_2_with_0EnumLiteralDeclaration_2());
 			}
 		)
 	)

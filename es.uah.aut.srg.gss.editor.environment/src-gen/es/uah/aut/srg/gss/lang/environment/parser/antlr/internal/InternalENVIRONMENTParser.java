@@ -34,7 +34,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSEnvironmentEnvironment'", "'{'", "'uri'", "'version'", "'}'", "'GSSScenarioScenario'", "'GSSScenarioOptions'", "'GSSScenarioProtocols'", "'GSSScenarioInterfaces'", "'ProtocolPacketsFile'", "'GSSScenarioSpecialPackets'", "'GSSScenarioPeriodicTCs'", "'GSSScenarioGlobalVars'", "'GSSScenarioMonitors'", "'ChartsFile'", "'GSSScenarioInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSScenarioInfoPrint'", "'mainLog'", "'portLogs'", "'rawLog'", "'GSSScenarioPhyHeaderPrint'", "'gssTabs'", "'GSSScenarioDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSScenarioProtocol'", "'id'", "'name'", "'typeLevel'", "'GSSScenarioProtocolType'", "'offset'", "'GSSScenarioProtocolSubtype'", "'GSSScenarioMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSScenarioInterface'", "'GSSScenarioLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSScenarioLevelIn'", "'GSSScenarioLevelOut'", "'GSSScenarioSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSScenarioUpperLevels'", "'GSSScenarioPrintingData'", "'printStatus'", "'GSSScenarioPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSScenarioIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSScenarioUpperLevel'", "'level'", "'GSSScenarioStructuredData'", "'firstField'", "'GSSScenarioPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'level2'", "'app_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSScenarioPeriodicTCLevel1'", "'app_to_level1'", "'GSSScenarioPeriodicTCLevel0'", "'app_to_level0'", "'GSSScenarioGlobalVar'", "'type'", "'initial_value'", "'GSSScenarioReferenceField'", "'fieldRef'", "'size'", "'GSSScenarioReferencePeriodicTC'", "'idRef'", "'GSSScenarioReferenceSpecialPacket'", "'GSSScenarioPlot'", "'chartRef'", "'GSSScenarioAlarmMsg'", "'text'", "'GSSScenarioModify'", "'value'", "'GSSScenarioAlarmVal'", "'GSSScenarioGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSScenarioGVPeriodic'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'+'", "'://'", "'disabled'", "'enabled'", "'SpW'", "'SpW_TC'", "'SpW_Error'", "'uart'", "'dummy'", "'in_out'", "'in'", "'out'", "'_1'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm1'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_HEXADECIMAL", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "':='", "';'", "'GSSEnvironmentEnvironment'", "'{'", "'uri'", "'version'", "'}'", "'GSSScenarioScenario'", "'GSSScenarioOptions'", "'GSSScenarioProtocols'", "'GSSScenarioInterfaces'", "'ProtocolPacketsFile'", "'GSSScenarioSpecialPackets'", "'GSSScenarioPeriodicTCs'", "'GSSScenarioGlobalVars'", "'GSSScenarioMonitors'", "'ChartsFile'", "'GSSScenarioInfo'", "'test_campaign'", "'date'", "'version_control_url'", "'GSSScenarioInfoPrint'", "'mainLog'", "'portLogs'", "'rawLog'", "'GSSScenarioPhyHeaderPrint'", "'gssTabs'", "'GSSScenarioDiscardErrorFlags'", "'txErrors'", "'notExpectedPackets'", "'filtersKo'", "'validTimesKo'", "'GSSScenarioProtocol'", "'id'", "'name'", "'typeLevel'", "'GSSScenarioProtocolType'", "'offset'", "'GSSScenarioProtocolSubtype'", "'GSSScenarioMainInterface'", "'ifType'", "'ifConfig'", "'ioType'", "'protocolID'", "'GSSScenarioInterface'", "'GSSScenarioLevelInOut'", "'TMformat'", "'TCformat'", "'inputFilter'", "'export_to_prev_Level'", "'import_from_prev_Level'", "'GSSScenarioLevelIn'", "'GSSScenarioLevelOut'", "'GSSScenarioSpecialPacket'", "'status'", "'ifRef'", "'levels'", "'levelRef'", "'GSSScenarioUpperLevels'", "'GSSScenarioPrintingData'", "'printStatus'", "'GSSScenarioPeriod'", "'min_value'", "'min_unit'", "'max_value'", "'max_unit'", "'GSSScenarioIntervalRange'", "'min'", "'max'", "'interval_value'", "'interval_unit'", "'GSSScenarioUpperLevel'", "'level'", "'GSSScenarioStructuredData'", "'firstField'", "'GSSScenarioPeriodicTCLevel2'", "'period_value'", "'period_unit'", "'level2'", "'app_to_level2'", "'level1'", "'level2_to_level1'", "'level0'", "'level1_to_level0'", "'GSSScenarioPeriodicTCLevel1'", "'app_to_level1'", "'GSSScenarioPeriodicTCLevel0'", "'app_to_level0'", "'GSSScenarioGlobalVar'", "'type'", "'initial_value'", "'GSSScenarioReferenceField'", "'fieldRef'", "'size'", "'GSSScenarioReferencePeriodicTC'", "'idRef'", "'GSSScenarioReferenceSpecialPacket'", "'GSSScenarioPlot'", "'chartRef'", "'GSSScenarioAlarmMsg'", "'text'", "'GSSScenarioModify'", "'value'", "'GSSScenarioAlarmVal'", "'GSSScenarioGVFiltered'", "'GlobalVarRef'", "'filter'", "'GSSScenarioGVPeriodic'", "'.'", "'('", "')'", "'::'", "'-'", "'/'", "'+'", "'://'", "'disabled'", "'enabled'", "'SpW'", "'SpW_TC'", "'SpW_Error'", "'uart'", "'socketSrv'", "'socketCli'", "'dummy'", "'in_out'", "'in'", "'out'", "'_1'", "'_2'", "'_3'", "'miliseconds'", "'seconds'", "'uint'", "'formula'", "'tm'", "'tc'", "'alarm1'", "'alarm2'", "'alarm3'", "'increment'", "'increment1wrap'"
     };
     public static final int T__144=144;
     public static final int T__143=143;
@@ -92,8 +92,10 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
+    public static final int T__154=154;
     public static final int T__151=151;
     public static final int T__150=150;
+    public static final int T__153=153;
     public static final int T__152=152;
     public static final int T__48=48;
     public static final int T__49=49;
@@ -16150,11 +16152,11 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
             if ( (LA48_0==RULE_INT) ) {
                 int LA48_1 = input.LA(2);
 
-                if ( (LA48_1==RULE_ID) ) {
-                    alt48=2;
-                }
-                else if ( (LA48_1==EOF||LA48_1==14||LA48_1==121||LA48_1==123) ) {
+                if ( (LA48_1==EOF||LA48_1==14||LA48_1==121||LA48_1==123) ) {
                     alt48=1;
+                }
+                else if ( (LA48_1==RULE_ID) ) {
+                    alt48=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -16275,11 +16277,11 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
             	    if ( (LA50_0==RULE_INT) ) {
             	        int LA50_1 = input.LA(2);
 
-            	        if ( (LA50_1==RULE_ID) ) {
-            	            alt50=2;
-            	        }
-            	        else if ( (LA50_1==EOF||LA50_1==14||LA50_1==121||LA50_1==123) ) {
+            	        if ( (LA50_1==EOF||LA50_1==14||LA50_1==121||LA50_1==123) ) {
             	            alt50=1;
+            	        }
+            	        else if ( (LA50_1==RULE_ID) ) {
+            	            alt50=2;
             	        }
             	        else {
             	            if (state.backtracking>0) {state.failed=true; return current;}
@@ -17393,7 +17395,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioInterfaceType"
-    // InternalENVIRONMENT.g:7352:1: ruleGSSScenarioInterfaceType returns [Enumerator current=null] : ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) ) ;
+    // InternalENVIRONMENT.g:7352:1: ruleGSSScenarioInterfaceType returns [Enumerator current=null] : ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'socketSrv' ) | (enumLiteral_5= 'socketCli' ) | (enumLiteral_6= 'dummy' ) ) ;
     public final Enumerator ruleGSSScenarioInterfaceType() throws RecognitionException {
         Enumerator current = null;
 
@@ -17402,16 +17404,18 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         Token enumLiteral_2=null;
         Token enumLiteral_3=null;
         Token enumLiteral_4=null;
+        Token enumLiteral_5=null;
+        Token enumLiteral_6=null;
 
 
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:7358:2: ( ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) ) )
-            // InternalENVIRONMENT.g:7359:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) )
+            // InternalENVIRONMENT.g:7358:2: ( ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'socketSrv' ) | (enumLiteral_5= 'socketCli' ) | (enumLiteral_6= 'dummy' ) ) )
+            // InternalENVIRONMENT.g:7359:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'socketSrv' ) | (enumLiteral_5= 'socketCli' ) | (enumLiteral_6= 'dummy' ) )
             {
-            // InternalENVIRONMENT.g:7359:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'dummy' ) )
-            int alt62=5;
+            // InternalENVIRONMENT.g:7359:2: ( (enumLiteral_0= 'SpW' ) | (enumLiteral_1= 'SpW_TC' ) | (enumLiteral_2= 'SpW_Error' ) | (enumLiteral_3= 'uart' ) | (enumLiteral_4= 'socketSrv' ) | (enumLiteral_5= 'socketCli' ) | (enumLiteral_6= 'dummy' ) )
+            int alt62=7;
             switch ( input.LA(1) ) {
             case 131:
                 {
@@ -17436,6 +17440,16 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
             case 135:
                 {
                 alt62=5;
+                }
+                break;
+            case 136:
+                {
+                alt62=6;
+                }
+                break;
+            case 137:
+                {
+                alt62=7;
                 }
                 break;
             default:
@@ -17524,16 +17538,54 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalENVIRONMENT.g:7392:3: (enumLiteral_4= 'dummy' )
+                    // InternalENVIRONMENT.g:7392:3: (enumLiteral_4= 'socketSrv' )
                     {
-                    // InternalENVIRONMENT.g:7392:3: (enumLiteral_4= 'dummy' )
-                    // InternalENVIRONMENT.g:7393:4: enumLiteral_4= 'dummy'
+                    // InternalENVIRONMENT.g:7392:3: (enumLiteral_4= 'socketSrv' )
+                    // InternalENVIRONMENT.g:7393:4: enumLiteral_4= 'socketSrv'
                     {
                     enumLiteral_4=(Token)match(input,135,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				current = grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_4, grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_4());
+                      				current = grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketSrvEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_4, grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketSrvEnumLiteralDeclaration_4());
+                      			
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 6 :
+                    // InternalENVIRONMENT.g:7400:3: (enumLiteral_5= 'socketCli' )
+                    {
+                    // InternalENVIRONMENT.g:7400:3: (enumLiteral_5= 'socketCli' )
+                    // InternalENVIRONMENT.g:7401:4: enumLiteral_5= 'socketCli'
+                    {
+                    enumLiteral_5=(Token)match(input,136,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				current = grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketCliEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_5, grammarAccess.getGSSScenarioInterfaceTypeAccess().getSocketCliEnumLiteralDeclaration_5());
+                      			
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 7 :
+                    // InternalENVIRONMENT.g:7408:3: (enumLiteral_6= 'dummy' )
+                    {
+                    // InternalENVIRONMENT.g:7408:3: (enumLiteral_6= 'dummy' )
+                    // InternalENVIRONMENT.g:7409:4: enumLiteral_6= 'dummy'
+                    {
+                    enumLiteral_6=(Token)match(input,137,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				current = grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_6, grammarAccess.getGSSScenarioInterfaceTypeAccess().getDummyEnumLiteralDeclaration_6());
                       			
                     }
 
@@ -17567,7 +17619,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioInterfaceIOType"
-    // InternalENVIRONMENT.g:7403:1: ruleGSSScenarioInterfaceIOType returns [Enumerator current=null] : ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) ) ;
+    // InternalENVIRONMENT.g:7419:1: ruleGSSScenarioInterfaceIOType returns [Enumerator current=null] : ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) ) ;
     public final Enumerator ruleGSSScenarioInterfaceIOType() throws RecognitionException {
         Enumerator current = null;
 
@@ -17579,23 +17631,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:7409:2: ( ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) ) )
-            // InternalENVIRONMENT.g:7410:2: ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) )
+            // InternalENVIRONMENT.g:7425:2: ( ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) ) )
+            // InternalENVIRONMENT.g:7426:2: ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) )
             {
-            // InternalENVIRONMENT.g:7410:2: ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) )
+            // InternalENVIRONMENT.g:7426:2: ( (enumLiteral_0= 'in_out' ) | (enumLiteral_1= 'in' ) | (enumLiteral_2= 'out' ) )
             int alt63=3;
             switch ( input.LA(1) ) {
-            case 136:
+            case 138:
                 {
                 alt63=1;
                 }
                 break;
-            case 137:
+            case 139:
                 {
                 alt63=2;
                 }
                 break;
-            case 138:
+            case 140:
                 {
                 alt63=3;
                 }
@@ -17610,12 +17662,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
             switch (alt63) {
                 case 1 :
-                    // InternalENVIRONMENT.g:7411:3: (enumLiteral_0= 'in_out' )
+                    // InternalENVIRONMENT.g:7427:3: (enumLiteral_0= 'in_out' )
                     {
-                    // InternalENVIRONMENT.g:7411:3: (enumLiteral_0= 'in_out' )
-                    // InternalENVIRONMENT.g:7412:4: enumLiteral_0= 'in_out'
+                    // InternalENVIRONMENT.g:7427:3: (enumLiteral_0= 'in_out' )
+                    // InternalENVIRONMENT.g:7428:4: enumLiteral_0= 'in_out'
                     {
-                    enumLiteral_0=(Token)match(input,136,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,138,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioInterfaceIOTypeAccess().getIn_outEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -17629,12 +17681,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalENVIRONMENT.g:7419:3: (enumLiteral_1= 'in' )
+                    // InternalENVIRONMENT.g:7435:3: (enumLiteral_1= 'in' )
                     {
-                    // InternalENVIRONMENT.g:7419:3: (enumLiteral_1= 'in' )
-                    // InternalENVIRONMENT.g:7420:4: enumLiteral_1= 'in'
+                    // InternalENVIRONMENT.g:7435:3: (enumLiteral_1= 'in' )
+                    // InternalENVIRONMENT.g:7436:4: enumLiteral_1= 'in'
                     {
-                    enumLiteral_1=(Token)match(input,137,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,139,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioInterfaceIOTypeAccess().getInEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -17648,12 +17700,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalENVIRONMENT.g:7427:3: (enumLiteral_2= 'out' )
+                    // InternalENVIRONMENT.g:7443:3: (enumLiteral_2= 'out' )
                     {
-                    // InternalENVIRONMENT.g:7427:3: (enumLiteral_2= 'out' )
-                    // InternalENVIRONMENT.g:7428:4: enumLiteral_2= 'out'
+                    // InternalENVIRONMENT.g:7443:3: (enumLiteral_2= 'out' )
+                    // InternalENVIRONMENT.g:7444:4: enumLiteral_2= 'out'
                     {
-                    enumLiteral_2=(Token)match(input,138,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,140,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioInterfaceIOTypeAccess().getOutEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -17691,7 +17743,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioUpperLevelLevel"
-    // InternalENVIRONMENT.g:7438:1: ruleGSSScenarioUpperLevelLevel returns [Enumerator current=null] : ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) ) ;
+    // InternalENVIRONMENT.g:7454:1: ruleGSSScenarioUpperLevelLevel returns [Enumerator current=null] : ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) ) ;
     public final Enumerator ruleGSSScenarioUpperLevelLevel() throws RecognitionException {
         Enumerator current = null;
 
@@ -17703,23 +17755,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:7444:2: ( ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) ) )
-            // InternalENVIRONMENT.g:7445:2: ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) )
+            // InternalENVIRONMENT.g:7460:2: ( ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) ) )
+            // InternalENVIRONMENT.g:7461:2: ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) )
             {
-            // InternalENVIRONMENT.g:7445:2: ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) )
+            // InternalENVIRONMENT.g:7461:2: ( (enumLiteral_0= '_1' ) | (enumLiteral_1= '_2' ) | (enumLiteral_2= '_3' ) )
             int alt64=3;
             switch ( input.LA(1) ) {
-            case 139:
+            case 141:
                 {
                 alt64=1;
                 }
                 break;
-            case 140:
+            case 142:
                 {
                 alt64=2;
                 }
                 break;
-            case 141:
+            case 143:
                 {
                 alt64=3;
                 }
@@ -17734,12 +17786,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
             switch (alt64) {
                 case 1 :
-                    // InternalENVIRONMENT.g:7446:3: (enumLiteral_0= '_1' )
+                    // InternalENVIRONMENT.g:7462:3: (enumLiteral_0= '_1' )
                     {
-                    // InternalENVIRONMENT.g:7446:3: (enumLiteral_0= '_1' )
-                    // InternalENVIRONMENT.g:7447:4: enumLiteral_0= '_1'
+                    // InternalENVIRONMENT.g:7462:3: (enumLiteral_0= '_1' )
+                    // InternalENVIRONMENT.g:7463:4: enumLiteral_0= '_1'
                     {
-                    enumLiteral_0=(Token)match(input,139,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,141,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioUpperLevelLevelAccess().get_1EnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -17753,12 +17805,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalENVIRONMENT.g:7454:3: (enumLiteral_1= '_2' )
+                    // InternalENVIRONMENT.g:7470:3: (enumLiteral_1= '_2' )
                     {
-                    // InternalENVIRONMENT.g:7454:3: (enumLiteral_1= '_2' )
-                    // InternalENVIRONMENT.g:7455:4: enumLiteral_1= '_2'
+                    // InternalENVIRONMENT.g:7470:3: (enumLiteral_1= '_2' )
+                    // InternalENVIRONMENT.g:7471:4: enumLiteral_1= '_2'
                     {
-                    enumLiteral_1=(Token)match(input,140,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,142,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioUpperLevelLevelAccess().get_2EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -17772,12 +17824,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalENVIRONMENT.g:7462:3: (enumLiteral_2= '_3' )
+                    // InternalENVIRONMENT.g:7478:3: (enumLiteral_2= '_3' )
                     {
-                    // InternalENVIRONMENT.g:7462:3: (enumLiteral_2= '_3' )
-                    // InternalENVIRONMENT.g:7463:4: enumLiteral_2= '_3'
+                    // InternalENVIRONMENT.g:7478:3: (enumLiteral_2= '_3' )
+                    // InternalENVIRONMENT.g:7479:4: enumLiteral_2= '_3'
                     {
-                    enumLiteral_2=(Token)match(input,141,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,143,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioUpperLevelLevelAccess().get_3EnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -17815,7 +17867,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioUnit"
-    // InternalENVIRONMENT.g:7473:1: ruleGSSScenarioUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) ;
+    // InternalENVIRONMENT.g:7489:1: ruleGSSScenarioUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) ;
     public final Enumerator ruleGSSScenarioUnit() throws RecognitionException {
         Enumerator current = null;
 
@@ -17826,17 +17878,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:7479:2: ( ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) )
-            // InternalENVIRONMENT.g:7480:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
+            // InternalENVIRONMENT.g:7495:2: ( ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) ) )
+            // InternalENVIRONMENT.g:7496:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
             {
-            // InternalENVIRONMENT.g:7480:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
+            // InternalENVIRONMENT.g:7496:2: ( (enumLiteral_0= 'miliseconds' ) | (enumLiteral_1= 'seconds' ) )
             int alt65=2;
             int LA65_0 = input.LA(1);
 
-            if ( (LA65_0==142) ) {
+            if ( (LA65_0==144) ) {
                 alt65=1;
             }
-            else if ( (LA65_0==143) ) {
+            else if ( (LA65_0==145) ) {
                 alt65=2;
             }
             else {
@@ -17848,12 +17900,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
             }
             switch (alt65) {
                 case 1 :
-                    // InternalENVIRONMENT.g:7481:3: (enumLiteral_0= 'miliseconds' )
+                    // InternalENVIRONMENT.g:7497:3: (enumLiteral_0= 'miliseconds' )
                     {
-                    // InternalENVIRONMENT.g:7481:3: (enumLiteral_0= 'miliseconds' )
-                    // InternalENVIRONMENT.g:7482:4: enumLiteral_0= 'miliseconds'
+                    // InternalENVIRONMENT.g:7497:3: (enumLiteral_0= 'miliseconds' )
+                    // InternalENVIRONMENT.g:7498:4: enumLiteral_0= 'miliseconds'
                     {
-                    enumLiteral_0=(Token)match(input,142,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,144,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioUnitAccess().getMilisecondsEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -17867,12 +17919,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalENVIRONMENT.g:7489:3: (enumLiteral_1= 'seconds' )
+                    // InternalENVIRONMENT.g:7505:3: (enumLiteral_1= 'seconds' )
                     {
-                    // InternalENVIRONMENT.g:7489:3: (enumLiteral_1= 'seconds' )
-                    // InternalENVIRONMENT.g:7490:4: enumLiteral_1= 'seconds'
+                    // InternalENVIRONMENT.g:7505:3: (enumLiteral_1= 'seconds' )
+                    // InternalENVIRONMENT.g:7506:4: enumLiteral_1= 'seconds'
                     {
-                    enumLiteral_1=(Token)match(input,143,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,145,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioUnitAccess().getSecondsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -17910,7 +17962,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioGlobalVarType"
-    // InternalENVIRONMENT.g:7500:1: ruleGSSScenarioGlobalVarType returns [Enumerator current=null] : ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) ) ;
+    // InternalENVIRONMENT.g:7516:1: ruleGSSScenarioGlobalVarType returns [Enumerator current=null] : ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) ) ;
     public final Enumerator ruleGSSScenarioGlobalVarType() throws RecognitionException {
         Enumerator current = null;
 
@@ -17921,17 +17973,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:7506:2: ( ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) ) )
-            // InternalENVIRONMENT.g:7507:2: ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) )
+            // InternalENVIRONMENT.g:7522:2: ( ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) ) )
+            // InternalENVIRONMENT.g:7523:2: ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) )
             {
-            // InternalENVIRONMENT.g:7507:2: ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) )
+            // InternalENVIRONMENT.g:7523:2: ( (enumLiteral_0= 'uint' ) | (enumLiteral_1= 'formula' ) )
             int alt66=2;
             int LA66_0 = input.LA(1);
 
-            if ( (LA66_0==144) ) {
+            if ( (LA66_0==146) ) {
                 alt66=1;
             }
-            else if ( (LA66_0==145) ) {
+            else if ( (LA66_0==147) ) {
                 alt66=2;
             }
             else {
@@ -17943,12 +17995,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
             }
             switch (alt66) {
                 case 1 :
-                    // InternalENVIRONMENT.g:7508:3: (enumLiteral_0= 'uint' )
+                    // InternalENVIRONMENT.g:7524:3: (enumLiteral_0= 'uint' )
                     {
-                    // InternalENVIRONMENT.g:7508:3: (enumLiteral_0= 'uint' )
-                    // InternalENVIRONMENT.g:7509:4: enumLiteral_0= 'uint'
+                    // InternalENVIRONMENT.g:7524:3: (enumLiteral_0= 'uint' )
+                    // InternalENVIRONMENT.g:7525:4: enumLiteral_0= 'uint'
                     {
-                    enumLiteral_0=(Token)match(input,144,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,146,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioGlobalVarTypeAccess().getUintEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -17962,12 +18014,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalENVIRONMENT.g:7516:3: (enumLiteral_1= 'formula' )
+                    // InternalENVIRONMENT.g:7532:3: (enumLiteral_1= 'formula' )
                     {
-                    // InternalENVIRONMENT.g:7516:3: (enumLiteral_1= 'formula' )
-                    // InternalENVIRONMENT.g:7517:4: enumLiteral_1= 'formula'
+                    // InternalENVIRONMENT.g:7532:3: (enumLiteral_1= 'formula' )
+                    // InternalENVIRONMENT.g:7533:4: enumLiteral_1= 'formula'
                     {
-                    enumLiteral_1=(Token)match(input,145,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,147,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioGlobalVarTypeAccess().getFormulaEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -18005,7 +18057,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioReferenceFieldType"
-    // InternalENVIRONMENT.g:7527:1: ruleGSSScenarioReferenceFieldType returns [Enumerator current=null] : ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) ) ;
+    // InternalENVIRONMENT.g:7543:1: ruleGSSScenarioReferenceFieldType returns [Enumerator current=null] : ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) ) ;
     public final Enumerator ruleGSSScenarioReferenceFieldType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18016,17 +18068,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:7533:2: ( ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) ) )
-            // InternalENVIRONMENT.g:7534:2: ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) )
+            // InternalENVIRONMENT.g:7549:2: ( ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) ) )
+            // InternalENVIRONMENT.g:7550:2: ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) )
             {
-            // InternalENVIRONMENT.g:7534:2: ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) )
+            // InternalENVIRONMENT.g:7550:2: ( (enumLiteral_0= 'tm' ) | (enumLiteral_1= 'tc' ) )
             int alt67=2;
             int LA67_0 = input.LA(1);
 
-            if ( (LA67_0==146) ) {
+            if ( (LA67_0==148) ) {
                 alt67=1;
             }
-            else if ( (LA67_0==147) ) {
+            else if ( (LA67_0==149) ) {
                 alt67=2;
             }
             else {
@@ -18038,12 +18090,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
             }
             switch (alt67) {
                 case 1 :
-                    // InternalENVIRONMENT.g:7535:3: (enumLiteral_0= 'tm' )
+                    // InternalENVIRONMENT.g:7551:3: (enumLiteral_0= 'tm' )
                     {
-                    // InternalENVIRONMENT.g:7535:3: (enumLiteral_0= 'tm' )
-                    // InternalENVIRONMENT.g:7536:4: enumLiteral_0= 'tm'
+                    // InternalENVIRONMENT.g:7551:3: (enumLiteral_0= 'tm' )
+                    // InternalENVIRONMENT.g:7552:4: enumLiteral_0= 'tm'
                     {
-                    enumLiteral_0=(Token)match(input,146,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,148,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioReferenceFieldTypeAccess().getTmEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -18057,12 +18109,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalENVIRONMENT.g:7543:3: (enumLiteral_1= 'tc' )
+                    // InternalENVIRONMENT.g:7559:3: (enumLiteral_1= 'tc' )
                     {
-                    // InternalENVIRONMENT.g:7543:3: (enumLiteral_1= 'tc' )
-                    // InternalENVIRONMENT.g:7544:4: enumLiteral_1= 'tc'
+                    // InternalENVIRONMENT.g:7559:3: (enumLiteral_1= 'tc' )
+                    // InternalENVIRONMENT.g:7560:4: enumLiteral_1= 'tc'
                     {
-                    enumLiteral_1=(Token)match(input,147,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,149,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioReferenceFieldTypeAccess().getTcEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -18100,7 +18152,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioAlarmMsgType"
-    // InternalENVIRONMENT.g:7554:1: ruleGSSScenarioAlarmMsgType returns [Enumerator current=null] : ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) ) ;
+    // InternalENVIRONMENT.g:7570:1: ruleGSSScenarioAlarmMsgType returns [Enumerator current=null] : ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) ) ;
     public final Enumerator ruleGSSScenarioAlarmMsgType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18112,23 +18164,23 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:7560:2: ( ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) ) )
-            // InternalENVIRONMENT.g:7561:2: ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) )
+            // InternalENVIRONMENT.g:7576:2: ( ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) ) )
+            // InternalENVIRONMENT.g:7577:2: ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) )
             {
-            // InternalENVIRONMENT.g:7561:2: ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) )
+            // InternalENVIRONMENT.g:7577:2: ( (enumLiteral_0= 'alarm1' ) | (enumLiteral_1= 'alarm2' ) | (enumLiteral_2= 'alarm3' ) )
             int alt68=3;
             switch ( input.LA(1) ) {
-            case 148:
+            case 150:
                 {
                 alt68=1;
                 }
                 break;
-            case 149:
+            case 151:
                 {
                 alt68=2;
                 }
                 break;
-            case 150:
+            case 152:
                 {
                 alt68=3;
                 }
@@ -18143,12 +18195,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
             switch (alt68) {
                 case 1 :
-                    // InternalENVIRONMENT.g:7562:3: (enumLiteral_0= 'alarm1' )
+                    // InternalENVIRONMENT.g:7578:3: (enumLiteral_0= 'alarm1' )
                     {
-                    // InternalENVIRONMENT.g:7562:3: (enumLiteral_0= 'alarm1' )
-                    // InternalENVIRONMENT.g:7563:4: enumLiteral_0= 'alarm1'
+                    // InternalENVIRONMENT.g:7578:3: (enumLiteral_0= 'alarm1' )
+                    // InternalENVIRONMENT.g:7579:4: enumLiteral_0= 'alarm1'
                     {
-                    enumLiteral_0=(Token)match(input,148,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,150,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioAlarmMsgTypeAccess().getAlarm1EnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -18162,12 +18214,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalENVIRONMENT.g:7570:3: (enumLiteral_1= 'alarm2' )
+                    // InternalENVIRONMENT.g:7586:3: (enumLiteral_1= 'alarm2' )
                     {
-                    // InternalENVIRONMENT.g:7570:3: (enumLiteral_1= 'alarm2' )
-                    // InternalENVIRONMENT.g:7571:4: enumLiteral_1= 'alarm2'
+                    // InternalENVIRONMENT.g:7586:3: (enumLiteral_1= 'alarm2' )
+                    // InternalENVIRONMENT.g:7587:4: enumLiteral_1= 'alarm2'
                     {
-                    enumLiteral_1=(Token)match(input,149,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,151,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioAlarmMsgTypeAccess().getAlarm2EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -18181,12 +18233,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalENVIRONMENT.g:7578:3: (enumLiteral_2= 'alarm3' )
+                    // InternalENVIRONMENT.g:7594:3: (enumLiteral_2= 'alarm3' )
                     {
-                    // InternalENVIRONMENT.g:7578:3: (enumLiteral_2= 'alarm3' )
-                    // InternalENVIRONMENT.g:7579:4: enumLiteral_2= 'alarm3'
+                    // InternalENVIRONMENT.g:7594:3: (enumLiteral_2= 'alarm3' )
+                    // InternalENVIRONMENT.g:7595:4: enumLiteral_2= 'alarm3'
                     {
-                    enumLiteral_2=(Token)match(input,150,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,152,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioAlarmMsgTypeAccess().getAlarm3EnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -18224,7 +18276,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioModifyType"
-    // InternalENVIRONMENT.g:7589:1: ruleGSSScenarioModifyType returns [Enumerator current=null] : ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) ) ;
+    // InternalENVIRONMENT.g:7605:1: ruleGSSScenarioModifyType returns [Enumerator current=null] : ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) ) ;
     public final Enumerator ruleGSSScenarioModifyType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18235,17 +18287,17 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:7595:2: ( ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) ) )
-            // InternalENVIRONMENT.g:7596:2: ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) )
+            // InternalENVIRONMENT.g:7611:2: ( ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) ) )
+            // InternalENVIRONMENT.g:7612:2: ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) )
             {
-            // InternalENVIRONMENT.g:7596:2: ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) )
+            // InternalENVIRONMENT.g:7612:2: ( (enumLiteral_0= 'increment' ) | (enumLiteral_1= 'increment1wrap' ) )
             int alt69=2;
             int LA69_0 = input.LA(1);
 
-            if ( (LA69_0==151) ) {
+            if ( (LA69_0==153) ) {
                 alt69=1;
             }
-            else if ( (LA69_0==152) ) {
+            else if ( (LA69_0==154) ) {
                 alt69=2;
             }
             else {
@@ -18257,12 +18309,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
             }
             switch (alt69) {
                 case 1 :
-                    // InternalENVIRONMENT.g:7597:3: (enumLiteral_0= 'increment' )
+                    // InternalENVIRONMENT.g:7613:3: (enumLiteral_0= 'increment' )
                     {
-                    // InternalENVIRONMENT.g:7597:3: (enumLiteral_0= 'increment' )
-                    // InternalENVIRONMENT.g:7598:4: enumLiteral_0= 'increment'
+                    // InternalENVIRONMENT.g:7613:3: (enumLiteral_0= 'increment' )
+                    // InternalENVIRONMENT.g:7614:4: enumLiteral_0= 'increment'
                     {
-                    enumLiteral_0=(Token)match(input,151,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,153,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioModifyTypeAccess().getIncrementEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -18276,12 +18328,12 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalENVIRONMENT.g:7605:3: (enumLiteral_1= 'increment1wrap' )
+                    // InternalENVIRONMENT.g:7621:3: (enumLiteral_1= 'increment1wrap' )
                     {
-                    // InternalENVIRONMENT.g:7605:3: (enumLiteral_1= 'increment1wrap' )
-                    // InternalENVIRONMENT.g:7606:4: enumLiteral_1= 'increment1wrap'
+                    // InternalENVIRONMENT.g:7621:3: (enumLiteral_1= 'increment1wrap' )
+                    // InternalENVIRONMENT.g:7622:4: enumLiteral_1= 'increment1wrap'
                     {
-                    enumLiteral_1=(Token)match(input,152,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,154,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSScenarioModifyTypeAccess().getIncrement1wrapEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -18319,7 +18371,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSScenarioAlarmValType"
-    // InternalENVIRONMENT.g:7616:1: ruleGSSScenarioAlarmValType returns [Enumerator current=null] : (enumLiteral_0= 'alarm1' ) ;
+    // InternalENVIRONMENT.g:7632:1: ruleGSSScenarioAlarmValType returns [Enumerator current=null] : (enumLiteral_0= 'alarm1' ) ;
     public final Enumerator ruleGSSScenarioAlarmValType() throws RecognitionException {
         Enumerator current = null;
 
@@ -18329,13 +18381,13 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalENVIRONMENT.g:7622:2: ( (enumLiteral_0= 'alarm1' ) )
-            // InternalENVIRONMENT.g:7623:2: (enumLiteral_0= 'alarm1' )
+            // InternalENVIRONMENT.g:7638:2: ( (enumLiteral_0= 'alarm1' ) )
+            // InternalENVIRONMENT.g:7639:2: (enumLiteral_0= 'alarm1' )
             {
-            // InternalENVIRONMENT.g:7623:2: (enumLiteral_0= 'alarm1' )
-            // InternalENVIRONMENT.g:7624:3: enumLiteral_0= 'alarm1'
+            // InternalENVIRONMENT.g:7639:2: (enumLiteral_0= 'alarm1' )
+            // InternalENVIRONMENT.g:7640:3: enumLiteral_0= 'alarm1'
             {
-            enumLiteral_0=(Token)match(input,148,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            enumLiteral_0=(Token)match(input,150,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current = grammarAccess.getGSSScenarioAlarmValTypeAccess().getAlarm1EnumLiteralDeclaration().getEnumLiteral().getInstance();
@@ -18580,10 +18632,10 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0008000000080000L});
         public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0004000000000000L});
         public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0020000000000000L});
-        public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x00000000000000F8L});
+        public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x00000000000003F8L});
         public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0040000000000000L});
         public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0080000000000000L});
-        public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000700L});
+        public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000001C00L});
         public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0500000000000000L});
         public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0500000000080000L});
         public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0500000000000000L,0x0000000000000003L});
@@ -18606,7 +18658,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000000000080000L,0x0000000000400000L});
         public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
         public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
-        public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000000000000C000L});
+        public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000030000L});
         public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
         public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
         public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
@@ -18614,7 +18666,7 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_87 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
         public static final BitSet FOLLOW_88 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
         public static final BitSet FOLLOW_89 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-        public static final BitSet FOLLOW_90 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000003800L});
+        public static final BitSet FOLLOW_90 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000000000000E000L});
         public static final BitSet FOLLOW_91 = new BitSet(new long[]{0xA800000000080000L});
         public static final BitSet FOLLOW_92 = new BitSet(new long[]{0xA000000000080000L});
         public static final BitSet FOLLOW_93 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
@@ -18631,20 +18683,20 @@ public class InternalENVIRONMENTParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_104 = new BitSet(new long[]{0x0000000000000000L,0x0000001080000000L});
         public static final BitSet FOLLOW_105 = new BitSet(new long[]{0x0000000000000000L,0x0000001000000000L});
         public static final BitSet FOLLOW_106 = new BitSet(new long[]{0x0000000000000000L,0x0000004000000000L});
-        public static final BitSet FOLLOW_107 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000030000L});
+        public static final BitSet FOLLOW_107 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x00000000000C0000L});
         public static final BitSet FOLLOW_108 = new BitSet(new long[]{0x0000000000000000L,0x0000008000000000L});
         public static final BitSet FOLLOW_109 = new BitSet(new long[]{0x0000000000000000L,0x0000290000000000L});
-        public static final BitSet FOLLOW_110 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x00000000000C0000L});
+        public static final BitSet FOLLOW_110 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000300000L});
         public static final BitSet FOLLOW_111 = new BitSet(new long[]{0x0000000000000000L,0x0000020000000000L});
         public static final BitSet FOLLOW_112 = new BitSet(new long[]{0x0000000000000000L,0x0000040000000000L});
         public static final BitSet FOLLOW_113 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
         public static final BitSet FOLLOW_114 = new BitSet(new long[]{0x0000000000000000L,0x0000800000000000L});
         public static final BitSet FOLLOW_115 = new BitSet(new long[]{0x0000000000000000L,0x0120000000000000L});
-        public static final BitSet FOLLOW_116 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000700000L});
+        public static final BitSet FOLLOW_116 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001C00000L});
         public static final BitSet FOLLOW_117 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
-        public static final BitSet FOLLOW_118 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001800000L});
+        public static final BitSet FOLLOW_118 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000006000000L});
         public static final BitSet FOLLOW_119 = new BitSet(new long[]{0x0000000000000000L,0x0008000000000000L});
-        public static final BitSet FOLLOW_120 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000100000L});
+        public static final BitSet FOLLOW_120 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
         public static final BitSet FOLLOW_121 = new BitSet(new long[]{0x0000000000000000L,0x0040000000000000L});
         public static final BitSet FOLLOW_122 = new BitSet(new long[]{0x0000000000080000L,0x0080000000000000L});
         public static final BitSet FOLLOW_123 = new BitSet(new long[]{0x0000000000000002L,0x0200000000000000L});

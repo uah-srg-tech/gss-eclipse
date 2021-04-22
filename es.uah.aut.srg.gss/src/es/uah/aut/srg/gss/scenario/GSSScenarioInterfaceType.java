@@ -74,7 +74,23 @@ public enum GSSScenarioInterfaceType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DUMMY(4, "dummy", "dummy");
+	DUMMY(4, "dummy", "dummy"), /**
+	 * The '<em><b>Socket Srv</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SOCKET_SRV_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SOCKET_SRV(5, "socketSrv", "socketSrv"), /**
+	 * The '<em><b>Socket Cli</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SOCKET_CLI_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SOCKET_CLI(6, "socketCli", "socketCli");
 
 	/**
 	 * The '<em><b>Sp W</b></em>' literal value.
@@ -152,6 +168,36 @@ public enum GSSScenarioInterfaceType implements Enumerator {
 	public static final int DUMMY_VALUE = 4;
 
 	/**
+	 * The '<em><b>Socket Srv</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Socket Srv</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #SOCKET_SRV
+	 * @model name="socketSrv"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SOCKET_SRV_VALUE = 5;
+
+	/**
+	 * The '<em><b>Socket Cli</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Socket Cli</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #SOCKET_CLI
+	 * @model name="socketCli"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SOCKET_CLI_VALUE = 6;
+
+	/**
 	 * An array of all the '<em><b>GSS Scenario Interface Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -164,6 +210,8 @@ public enum GSSScenarioInterfaceType implements Enumerator {
 			SP_WERROR,
 			UART,
 			DUMMY,
+			SOCKET_SRV,
+			SOCKET_CLI,
 		};
 
 	/**
@@ -225,6 +273,8 @@ public enum GSSScenarioInterfaceType implements Enumerator {
 			case SP_WERROR_VALUE: return SP_WERROR;
 			case UART_VALUE: return UART;
 			case DUMMY_VALUE: return DUMMY;
+			case SOCKET_SRV_VALUE: return SOCKET_SRV;
+			case SOCKET_CLI_VALUE: return SOCKET_CLI;
 		}
 		return null;
 	}

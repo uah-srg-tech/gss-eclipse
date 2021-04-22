@@ -16,13 +16,15 @@ import es.uah.aut.srg.gss.common.GSSModelFileImport;
 import es.uah.aut.srg.gss.common.commonPackage;
 import es.uah.aut.srg.gss.iface.GSSIfaceDummyPort;
 import es.uah.aut.srg.gss.iface.GSSIfacePortConfig;
+import es.uah.aut.srg.gss.iface.GSSIfacePortProtocol;
 import es.uah.aut.srg.gss.iface.GSSIfaceReadingPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceSize;
+import es.uah.aut.srg.gss.iface.GSSIfaceSocketCliPort;
+import es.uah.aut.srg.gss.iface.GSSIfaceSocketSrvPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceSpWPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceSpWTCPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceSyncPattern;
 import es.uah.aut.srg.gss.iface.GSSIfaceUartPort;
-import es.uah.aut.srg.gss.iface.GSSIfaceUartProtocol;
 import es.uah.aut.srg.gss.iface.ifacePackage;
 import es.uah.aut.srg.gss.lang.iface.services.IFACEGrammarAccess;
 import java.util.Set;
@@ -65,6 +67,9 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case ifacePackage.GSS_IFACE_PORT_CONFIG:
 				sequence_GSSIfacePortConfig(context, (GSSIfacePortConfig) semanticObject); 
 				return; 
+			case ifacePackage.GSS_IFACE_PORT_PROTOCOL:
+				sequence_GSSIfacePortProtocol(context, (GSSIfacePortProtocol) semanticObject); 
+				return; 
 			case ifacePackage.GSS_IFACE_READING_PORT:
 				sequence_GSSIfaceReadingPort(context, (GSSIfaceReadingPort) semanticObject); 
 				return; 
@@ -82,6 +87,12 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					return; 
 				}
 				else break;
+			case ifacePackage.GSS_IFACE_SOCKET_CLI_PORT:
+				sequence_GSSIfaceSocketCliPort(context, (GSSIfaceSocketCliPort) semanticObject); 
+				return; 
+			case ifacePackage.GSS_IFACE_SOCKET_SRV_PORT:
+				sequence_GSSIfaceSocketSrvPort(context, (GSSIfaceSocketSrvPort) semanticObject); 
+				return; 
 			case ifacePackage.GSS_IFACE_SP_WPORT:
 				sequence_GSSIfaceSpWPort(context, (GSSIfaceSpWPort) semanticObject); 
 				return; 
@@ -93,9 +104,6 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case ifacePackage.GSS_IFACE_UART_PORT:
 				sequence_GSSIfaceUartPort(context, (GSSIfaceUartPort) semanticObject); 
-				return; 
-			case ifacePackage.GSS_IFACE_UART_PROTOCOL:
-				sequence_GSSIfaceUartProtocol(context, (GSSIfaceUartProtocol) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -144,6 +152,25 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     (name=ID (uri=QualifiedName | version=Version)+ portConfig=GSSIfacePort)
 	 */
 	protected void sequence_GSSIfacePortConfig(ISerializationContext context, GSSIfacePortConfig semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     GSSIfacePortProtocol returns GSSIfacePortProtocol
+	 *
+	 * Constraint:
+	 *     (
+	 *         unit=GSSIfacePortProtocolUnit 
+	 *         power=GSSIfacePortProtocolPower 
+	 *         constSize=GSSIfaceConstSize 
+	 *         sizeFieldOffset=GSSIfaceSizeFieldOffset 
+	 *         sizeFieldTrim=GSSIfaceSizeFieldTrim 
+	 *         syncPattern=GSSIfaceSyncPattern?
+	 *     )
+	 */
+	protected void sequence_GSSIfacePortProtocol(ISerializationContext context, GSSIfacePortProtocol semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -204,6 +231,53 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBytesINTEGERParserRuleCall_4_0(), semanticObject.getBytes());
 		feeder.accept(grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBitsINTEGERParserRuleCall_8_0(), semanticObject.getBits());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     GSSIfacePort returns GSSIfaceSocketCliPort
+	 *     GSSIfaceSocketCliPort returns GSSIfaceSocketCliPort
+	 *
+	 * Constraint:
+	 *     (ipAddress=STRING portNumber=INTEGER portProtocol=GSSIfacePortProtocol)
+	 */
+	protected void sequence_GSSIfaceSocketCliPort(ISerializationContext context, GSSIfaceSocketCliPort semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_CLI_PORT__IP_ADDRESS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_CLI_PORT__IP_ADDRESS));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_CLI_PORT__PORT_NUMBER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_CLI_PORT__PORT_NUMBER));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_CLI_PORT__PORT_PROTOCOL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_CLI_PORT__PORT_PROTOCOL));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSIfaceSocketCliPortAccess().getIpAddressSTRINGTerminalRuleCall_4_0(), semanticObject.getIpAddress());
+		feeder.accept(grammarAccess.getGSSIfaceSocketCliPortAccess().getPortNumberINTEGERParserRuleCall_8_0(), semanticObject.getPortNumber());
+		feeder.accept(grammarAccess.getGSSIfaceSocketCliPortAccess().getPortProtocolGSSIfacePortProtocolParserRuleCall_10_0(), semanticObject.getPortProtocol());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     GSSIfacePort returns GSSIfaceSocketSrvPort
+	 *     GSSIfaceSocketSrvPort returns GSSIfaceSocketSrvPort
+	 *
+	 * Constraint:
+	 *     (portNumber=INTEGER portProtocol=GSSIfacePortProtocol)
+	 */
+	protected void sequence_GSSIfaceSocketSrvPort(ISerializationContext context, GSSIfaceSocketSrvPort semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_SRV_PORT__PORT_NUMBER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_SRV_PORT__PORT_NUMBER));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_SRV_PORT__PORT_PROTOCOL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_SRV_PORT__PORT_PROTOCOL));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getGSSIfaceSocketSrvPortAccess().getPortNumberINTEGERParserRuleCall_4_0(), semanticObject.getPortNumber());
+		feeder.accept(grammarAccess.getGSSIfaceSocketSrvPortAccess().getPortProtocolGSSIfacePortProtocolParserRuleCall_6_0(), semanticObject.getPortProtocol());
 		feeder.finish();
 	}
 	
@@ -271,7 +345,7 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         dataBits=GSSIfaceUartPortDataBits 
 	 *         stopBits=GSSIfaceUartPortStopBits 
 	 *         flowControl=GSSIfaceUartPortFlowControl 
-	 *         uartProtocol=GSSIfaceUartProtocol
+	 *         portProtocol=GSSIfacePortProtocol
 	 *     )
 	 */
 	protected void sequence_GSSIfaceUartPort(ISerializationContext context, GSSIfaceUartPort semanticObject) {
@@ -288,8 +362,8 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__STOP_BITS));
 			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__FLOW_CONTROL) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__FLOW_CONTROL));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__UART_PROTOCOL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__UART_PROTOCOL));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__PORT_PROTOCOL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_UART_PORT__PORT_PROTOCOL));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getNumberINTEGERParserRuleCall_4_0(), semanticObject.getNumber());
@@ -298,27 +372,8 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getDataBitsGSSIfaceUartPortDataBitsEnumRuleCall_16_0(), semanticObject.getDataBits());
 		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getStopBitsGSSIfaceUartPortStopBitsEnumRuleCall_20_0(), semanticObject.getStopBits());
 		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getFlowControlGSSIfaceUartPortFlowControlEnumRuleCall_24_0(), semanticObject.getFlowControl());
-		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0(), semanticObject.getUartProtocol());
+		feeder.accept(grammarAccess.getGSSIfaceUartPortAccess().getPortProtocolGSSIfacePortProtocolParserRuleCall_26_0(), semanticObject.getPortProtocol());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     GSSIfaceUartProtocol returns GSSIfaceUartProtocol
-	 *
-	 * Constraint:
-	 *     (
-	 *         unit=GSSIfaceUartProtocolUnit 
-	 *         power=GSSIfaceUartProtocolPower 
-	 *         constSize=GSSIfaceConstSize 
-	 *         sizeFieldOffset=GSSIfaceSizeFieldOffset 
-	 *         sizeFieldTrim=GSSIfaceSizeFieldTrim 
-	 *         syncPattern=GSSIfaceSyncPattern?
-	 *     )
-	 */
-	protected void sequence_GSSIfaceUartProtocol(ISerializationContext context, GSSIfaceUartProtocol semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

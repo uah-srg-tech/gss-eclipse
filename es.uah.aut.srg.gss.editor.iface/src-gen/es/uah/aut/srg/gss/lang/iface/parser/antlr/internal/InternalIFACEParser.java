@@ -34,7 +34,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalIFACEParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_HEXADECIMAL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "';'", "'portConfig'", "'{'", "'uri'", "':='", "'version'", "'}'", "'spwPort'", "'type'", "'link'", "'writingPort'", "'readingPort'", "'port'", "'uartPort'", "'number'", "'baudRate'", "'parity'", "'dataBits'", "'stopBits'", "'flowControl'", "'uartProtocol'", "'unit'", "'power'", "'constSize'", "'bytes'", "'bits'", "'sizeFieldOffset'", "'sizeFieldTrim'", "'syncPattern'", "'hexValue'", "'spwTCPort'", "'spwPortRef'", "'dummyPort'", "'.'", "'('", "')'", "'-'", "'usb'", "'mk2'", "'pci'", "'38400bauds'", "'115200bauds'", "'NO'", "'ODD'", "'EVEN'", "'MARK'", "'SPACE'", "'5bits'", "'6bits'", "'7bits'", "'8bits'", "'1bit'", "'2bits'", "'rts_cts'", "'xon_xoff'", "'no'", "'2_with_0'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_HEXADECIMAL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'import'", "';'", "'portConfig'", "'{'", "'uri'", "':='", "'version'", "'}'", "'spwPort'", "'type'", "'link'", "'writingPort'", "'readingPort'", "'port'", "'uartPort'", "'number'", "'baudRate'", "'parity'", "'dataBits'", "'stopBits'", "'flowControl'", "'socketSrvPort'", "'portNumber'", "'socketCliPort'", "'ipAddress'", "'portProtocol'", "'unit'", "'power'", "'constSize'", "'bytes'", "'bits'", "'sizeFieldOffset'", "'sizeFieldTrim'", "'syncPattern'", "'hexValue'", "'spwTCPort'", "'spwPortRef'", "'dummyPort'", "'.'", "'('", "')'", "'-'", "'usb'", "'mk2'", "'pci'", "'38400bauds'", "'115200bauds'", "'NO'", "'ODD'", "'EVEN'", "'MARK'", "'SPACE'", "'5bits'", "'6bits'", "'7bits'", "'8bits'", "'1bit'", "'2bits'", "'rts_cts'", "'xon_xoff'", "'no'", "'2_with_0'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -78,6 +78,9 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
     public static final int T__64=64;
     public static final int T__21=21;
     public static final int T__65=65;
+    public static final int T__70=70;
+    public static final int T__71=71;
+    public static final int T__72=72;
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__37=37;
@@ -87,6 +90,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
+    public static final int T__73=73;
     public static final int EOF=-1;
     public static final int T__30=30;
     public static final int T__31=31;
@@ -923,7 +927,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfacePort"
-    // InternalIFACE.g:372:1: ruleGSSIfacePort returns [EObject current=null] : (this_GSSIfaceSpWPort_0= ruleGSSIfaceSpWPort | this_GSSIfaceUartPort_1= ruleGSSIfaceUartPort | this_GSSIfaceSpWTCPort_2= ruleGSSIfaceSpWTCPort | this_GSSIfaceDummyPort_3= ruleGSSIfaceDummyPort ) ;
+    // InternalIFACE.g:372:1: ruleGSSIfacePort returns [EObject current=null] : (this_GSSIfaceSpWPort_0= ruleGSSIfaceSpWPort | this_GSSIfaceUartPort_1= ruleGSSIfaceUartPort | this_GSSIfaceSocketSrvPort_2= ruleGSSIfaceSocketSrvPort | this_GSSIfaceSocketCliPort_3= ruleGSSIfaceSocketCliPort | this_GSSIfaceSpWTCPort_4= ruleGSSIfaceSpWTCPort | this_GSSIfaceDummyPort_5= ruleGSSIfaceDummyPort ) ;
     public final EObject ruleGSSIfacePort() throws RecognitionException {
         EObject current = null;
 
@@ -931,20 +935,24 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
         EObject this_GSSIfaceUartPort_1 = null;
 
-        EObject this_GSSIfaceSpWTCPort_2 = null;
+        EObject this_GSSIfaceSocketSrvPort_2 = null;
 
-        EObject this_GSSIfaceDummyPort_3 = null;
+        EObject this_GSSIfaceSocketCliPort_3 = null;
+
+        EObject this_GSSIfaceSpWTCPort_4 = null;
+
+        EObject this_GSSIfaceDummyPort_5 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalIFACE.g:378:2: ( (this_GSSIfaceSpWPort_0= ruleGSSIfaceSpWPort | this_GSSIfaceUartPort_1= ruleGSSIfaceUartPort | this_GSSIfaceSpWTCPort_2= ruleGSSIfaceSpWTCPort | this_GSSIfaceDummyPort_3= ruleGSSIfaceDummyPort ) )
-            // InternalIFACE.g:379:2: (this_GSSIfaceSpWPort_0= ruleGSSIfaceSpWPort | this_GSSIfaceUartPort_1= ruleGSSIfaceUartPort | this_GSSIfaceSpWTCPort_2= ruleGSSIfaceSpWTCPort | this_GSSIfaceDummyPort_3= ruleGSSIfaceDummyPort )
+            // InternalIFACE.g:378:2: ( (this_GSSIfaceSpWPort_0= ruleGSSIfaceSpWPort | this_GSSIfaceUartPort_1= ruleGSSIfaceUartPort | this_GSSIfaceSocketSrvPort_2= ruleGSSIfaceSocketSrvPort | this_GSSIfaceSocketCliPort_3= ruleGSSIfaceSocketCliPort | this_GSSIfaceSpWTCPort_4= ruleGSSIfaceSpWTCPort | this_GSSIfaceDummyPort_5= ruleGSSIfaceDummyPort ) )
+            // InternalIFACE.g:379:2: (this_GSSIfaceSpWPort_0= ruleGSSIfaceSpWPort | this_GSSIfaceUartPort_1= ruleGSSIfaceUartPort | this_GSSIfaceSocketSrvPort_2= ruleGSSIfaceSocketSrvPort | this_GSSIfaceSocketCliPort_3= ruleGSSIfaceSocketCliPort | this_GSSIfaceSpWTCPort_4= ruleGSSIfaceSpWTCPort | this_GSSIfaceDummyPort_5= ruleGSSIfaceDummyPort )
             {
-            // InternalIFACE.g:379:2: (this_GSSIfaceSpWPort_0= ruleGSSIfaceSpWPort | this_GSSIfaceUartPort_1= ruleGSSIfaceUartPort | this_GSSIfaceSpWTCPort_2= ruleGSSIfaceSpWTCPort | this_GSSIfaceDummyPort_3= ruleGSSIfaceDummyPort )
-            int alt3=4;
+            // InternalIFACE.g:379:2: (this_GSSIfaceSpWPort_0= ruleGSSIfaceSpWPort | this_GSSIfaceUartPort_1= ruleGSSIfaceUartPort | this_GSSIfaceSocketSrvPort_2= ruleGSSIfaceSocketSrvPort | this_GSSIfaceSocketCliPort_3= ruleGSSIfaceSocketCliPort | this_GSSIfaceSpWTCPort_4= ruleGSSIfaceSpWTCPort | this_GSSIfaceDummyPort_5= ruleGSSIfaceDummyPort )
+            int alt3=6;
             switch ( input.LA(1) ) {
             case 20:
                 {
@@ -956,14 +964,24 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                 alt3=2;
                 }
                 break;
-            case 43:
+            case 33:
                 {
                 alt3=3;
                 }
                 break;
-            case 45:
+            case 35:
                 {
                 alt3=4;
+                }
+                break;
+            case 47:
+                {
+                alt3=5;
+                }
+                break;
+            case 49:
+                {
+                alt3=6;
                 }
                 break;
             default:
@@ -1030,7 +1048,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalIFACE.g:404:3: this_GSSIfaceSpWTCPort_2= ruleGSSIfaceSpWTCPort
+                    // InternalIFACE.g:404:3: this_GSSIfaceSocketSrvPort_2= ruleGSSIfaceSocketSrvPort
                     {
                     if ( state.backtracking==0 ) {
 
@@ -1039,17 +1057,17 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     if ( state.backtracking==0 ) {
 
-                      			newCompositeNode(grammarAccess.getGSSIfacePortAccess().getGSSIfaceSpWTCPortParserRuleCall_2());
+                      			newCompositeNode(grammarAccess.getGSSIfacePortAccess().getGSSIfaceSocketSrvPortParserRuleCall_2());
                       		
                     }
                     pushFollow(FollowSets000.FOLLOW_2);
-                    this_GSSIfaceSpWTCPort_2=ruleGSSIfaceSpWTCPort();
+                    this_GSSIfaceSocketSrvPort_2=ruleGSSIfaceSocketSrvPort();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			current = this_GSSIfaceSpWTCPort_2;
+                      			current = this_GSSIfaceSocketSrvPort_2;
                       			afterParserOrEnumRuleCall();
                       		
                     }
@@ -1057,7 +1075,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalIFACE.g:416:3: this_GSSIfaceDummyPort_3= ruleGSSIfaceDummyPort
+                    // InternalIFACE.g:416:3: this_GSSIfaceSocketCliPort_3= ruleGSSIfaceSocketCliPort
                     {
                     if ( state.backtracking==0 ) {
 
@@ -1066,17 +1084,71 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     if ( state.backtracking==0 ) {
 
-                      			newCompositeNode(grammarAccess.getGSSIfacePortAccess().getGSSIfaceDummyPortParserRuleCall_3());
+                      			newCompositeNode(grammarAccess.getGSSIfacePortAccess().getGSSIfaceSocketCliPortParserRuleCall_3());
                       		
                     }
                     pushFollow(FollowSets000.FOLLOW_2);
-                    this_GSSIfaceDummyPort_3=ruleGSSIfaceDummyPort();
+                    this_GSSIfaceSocketCliPort_3=ruleGSSIfaceSocketCliPort();
 
                     state._fsp--;
                     if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			current = this_GSSIfaceDummyPort_3;
+                      			current = this_GSSIfaceSocketCliPort_3;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 5 :
+                    // InternalIFACE.g:428:3: this_GSSIfaceSpWTCPort_4= ruleGSSIfaceSpWTCPort
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getGSSIfacePortAccess().getGSSIfaceSpWTCPortParserRuleCall_4());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_GSSIfaceSpWTCPort_4=ruleGSSIfaceSpWTCPort();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_GSSIfaceSpWTCPort_4;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 6 :
+                    // InternalIFACE.g:440:3: this_GSSIfaceDummyPort_5= ruleGSSIfaceDummyPort
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getGSSIfacePortAccess().getGSSIfaceDummyPortParserRuleCall_5());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_GSSIfaceDummyPort_5=ruleGSSIfaceDummyPort();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_GSSIfaceDummyPort_5;
                       			afterParserOrEnumRuleCall();
                       		
                     }
@@ -1108,7 +1180,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSIfaceSpWPort"
-    // InternalIFACE.g:431:1: entryRuleGSSIfaceSpWPort returns [EObject current=null] : iv_ruleGSSIfaceSpWPort= ruleGSSIfaceSpWPort EOF ;
+    // InternalIFACE.g:455:1: entryRuleGSSIfaceSpWPort returns [EObject current=null] : iv_ruleGSSIfaceSpWPort= ruleGSSIfaceSpWPort EOF ;
     public final EObject entryRuleGSSIfaceSpWPort() throws RecognitionException {
         EObject current = null;
 
@@ -1116,8 +1188,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:431:56: (iv_ruleGSSIfaceSpWPort= ruleGSSIfaceSpWPort EOF )
-            // InternalIFACE.g:432:2: iv_ruleGSSIfaceSpWPort= ruleGSSIfaceSpWPort EOF
+            // InternalIFACE.g:455:56: (iv_ruleGSSIfaceSpWPort= ruleGSSIfaceSpWPort EOF )
+            // InternalIFACE.g:456:2: iv_ruleGSSIfaceSpWPort= ruleGSSIfaceSpWPort EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSIfaceSpWPortRule()); 
@@ -1148,7 +1220,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceSpWPort"
-    // InternalIFACE.g:438:1: ruleGSSIfaceSpWPort returns [EObject current=null] : (otherlv_0= 'spwPort' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSIfaceSpWPortType ) ) otherlv_5= ';' otherlv_6= 'link' otherlv_7= ':=' ( (lv_link_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'writingPort' otherlv_11= ':=' ( (lv_writingPort_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_readingPort_14_0= ruleGSSIfaceReadingPort ) )+ otherlv_15= '}' otherlv_16= ';' ) ;
+    // InternalIFACE.g:462:1: ruleGSSIfaceSpWPort returns [EObject current=null] : (otherlv_0= 'spwPort' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSIfaceSpWPortType ) ) otherlv_5= ';' otherlv_6= 'link' otherlv_7= ':=' ( (lv_link_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'writingPort' otherlv_11= ':=' ( (lv_writingPort_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_readingPort_14_0= ruleGSSIfaceReadingPort ) )+ otherlv_15= '}' otherlv_16= ';' ) ;
     public final EObject ruleGSSIfaceSpWPort() throws RecognitionException {
         EObject current = null;
 
@@ -1178,11 +1250,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:444:2: ( (otherlv_0= 'spwPort' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSIfaceSpWPortType ) ) otherlv_5= ';' otherlv_6= 'link' otherlv_7= ':=' ( (lv_link_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'writingPort' otherlv_11= ':=' ( (lv_writingPort_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_readingPort_14_0= ruleGSSIfaceReadingPort ) )+ otherlv_15= '}' otherlv_16= ';' ) )
-            // InternalIFACE.g:445:2: (otherlv_0= 'spwPort' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSIfaceSpWPortType ) ) otherlv_5= ';' otherlv_6= 'link' otherlv_7= ':=' ( (lv_link_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'writingPort' otherlv_11= ':=' ( (lv_writingPort_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_readingPort_14_0= ruleGSSIfaceReadingPort ) )+ otherlv_15= '}' otherlv_16= ';' )
+            // InternalIFACE.g:468:2: ( (otherlv_0= 'spwPort' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSIfaceSpWPortType ) ) otherlv_5= ';' otherlv_6= 'link' otherlv_7= ':=' ( (lv_link_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'writingPort' otherlv_11= ':=' ( (lv_writingPort_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_readingPort_14_0= ruleGSSIfaceReadingPort ) )+ otherlv_15= '}' otherlv_16= ';' ) )
+            // InternalIFACE.g:469:2: (otherlv_0= 'spwPort' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSIfaceSpWPortType ) ) otherlv_5= ';' otherlv_6= 'link' otherlv_7= ':=' ( (lv_link_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'writingPort' otherlv_11= ':=' ( (lv_writingPort_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_readingPort_14_0= ruleGSSIfaceReadingPort ) )+ otherlv_15= '}' otherlv_16= ';' )
             {
-            // InternalIFACE.g:445:2: (otherlv_0= 'spwPort' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSIfaceSpWPortType ) ) otherlv_5= ';' otherlv_6= 'link' otherlv_7= ':=' ( (lv_link_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'writingPort' otherlv_11= ':=' ( (lv_writingPort_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_readingPort_14_0= ruleGSSIfaceReadingPort ) )+ otherlv_15= '}' otherlv_16= ';' )
-            // InternalIFACE.g:446:3: otherlv_0= 'spwPort' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSIfaceSpWPortType ) ) otherlv_5= ';' otherlv_6= 'link' otherlv_7= ':=' ( (lv_link_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'writingPort' otherlv_11= ':=' ( (lv_writingPort_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_readingPort_14_0= ruleGSSIfaceReadingPort ) )+ otherlv_15= '}' otherlv_16= ';'
+            // InternalIFACE.g:469:2: (otherlv_0= 'spwPort' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSIfaceSpWPortType ) ) otherlv_5= ';' otherlv_6= 'link' otherlv_7= ':=' ( (lv_link_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'writingPort' otherlv_11= ':=' ( (lv_writingPort_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_readingPort_14_0= ruleGSSIfaceReadingPort ) )+ otherlv_15= '}' otherlv_16= ';' )
+            // InternalIFACE.g:470:3: otherlv_0= 'spwPort' otherlv_1= '{' otherlv_2= 'type' otherlv_3= ':=' ( (lv_type_4_0= ruleGSSIfaceSpWPortType ) ) otherlv_5= ';' otherlv_6= 'link' otherlv_7= ':=' ( (lv_link_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= 'writingPort' otherlv_11= ':=' ( (lv_writingPort_12_0= ruleINTEGER ) ) otherlv_13= ';' ( (lv_readingPort_14_0= ruleGSSIfaceReadingPort ) )+ otherlv_15= '}' otherlv_16= ';'
             {
             otherlv_0=(Token)match(input,20,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1208,11 +1280,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalIFACE.g:462:3: ( (lv_type_4_0= ruleGSSIfaceSpWPortType ) )
-            // InternalIFACE.g:463:4: (lv_type_4_0= ruleGSSIfaceSpWPortType )
+            // InternalIFACE.g:486:3: ( (lv_type_4_0= ruleGSSIfaceSpWPortType ) )
+            // InternalIFACE.g:487:4: (lv_type_4_0= ruleGSSIfaceSpWPortType )
             {
-            // InternalIFACE.g:463:4: (lv_type_4_0= ruleGSSIfaceSpWPortType )
-            // InternalIFACE.g:464:5: lv_type_4_0= ruleGSSIfaceSpWPortType
+            // InternalIFACE.g:487:4: (lv_type_4_0= ruleGSSIfaceSpWPortType )
+            // InternalIFACE.g:488:5: lv_type_4_0= ruleGSSIfaceSpWPortType
             {
             if ( state.backtracking==0 ) {
 
@@ -1261,11 +1333,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalIFACE.g:493:3: ( (lv_link_8_0= ruleINTEGER ) )
-            // InternalIFACE.g:494:4: (lv_link_8_0= ruleINTEGER )
+            // InternalIFACE.g:517:3: ( (lv_link_8_0= ruleINTEGER ) )
+            // InternalIFACE.g:518:4: (lv_link_8_0= ruleINTEGER )
             {
-            // InternalIFACE.g:494:4: (lv_link_8_0= ruleINTEGER )
-            // InternalIFACE.g:495:5: lv_link_8_0= ruleINTEGER
+            // InternalIFACE.g:518:4: (lv_link_8_0= ruleINTEGER )
+            // InternalIFACE.g:519:5: lv_link_8_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -1314,11 +1386,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_11, grammarAccess.getGSSIfaceSpWPortAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalIFACE.g:524:3: ( (lv_writingPort_12_0= ruleINTEGER ) )
-            // InternalIFACE.g:525:4: (lv_writingPort_12_0= ruleINTEGER )
+            // InternalIFACE.g:548:3: ( (lv_writingPort_12_0= ruleINTEGER ) )
+            // InternalIFACE.g:549:4: (lv_writingPort_12_0= ruleINTEGER )
             {
-            // InternalIFACE.g:525:4: (lv_writingPort_12_0= ruleINTEGER )
-            // InternalIFACE.g:526:5: lv_writingPort_12_0= ruleINTEGER
+            // InternalIFACE.g:549:4: (lv_writingPort_12_0= ruleINTEGER )
+            // InternalIFACE.g:550:5: lv_writingPort_12_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -1355,7 +1427,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_13, grammarAccess.getGSSIfaceSpWPortAccess().getSemicolonKeyword_13());
               		
             }
-            // InternalIFACE.g:547:3: ( (lv_readingPort_14_0= ruleGSSIfaceReadingPort ) )+
+            // InternalIFACE.g:571:3: ( (lv_readingPort_14_0= ruleGSSIfaceReadingPort ) )+
             int cnt4=0;
             loop4:
             do {
@@ -1369,10 +1441,10 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalIFACE.g:548:4: (lv_readingPort_14_0= ruleGSSIfaceReadingPort )
+            	    // InternalIFACE.g:572:4: (lv_readingPort_14_0= ruleGSSIfaceReadingPort )
             	    {
-            	    // InternalIFACE.g:548:4: (lv_readingPort_14_0= ruleGSSIfaceReadingPort )
-            	    // InternalIFACE.g:549:5: lv_readingPort_14_0= ruleGSSIfaceReadingPort
+            	    // InternalIFACE.g:572:4: (lv_readingPort_14_0= ruleGSSIfaceReadingPort )
+            	    // InternalIFACE.g:573:5: lv_readingPort_14_0= ruleGSSIfaceReadingPort
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -1451,7 +1523,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSIfaceReadingPort"
-    // InternalIFACE.g:578:1: entryRuleGSSIfaceReadingPort returns [EObject current=null] : iv_ruleGSSIfaceReadingPort= ruleGSSIfaceReadingPort EOF ;
+    // InternalIFACE.g:602:1: entryRuleGSSIfaceReadingPort returns [EObject current=null] : iv_ruleGSSIfaceReadingPort= ruleGSSIfaceReadingPort EOF ;
     public final EObject entryRuleGSSIfaceReadingPort() throws RecognitionException {
         EObject current = null;
 
@@ -1459,8 +1531,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:578:60: (iv_ruleGSSIfaceReadingPort= ruleGSSIfaceReadingPort EOF )
-            // InternalIFACE.g:579:2: iv_ruleGSSIfaceReadingPort= ruleGSSIfaceReadingPort EOF
+            // InternalIFACE.g:602:60: (iv_ruleGSSIfaceReadingPort= ruleGSSIfaceReadingPort EOF )
+            // InternalIFACE.g:603:2: iv_ruleGSSIfaceReadingPort= ruleGSSIfaceReadingPort EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSIfaceReadingPortRule()); 
@@ -1491,7 +1563,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceReadingPort"
-    // InternalIFACE.g:585:1: ruleGSSIfaceReadingPort returns [EObject current=null] : (otherlv_0= 'readingPort' otherlv_1= '{' otherlv_2= 'port' otherlv_3= ':=' ( (lv_port_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
+    // InternalIFACE.g:609:1: ruleGSSIfaceReadingPort returns [EObject current=null] : (otherlv_0= 'readingPort' otherlv_1= '{' otherlv_2= 'port' otherlv_3= ':=' ( (lv_port_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
     public final EObject ruleGSSIfaceReadingPort() throws RecognitionException {
         EObject current = null;
 
@@ -1509,11 +1581,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:591:2: ( (otherlv_0= 'readingPort' otherlv_1= '{' otherlv_2= 'port' otherlv_3= ':=' ( (lv_port_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
-            // InternalIFACE.g:592:2: (otherlv_0= 'readingPort' otherlv_1= '{' otherlv_2= 'port' otherlv_3= ':=' ( (lv_port_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalIFACE.g:615:2: ( (otherlv_0= 'readingPort' otherlv_1= '{' otherlv_2= 'port' otherlv_3= ':=' ( (lv_port_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
+            // InternalIFACE.g:616:2: (otherlv_0= 'readingPort' otherlv_1= '{' otherlv_2= 'port' otherlv_3= ':=' ( (lv_port_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
             {
-            // InternalIFACE.g:592:2: (otherlv_0= 'readingPort' otherlv_1= '{' otherlv_2= 'port' otherlv_3= ':=' ( (lv_port_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
-            // InternalIFACE.g:593:3: otherlv_0= 'readingPort' otherlv_1= '{' otherlv_2= 'port' otherlv_3= ':=' ( (lv_port_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
+            // InternalIFACE.g:616:2: (otherlv_0= 'readingPort' otherlv_1= '{' otherlv_2= 'port' otherlv_3= ':=' ( (lv_port_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalIFACE.g:617:3: otherlv_0= 'readingPort' otherlv_1= '{' otherlv_2= 'port' otherlv_3= ':=' ( (lv_port_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
             {
             otherlv_0=(Token)match(input,24,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1539,11 +1611,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceReadingPortAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalIFACE.g:609:3: ( (lv_port_4_0= ruleINTEGER ) )
-            // InternalIFACE.g:610:4: (lv_port_4_0= ruleINTEGER )
+            // InternalIFACE.g:633:3: ( (lv_port_4_0= ruleINTEGER ) )
+            // InternalIFACE.g:634:4: (lv_port_4_0= ruleINTEGER )
             {
-            // InternalIFACE.g:610:4: (lv_port_4_0= ruleINTEGER )
-            // InternalIFACE.g:611:5: lv_port_4_0= ruleINTEGER
+            // InternalIFACE.g:634:4: (lv_port_4_0= ruleINTEGER )
+            // InternalIFACE.g:635:5: lv_port_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -1617,7 +1689,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSIfaceUartPort"
-    // InternalIFACE.g:644:1: entryRuleGSSIfaceUartPort returns [EObject current=null] : iv_ruleGSSIfaceUartPort= ruleGSSIfaceUartPort EOF ;
+    // InternalIFACE.g:668:1: entryRuleGSSIfaceUartPort returns [EObject current=null] : iv_ruleGSSIfaceUartPort= ruleGSSIfaceUartPort EOF ;
     public final EObject entryRuleGSSIfaceUartPort() throws RecognitionException {
         EObject current = null;
 
@@ -1625,8 +1697,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:644:57: (iv_ruleGSSIfaceUartPort= ruleGSSIfaceUartPort EOF )
-            // InternalIFACE.g:645:2: iv_ruleGSSIfaceUartPort= ruleGSSIfaceUartPort EOF
+            // InternalIFACE.g:668:57: (iv_ruleGSSIfaceUartPort= ruleGSSIfaceUartPort EOF )
+            // InternalIFACE.g:669:2: iv_ruleGSSIfaceUartPort= ruleGSSIfaceUartPort EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSIfaceUartPortRule()); 
@@ -1657,7 +1729,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceUartPort"
-    // InternalIFACE.g:651:1: ruleGSSIfaceUartPort returns [EObject current=null] : (otherlv_0= 'uartPort' otherlv_1= '{' otherlv_2= 'number' otherlv_3= ':=' ( (lv_number_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'baudRate' otherlv_7= ':=' ( (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate ) ) otherlv_9= ';' otherlv_10= 'parity' otherlv_11= ':=' ( (lv_parity_12_0= ruleGSSIfaceUartPortParity ) ) otherlv_13= ';' otherlv_14= 'dataBits' otherlv_15= ':=' ( (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits ) ) otherlv_17= ';' otherlv_18= 'stopBits' otherlv_19= ':=' ( (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits ) ) otherlv_21= ';' otherlv_22= 'flowControl' otherlv_23= ':=' ( (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl ) ) otherlv_25= ';' ( (lv_uartProtocol_26_0= ruleGSSIfaceUartProtocol ) ) otherlv_27= '}' otherlv_28= ';' ) ;
+    // InternalIFACE.g:675:1: ruleGSSIfaceUartPort returns [EObject current=null] : (otherlv_0= 'uartPort' otherlv_1= '{' otherlv_2= 'number' otherlv_3= ':=' ( (lv_number_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'baudRate' otherlv_7= ':=' ( (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate ) ) otherlv_9= ';' otherlv_10= 'parity' otherlv_11= ':=' ( (lv_parity_12_0= ruleGSSIfaceUartPortParity ) ) otherlv_13= ';' otherlv_14= 'dataBits' otherlv_15= ':=' ( (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits ) ) otherlv_17= ';' otherlv_18= 'stopBits' otherlv_19= ':=' ( (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits ) ) otherlv_21= ';' otherlv_22= 'flowControl' otherlv_23= ':=' ( (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl ) ) otherlv_25= ';' ( (lv_portProtocol_26_0= ruleGSSIfacePortProtocol ) ) otherlv_27= '}' otherlv_28= ';' ) ;
     public final EObject ruleGSSIfaceUartPort() throws RecognitionException {
         EObject current = null;
 
@@ -1695,18 +1767,18 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
         Enumerator lv_flowControl_24_0 = null;
 
-        EObject lv_uartProtocol_26_0 = null;
+        EObject lv_portProtocol_26_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalIFACE.g:657:2: ( (otherlv_0= 'uartPort' otherlv_1= '{' otherlv_2= 'number' otherlv_3= ':=' ( (lv_number_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'baudRate' otherlv_7= ':=' ( (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate ) ) otherlv_9= ';' otherlv_10= 'parity' otherlv_11= ':=' ( (lv_parity_12_0= ruleGSSIfaceUartPortParity ) ) otherlv_13= ';' otherlv_14= 'dataBits' otherlv_15= ':=' ( (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits ) ) otherlv_17= ';' otherlv_18= 'stopBits' otherlv_19= ':=' ( (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits ) ) otherlv_21= ';' otherlv_22= 'flowControl' otherlv_23= ':=' ( (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl ) ) otherlv_25= ';' ( (lv_uartProtocol_26_0= ruleGSSIfaceUartProtocol ) ) otherlv_27= '}' otherlv_28= ';' ) )
-            // InternalIFACE.g:658:2: (otherlv_0= 'uartPort' otherlv_1= '{' otherlv_2= 'number' otherlv_3= ':=' ( (lv_number_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'baudRate' otherlv_7= ':=' ( (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate ) ) otherlv_9= ';' otherlv_10= 'parity' otherlv_11= ':=' ( (lv_parity_12_0= ruleGSSIfaceUartPortParity ) ) otherlv_13= ';' otherlv_14= 'dataBits' otherlv_15= ':=' ( (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits ) ) otherlv_17= ';' otherlv_18= 'stopBits' otherlv_19= ':=' ( (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits ) ) otherlv_21= ';' otherlv_22= 'flowControl' otherlv_23= ':=' ( (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl ) ) otherlv_25= ';' ( (lv_uartProtocol_26_0= ruleGSSIfaceUartProtocol ) ) otherlv_27= '}' otherlv_28= ';' )
+            // InternalIFACE.g:681:2: ( (otherlv_0= 'uartPort' otherlv_1= '{' otherlv_2= 'number' otherlv_3= ':=' ( (lv_number_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'baudRate' otherlv_7= ':=' ( (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate ) ) otherlv_9= ';' otherlv_10= 'parity' otherlv_11= ':=' ( (lv_parity_12_0= ruleGSSIfaceUartPortParity ) ) otherlv_13= ';' otherlv_14= 'dataBits' otherlv_15= ':=' ( (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits ) ) otherlv_17= ';' otherlv_18= 'stopBits' otherlv_19= ':=' ( (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits ) ) otherlv_21= ';' otherlv_22= 'flowControl' otherlv_23= ':=' ( (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl ) ) otherlv_25= ';' ( (lv_portProtocol_26_0= ruleGSSIfacePortProtocol ) ) otherlv_27= '}' otherlv_28= ';' ) )
+            // InternalIFACE.g:682:2: (otherlv_0= 'uartPort' otherlv_1= '{' otherlv_2= 'number' otherlv_3= ':=' ( (lv_number_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'baudRate' otherlv_7= ':=' ( (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate ) ) otherlv_9= ';' otherlv_10= 'parity' otherlv_11= ':=' ( (lv_parity_12_0= ruleGSSIfaceUartPortParity ) ) otherlv_13= ';' otherlv_14= 'dataBits' otherlv_15= ':=' ( (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits ) ) otherlv_17= ';' otherlv_18= 'stopBits' otherlv_19= ':=' ( (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits ) ) otherlv_21= ';' otherlv_22= 'flowControl' otherlv_23= ':=' ( (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl ) ) otherlv_25= ';' ( (lv_portProtocol_26_0= ruleGSSIfacePortProtocol ) ) otherlv_27= '}' otherlv_28= ';' )
             {
-            // InternalIFACE.g:658:2: (otherlv_0= 'uartPort' otherlv_1= '{' otherlv_2= 'number' otherlv_3= ':=' ( (lv_number_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'baudRate' otherlv_7= ':=' ( (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate ) ) otherlv_9= ';' otherlv_10= 'parity' otherlv_11= ':=' ( (lv_parity_12_0= ruleGSSIfaceUartPortParity ) ) otherlv_13= ';' otherlv_14= 'dataBits' otherlv_15= ':=' ( (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits ) ) otherlv_17= ';' otherlv_18= 'stopBits' otherlv_19= ':=' ( (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits ) ) otherlv_21= ';' otherlv_22= 'flowControl' otherlv_23= ':=' ( (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl ) ) otherlv_25= ';' ( (lv_uartProtocol_26_0= ruleGSSIfaceUartProtocol ) ) otherlv_27= '}' otherlv_28= ';' )
-            // InternalIFACE.g:659:3: otherlv_0= 'uartPort' otherlv_1= '{' otherlv_2= 'number' otherlv_3= ':=' ( (lv_number_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'baudRate' otherlv_7= ':=' ( (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate ) ) otherlv_9= ';' otherlv_10= 'parity' otherlv_11= ':=' ( (lv_parity_12_0= ruleGSSIfaceUartPortParity ) ) otherlv_13= ';' otherlv_14= 'dataBits' otherlv_15= ':=' ( (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits ) ) otherlv_17= ';' otherlv_18= 'stopBits' otherlv_19= ':=' ( (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits ) ) otherlv_21= ';' otherlv_22= 'flowControl' otherlv_23= ':=' ( (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl ) ) otherlv_25= ';' ( (lv_uartProtocol_26_0= ruleGSSIfaceUartProtocol ) ) otherlv_27= '}' otherlv_28= ';'
+            // InternalIFACE.g:682:2: (otherlv_0= 'uartPort' otherlv_1= '{' otherlv_2= 'number' otherlv_3= ':=' ( (lv_number_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'baudRate' otherlv_7= ':=' ( (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate ) ) otherlv_9= ';' otherlv_10= 'parity' otherlv_11= ':=' ( (lv_parity_12_0= ruleGSSIfaceUartPortParity ) ) otherlv_13= ';' otherlv_14= 'dataBits' otherlv_15= ':=' ( (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits ) ) otherlv_17= ';' otherlv_18= 'stopBits' otherlv_19= ':=' ( (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits ) ) otherlv_21= ';' otherlv_22= 'flowControl' otherlv_23= ':=' ( (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl ) ) otherlv_25= ';' ( (lv_portProtocol_26_0= ruleGSSIfacePortProtocol ) ) otherlv_27= '}' otherlv_28= ';' )
+            // InternalIFACE.g:683:3: otherlv_0= 'uartPort' otherlv_1= '{' otherlv_2= 'number' otherlv_3= ':=' ( (lv_number_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'baudRate' otherlv_7= ':=' ( (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate ) ) otherlv_9= ';' otherlv_10= 'parity' otherlv_11= ':=' ( (lv_parity_12_0= ruleGSSIfaceUartPortParity ) ) otherlv_13= ';' otherlv_14= 'dataBits' otherlv_15= ':=' ( (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits ) ) otherlv_17= ';' otherlv_18= 'stopBits' otherlv_19= ':=' ( (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits ) ) otherlv_21= ';' otherlv_22= 'flowControl' otherlv_23= ':=' ( (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl ) ) otherlv_25= ';' ( (lv_portProtocol_26_0= ruleGSSIfacePortProtocol ) ) otherlv_27= '}' otherlv_28= ';'
             {
             otherlv_0=(Token)match(input,26,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1732,11 +1804,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalIFACE.g:675:3: ( (lv_number_4_0= ruleINTEGER ) )
-            // InternalIFACE.g:676:4: (lv_number_4_0= ruleINTEGER )
+            // InternalIFACE.g:699:3: ( (lv_number_4_0= ruleINTEGER ) )
+            // InternalIFACE.g:700:4: (lv_number_4_0= ruleINTEGER )
             {
-            // InternalIFACE.g:676:4: (lv_number_4_0= ruleINTEGER )
-            // InternalIFACE.g:677:5: lv_number_4_0= ruleINTEGER
+            // InternalIFACE.g:700:4: (lv_number_4_0= ruleINTEGER )
+            // InternalIFACE.g:701:5: lv_number_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -1785,11 +1857,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalIFACE.g:706:3: ( (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate ) )
-            // InternalIFACE.g:707:4: (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate )
+            // InternalIFACE.g:730:3: ( (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate ) )
+            // InternalIFACE.g:731:4: (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate )
             {
-            // InternalIFACE.g:707:4: (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate )
-            // InternalIFACE.g:708:5: lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate
+            // InternalIFACE.g:731:4: (lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate )
+            // InternalIFACE.g:732:5: lv_baudRate_8_0= ruleGSSIfaceUartPortBaudRate
             {
             if ( state.backtracking==0 ) {
 
@@ -1838,11 +1910,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_11, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_11());
               		
             }
-            // InternalIFACE.g:737:3: ( (lv_parity_12_0= ruleGSSIfaceUartPortParity ) )
-            // InternalIFACE.g:738:4: (lv_parity_12_0= ruleGSSIfaceUartPortParity )
+            // InternalIFACE.g:761:3: ( (lv_parity_12_0= ruleGSSIfaceUartPortParity ) )
+            // InternalIFACE.g:762:4: (lv_parity_12_0= ruleGSSIfaceUartPortParity )
             {
-            // InternalIFACE.g:738:4: (lv_parity_12_0= ruleGSSIfaceUartPortParity )
-            // InternalIFACE.g:739:5: lv_parity_12_0= ruleGSSIfaceUartPortParity
+            // InternalIFACE.g:762:4: (lv_parity_12_0= ruleGSSIfaceUartPortParity )
+            // InternalIFACE.g:763:5: lv_parity_12_0= ruleGSSIfaceUartPortParity
             {
             if ( state.backtracking==0 ) {
 
@@ -1891,11 +1963,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_15, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_15());
               		
             }
-            // InternalIFACE.g:768:3: ( (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits ) )
-            // InternalIFACE.g:769:4: (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits )
+            // InternalIFACE.g:792:3: ( (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits ) )
+            // InternalIFACE.g:793:4: (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits )
             {
-            // InternalIFACE.g:769:4: (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits )
-            // InternalIFACE.g:770:5: lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits
+            // InternalIFACE.g:793:4: (lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits )
+            // InternalIFACE.g:794:5: lv_dataBits_16_0= ruleGSSIfaceUartPortDataBits
             {
             if ( state.backtracking==0 ) {
 
@@ -1944,11 +2016,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_19, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_19());
               		
             }
-            // InternalIFACE.g:799:3: ( (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits ) )
-            // InternalIFACE.g:800:4: (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits )
+            // InternalIFACE.g:823:3: ( (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits ) )
+            // InternalIFACE.g:824:4: (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits )
             {
-            // InternalIFACE.g:800:4: (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits )
-            // InternalIFACE.g:801:5: lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits
+            // InternalIFACE.g:824:4: (lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits )
+            // InternalIFACE.g:825:5: lv_stopBits_20_0= ruleGSSIfaceUartPortStopBits
             {
             if ( state.backtracking==0 ) {
 
@@ -1997,11 +2069,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_23, grammarAccess.getGSSIfaceUartPortAccess().getColonEqualsSignKeyword_23());
               		
             }
-            // InternalIFACE.g:830:3: ( (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl ) )
-            // InternalIFACE.g:831:4: (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl )
+            // InternalIFACE.g:854:3: ( (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl ) )
+            // InternalIFACE.g:855:4: (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl )
             {
-            // InternalIFACE.g:831:4: (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl )
-            // InternalIFACE.g:832:5: lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl
+            // InternalIFACE.g:855:4: (lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl )
+            // InternalIFACE.g:856:5: lv_flowControl_24_0= ruleGSSIfaceUartPortFlowControl
             {
             if ( state.backtracking==0 ) {
 
@@ -2038,19 +2110,19 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_25, grammarAccess.getGSSIfaceUartPortAccess().getSemicolonKeyword_25());
               		
             }
-            // InternalIFACE.g:853:3: ( (lv_uartProtocol_26_0= ruleGSSIfaceUartProtocol ) )
-            // InternalIFACE.g:854:4: (lv_uartProtocol_26_0= ruleGSSIfaceUartProtocol )
+            // InternalIFACE.g:877:3: ( (lv_portProtocol_26_0= ruleGSSIfacePortProtocol ) )
+            // InternalIFACE.g:878:4: (lv_portProtocol_26_0= ruleGSSIfacePortProtocol )
             {
-            // InternalIFACE.g:854:4: (lv_uartProtocol_26_0= ruleGSSIfaceUartProtocol )
-            // InternalIFACE.g:855:5: lv_uartProtocol_26_0= ruleGSSIfaceUartProtocol
+            // InternalIFACE.g:878:4: (lv_portProtocol_26_0= ruleGSSIfacePortProtocol )
+            // InternalIFACE.g:879:5: lv_portProtocol_26_0= ruleGSSIfacePortProtocol
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getUartProtocolGSSIfaceUartProtocolParserRuleCall_26_0());
+              					newCompositeNode(grammarAccess.getGSSIfaceUartPortAccess().getPortProtocolGSSIfacePortProtocolParserRuleCall_26_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_12);
-            lv_uartProtocol_26_0=ruleGSSIfaceUartProtocol();
+            lv_portProtocol_26_0=ruleGSSIfacePortProtocol();
 
             state._fsp--;
             if (state.failed) return current;
@@ -2061,9 +2133,9 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               					}
               					set(
               						current,
-              						"uartProtocol",
-              						lv_uartProtocol_26_0,
-              						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocol");
+              						"portProtocol",
+              						lv_portProtocol_26_0,
+              						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocol");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -2109,28 +2181,28 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleGSSIfaceUartPort"
 
 
-    // $ANTLR start "entryRuleGSSIfaceUartProtocol"
-    // InternalIFACE.g:884:1: entryRuleGSSIfaceUartProtocol returns [EObject current=null] : iv_ruleGSSIfaceUartProtocol= ruleGSSIfaceUartProtocol EOF ;
-    public final EObject entryRuleGSSIfaceUartProtocol() throws RecognitionException {
+    // $ANTLR start "entryRuleGSSIfaceSocketSrvPort"
+    // InternalIFACE.g:908:1: entryRuleGSSIfaceSocketSrvPort returns [EObject current=null] : iv_ruleGSSIfaceSocketSrvPort= ruleGSSIfaceSocketSrvPort EOF ;
+    public final EObject entryRuleGSSIfaceSocketSrvPort() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleGSSIfaceUartProtocol = null;
+        EObject iv_ruleGSSIfaceSocketSrvPort = null;
 
 
         try {
-            // InternalIFACE.g:884:61: (iv_ruleGSSIfaceUartProtocol= ruleGSSIfaceUartProtocol EOF )
-            // InternalIFACE.g:885:2: iv_ruleGSSIfaceUartProtocol= ruleGSSIfaceUartProtocol EOF
+            // InternalIFACE.g:908:62: (iv_ruleGSSIfaceSocketSrvPort= ruleGSSIfaceSocketSrvPort EOF )
+            // InternalIFACE.g:909:2: iv_ruleGSSIfaceSocketSrvPort= ruleGSSIfaceSocketSrvPort EOF
             {
             if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getGSSIfaceUartProtocolRule()); 
+               newCompositeNode(grammarAccess.getGSSIfaceSocketSrvPortRule()); 
             }
             pushFollow(FollowSets000.FOLLOW_1);
-            iv_ruleGSSIfaceUartProtocol=ruleGSSIfaceUartProtocol();
+            iv_ruleGSSIfaceSocketSrvPort=ruleGSSIfaceSocketSrvPort();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleGSSIfaceUartProtocol; 
+               current =iv_ruleGSSIfaceSocketSrvPort; 
             }
             match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
 
@@ -2146,12 +2218,470 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleGSSIfaceUartProtocol"
+    // $ANTLR end "entryRuleGSSIfaceSocketSrvPort"
 
 
-    // $ANTLR start "ruleGSSIfaceUartProtocol"
-    // InternalIFACE.g:891:1: ruleGSSIfaceUartProtocol returns [EObject current=null] : (otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';' ) ;
-    public final EObject ruleGSSIfaceUartProtocol() throws RecognitionException {
+    // $ANTLR start "ruleGSSIfaceSocketSrvPort"
+    // InternalIFACE.g:915:1: ruleGSSIfaceSocketSrvPort returns [EObject current=null] : (otherlv_0= 'socketSrvPort' otherlv_1= '{' otherlv_2= 'portNumber' otherlv_3= ':=' ( (lv_portNumber_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_portProtocol_6_0= ruleGSSIfacePortProtocol ) ) otherlv_7= '}' otherlv_8= ';' ) ;
+    public final EObject ruleGSSIfaceSocketSrvPort() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token otherlv_5=null;
+        Token otherlv_7=null;
+        Token otherlv_8=null;
+        AntlrDatatypeRuleToken lv_portNumber_4_0 = null;
+
+        EObject lv_portProtocol_6_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalIFACE.g:921:2: ( (otherlv_0= 'socketSrvPort' otherlv_1= '{' otherlv_2= 'portNumber' otherlv_3= ':=' ( (lv_portNumber_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_portProtocol_6_0= ruleGSSIfacePortProtocol ) ) otherlv_7= '}' otherlv_8= ';' ) )
+            // InternalIFACE.g:922:2: (otherlv_0= 'socketSrvPort' otherlv_1= '{' otherlv_2= 'portNumber' otherlv_3= ':=' ( (lv_portNumber_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_portProtocol_6_0= ruleGSSIfacePortProtocol ) ) otherlv_7= '}' otherlv_8= ';' )
+            {
+            // InternalIFACE.g:922:2: (otherlv_0= 'socketSrvPort' otherlv_1= '{' otherlv_2= 'portNumber' otherlv_3= ':=' ( (lv_portNumber_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_portProtocol_6_0= ruleGSSIfacePortProtocol ) ) otherlv_7= '}' otherlv_8= ';' )
+            // InternalIFACE.g:923:3: otherlv_0= 'socketSrvPort' otherlv_1= '{' otherlv_2= 'portNumber' otherlv_3= ':=' ( (lv_portNumber_4_0= ruleINTEGER ) ) otherlv_5= ';' ( (lv_portProtocol_6_0= ruleGSSIfacePortProtocol ) ) otherlv_7= '}' otherlv_8= ';'
+            {
+            otherlv_0=(Token)match(input,33,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_0, grammarAccess.getGSSIfaceSocketSrvPortAccess().getSocketSrvPortKeyword_0());
+              		
+            }
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_33); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSocketSrvPortAccess().getLeftCurlyBracketKeyword_1());
+              		
+            }
+            otherlv_2=(Token)match(input,34,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSocketSrvPortAccess().getPortNumberKeyword_2());
+              		
+            }
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_16); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSocketSrvPortAccess().getColonEqualsSignKeyword_3());
+              		
+            }
+            // InternalIFACE.g:939:3: ( (lv_portNumber_4_0= ruleINTEGER ) )
+            // InternalIFACE.g:940:4: (lv_portNumber_4_0= ruleINTEGER )
+            {
+            // InternalIFACE.g:940:4: (lv_portNumber_4_0= ruleINTEGER )
+            // InternalIFACE.g:941:5: lv_portNumber_4_0= ruleINTEGER
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSIfaceSocketSrvPortAccess().getPortNumberINTEGERParserRuleCall_4_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_5);
+            lv_portNumber_4_0=ruleINTEGER();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSIfaceSocketSrvPortRule());
+              					}
+              					set(
+              						current,
+              						"portNumber",
+              						lv_portNumber_4_0,
+              						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_32); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSocketSrvPortAccess().getSemicolonKeyword_5());
+              		
+            }
+            // InternalIFACE.g:962:3: ( (lv_portProtocol_6_0= ruleGSSIfacePortProtocol ) )
+            // InternalIFACE.g:963:4: (lv_portProtocol_6_0= ruleGSSIfacePortProtocol )
+            {
+            // InternalIFACE.g:963:4: (lv_portProtocol_6_0= ruleGSSIfacePortProtocol )
+            // InternalIFACE.g:964:5: lv_portProtocol_6_0= ruleGSSIfacePortProtocol
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSIfaceSocketSrvPortAccess().getPortProtocolGSSIfacePortProtocolParserRuleCall_6_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_12);
+            lv_portProtocol_6_0=ruleGSSIfacePortProtocol();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSIfaceSocketSrvPortRule());
+              					}
+              					set(
+              						current,
+              						"portProtocol",
+              						lv_portProtocol_6_0,
+              						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocol");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_7=(Token)match(input,19,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSocketSrvPortAccess().getRightCurlyBracketKeyword_7());
+              		
+            }
+            otherlv_8=(Token)match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_8, grammarAccess.getGSSIfaceSocketSrvPortAccess().getSemicolonKeyword_8());
+              		
+            }
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleGSSIfaceSocketSrvPort"
+
+
+    // $ANTLR start "entryRuleGSSIfaceSocketCliPort"
+    // InternalIFACE.g:993:1: entryRuleGSSIfaceSocketCliPort returns [EObject current=null] : iv_ruleGSSIfaceSocketCliPort= ruleGSSIfaceSocketCliPort EOF ;
+    public final EObject entryRuleGSSIfaceSocketCliPort() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleGSSIfaceSocketCliPort = null;
+
+
+        try {
+            // InternalIFACE.g:993:62: (iv_ruleGSSIfaceSocketCliPort= ruleGSSIfaceSocketCliPort EOF )
+            // InternalIFACE.g:994:2: iv_ruleGSSIfaceSocketCliPort= ruleGSSIfaceSocketCliPort EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getGSSIfaceSocketCliPortRule()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_1);
+            iv_ruleGSSIfaceSocketCliPort=ruleGSSIfaceSocketCliPort();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleGSSIfaceSocketCliPort; 
+            }
+            match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleGSSIfaceSocketCliPort"
+
+
+    // $ANTLR start "ruleGSSIfaceSocketCliPort"
+    // InternalIFACE.g:1000:1: ruleGSSIfaceSocketCliPort returns [EObject current=null] : (otherlv_0= 'socketCliPort' otherlv_1= '{' otherlv_2= 'ipAddress' otherlv_3= ':=' ( (lv_ipAddress_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'portNumber' otherlv_7= ':=' ( (lv_portNumber_8_0= ruleINTEGER ) ) otherlv_9= ';' ( (lv_portProtocol_10_0= ruleGSSIfacePortProtocol ) ) otherlv_11= '}' otherlv_12= ';' ) ;
+    public final EObject ruleGSSIfaceSocketCliPort() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token lv_ipAddress_4_0=null;
+        Token otherlv_5=null;
+        Token otherlv_6=null;
+        Token otherlv_7=null;
+        Token otherlv_9=null;
+        Token otherlv_11=null;
+        Token otherlv_12=null;
+        AntlrDatatypeRuleToken lv_portNumber_8_0 = null;
+
+        EObject lv_portProtocol_10_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalIFACE.g:1006:2: ( (otherlv_0= 'socketCliPort' otherlv_1= '{' otherlv_2= 'ipAddress' otherlv_3= ':=' ( (lv_ipAddress_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'portNumber' otherlv_7= ':=' ( (lv_portNumber_8_0= ruleINTEGER ) ) otherlv_9= ';' ( (lv_portProtocol_10_0= ruleGSSIfacePortProtocol ) ) otherlv_11= '}' otherlv_12= ';' ) )
+            // InternalIFACE.g:1007:2: (otherlv_0= 'socketCliPort' otherlv_1= '{' otherlv_2= 'ipAddress' otherlv_3= ':=' ( (lv_ipAddress_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'portNumber' otherlv_7= ':=' ( (lv_portNumber_8_0= ruleINTEGER ) ) otherlv_9= ';' ( (lv_portProtocol_10_0= ruleGSSIfacePortProtocol ) ) otherlv_11= '}' otherlv_12= ';' )
+            {
+            // InternalIFACE.g:1007:2: (otherlv_0= 'socketCliPort' otherlv_1= '{' otherlv_2= 'ipAddress' otherlv_3= ':=' ( (lv_ipAddress_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'portNumber' otherlv_7= ':=' ( (lv_portNumber_8_0= ruleINTEGER ) ) otherlv_9= ';' ( (lv_portProtocol_10_0= ruleGSSIfacePortProtocol ) ) otherlv_11= '}' otherlv_12= ';' )
+            // InternalIFACE.g:1008:3: otherlv_0= 'socketCliPort' otherlv_1= '{' otherlv_2= 'ipAddress' otherlv_3= ':=' ( (lv_ipAddress_4_0= RULE_STRING ) ) otherlv_5= ';' otherlv_6= 'portNumber' otherlv_7= ':=' ( (lv_portNumber_8_0= ruleINTEGER ) ) otherlv_9= ';' ( (lv_portProtocol_10_0= ruleGSSIfacePortProtocol ) ) otherlv_11= '}' otherlv_12= ';'
+            {
+            otherlv_0=(Token)match(input,35,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_0, grammarAccess.getGSSIfaceSocketCliPortAccess().getSocketCliPortKeyword_0());
+              		
+            }
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_34); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSocketCliPortAccess().getLeftCurlyBracketKeyword_1());
+              		
+            }
+            otherlv_2=(Token)match(input,36,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSocketCliPortAccess().getIpAddressKeyword_2());
+              		
+            }
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSocketCliPortAccess().getColonEqualsSignKeyword_3());
+              		
+            }
+            // InternalIFACE.g:1024:3: ( (lv_ipAddress_4_0= RULE_STRING ) )
+            // InternalIFACE.g:1025:4: (lv_ipAddress_4_0= RULE_STRING )
+            {
+            // InternalIFACE.g:1025:4: (lv_ipAddress_4_0= RULE_STRING )
+            // InternalIFACE.g:1026:5: lv_ipAddress_4_0= RULE_STRING
+            {
+            lv_ipAddress_4_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					newLeafNode(lv_ipAddress_4_0, grammarAccess.getGSSIfaceSocketCliPortAccess().getIpAddressSTRINGTerminalRuleCall_4_0());
+              				
+            }
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElement(grammarAccess.getGSSIfaceSocketCliPortRule());
+              					}
+              					setWithLastConsumed(
+              						current,
+              						"ipAddress",
+              						lv_ipAddress_4_0,
+              						"org.eclipse.xtext.common.Terminals.STRING");
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_33); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSocketCliPortAccess().getSemicolonKeyword_5());
+              		
+            }
+            otherlv_6=(Token)match(input,34,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSocketCliPortAccess().getPortNumberKeyword_6());
+              		
+            }
+            otherlv_7=(Token)match(input,17,FollowSets000.FOLLOW_16); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSocketCliPortAccess().getColonEqualsSignKeyword_7());
+              		
+            }
+            // InternalIFACE.g:1054:3: ( (lv_portNumber_8_0= ruleINTEGER ) )
+            // InternalIFACE.g:1055:4: (lv_portNumber_8_0= ruleINTEGER )
+            {
+            // InternalIFACE.g:1055:4: (lv_portNumber_8_0= ruleINTEGER )
+            // InternalIFACE.g:1056:5: lv_portNumber_8_0= ruleINTEGER
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSIfaceSocketCliPortAccess().getPortNumberINTEGERParserRuleCall_8_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_5);
+            lv_portNumber_8_0=ruleINTEGER();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSIfaceSocketCliPortRule());
+              					}
+              					set(
+              						current,
+              						"portNumber",
+              						lv_portNumber_8_0,
+              						"es.uah.aut.srg.gss.lang.iface.IFACE.INTEGER");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_32); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_9, grammarAccess.getGSSIfaceSocketCliPortAccess().getSemicolonKeyword_9());
+              		
+            }
+            // InternalIFACE.g:1077:3: ( (lv_portProtocol_10_0= ruleGSSIfacePortProtocol ) )
+            // InternalIFACE.g:1078:4: (lv_portProtocol_10_0= ruleGSSIfacePortProtocol )
+            {
+            // InternalIFACE.g:1078:4: (lv_portProtocol_10_0= ruleGSSIfacePortProtocol )
+            // InternalIFACE.g:1079:5: lv_portProtocol_10_0= ruleGSSIfacePortProtocol
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getGSSIfaceSocketCliPortAccess().getPortProtocolGSSIfacePortProtocolParserRuleCall_10_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_12);
+            lv_portProtocol_10_0=ruleGSSIfacePortProtocol();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getGSSIfaceSocketCliPortRule());
+              					}
+              					set(
+              						current,
+              						"portProtocol",
+              						lv_portProtocol_10_0,
+              						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocol");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_11=(Token)match(input,19,FollowSets000.FOLLOW_5); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_11, grammarAccess.getGSSIfaceSocketCliPortAccess().getRightCurlyBracketKeyword_11());
+              		
+            }
+            otherlv_12=(Token)match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_12, grammarAccess.getGSSIfaceSocketCliPortAccess().getSemicolonKeyword_12());
+              		
+            }
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleGSSIfaceSocketCliPort"
+
+
+    // $ANTLR start "entryRuleGSSIfacePortProtocol"
+    // InternalIFACE.g:1108:1: entryRuleGSSIfacePortProtocol returns [EObject current=null] : iv_ruleGSSIfacePortProtocol= ruleGSSIfacePortProtocol EOF ;
+    public final EObject entryRuleGSSIfacePortProtocol() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleGSSIfacePortProtocol = null;
+
+
+        try {
+            // InternalIFACE.g:1108:61: (iv_ruleGSSIfacePortProtocol= ruleGSSIfacePortProtocol EOF )
+            // InternalIFACE.g:1109:2: iv_ruleGSSIfacePortProtocol= ruleGSSIfacePortProtocol EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getGSSIfacePortProtocolRule()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_1);
+            iv_ruleGSSIfacePortProtocol=ruleGSSIfacePortProtocol();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleGSSIfacePortProtocol; 
+            }
+            match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleGSSIfacePortProtocol"
+
+
+    // $ANTLR start "ruleGSSIfacePortProtocol"
+    // InternalIFACE.g:1115:1: ruleGSSIfacePortProtocol returns [EObject current=null] : (otherlv_0= 'portProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfacePortProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfacePortProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';' ) ;
+    public final EObject ruleGSSIfacePortProtocol() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -2181,62 +2711,62 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:897:2: ( (otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';' ) )
-            // InternalIFACE.g:898:2: (otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';' )
+            // InternalIFACE.g:1121:2: ( (otherlv_0= 'portProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfacePortProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfacePortProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';' ) )
+            // InternalIFACE.g:1122:2: (otherlv_0= 'portProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfacePortProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfacePortProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';' )
             {
-            // InternalIFACE.g:898:2: (otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';' )
-            // InternalIFACE.g:899:3: otherlv_0= 'uartProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';'
+            // InternalIFACE.g:1122:2: (otherlv_0= 'portProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfacePortProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfacePortProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';' )
+            // InternalIFACE.g:1123:3: otherlv_0= 'portProtocol' otherlv_1= '{' otherlv_2= 'unit' otherlv_3= ':=' ( (lv_unit_4_0= ruleGSSIfacePortProtocolUnit ) ) otherlv_5= ';' otherlv_6= 'power' otherlv_7= ':=' ( (lv_power_8_0= ruleGSSIfacePortProtocolPower ) ) otherlv_9= ';' ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) ) ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) ) ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) ) ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )? otherlv_14= '}' otherlv_15= ';'
             {
-            otherlv_0=(Token)match(input,33,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,37,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_0, grammarAccess.getGSSIfaceUartProtocolAccess().getUartProtocolKeyword_0());
+              			newLeafNode(otherlv_0, grammarAccess.getGSSIfacePortProtocolAccess().getPortProtocolKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_33); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_35); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceUartProtocolAccess().getLeftCurlyBracketKeyword_1());
+              			newLeafNode(otherlv_1, grammarAccess.getGSSIfacePortProtocolAccess().getLeftCurlyBracketKeyword_1());
               		
             }
-            otherlv_2=(Token)match(input,34,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            otherlv_2=(Token)match(input,38,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceUartProtocolAccess().getUnitKeyword_2());
+              			newLeafNode(otherlv_2, grammarAccess.getGSSIfacePortProtocolAccess().getUnitKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_34); if (state.failed) return current;
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_36); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceUartProtocolAccess().getColonEqualsSignKeyword_3());
+              			newLeafNode(otherlv_3, grammarAccess.getGSSIfacePortProtocolAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalIFACE.g:915:3: ( (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit ) )
-            // InternalIFACE.g:916:4: (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit )
+            // InternalIFACE.g:1139:3: ( (lv_unit_4_0= ruleGSSIfacePortProtocolUnit ) )
+            // InternalIFACE.g:1140:4: (lv_unit_4_0= ruleGSSIfacePortProtocolUnit )
             {
-            // InternalIFACE.g:916:4: (lv_unit_4_0= ruleGSSIfaceUartProtocolUnit )
-            // InternalIFACE.g:917:5: lv_unit_4_0= ruleGSSIfaceUartProtocolUnit
+            // InternalIFACE.g:1140:4: (lv_unit_4_0= ruleGSSIfacePortProtocolUnit )
+            // InternalIFACE.g:1141:5: lv_unit_4_0= ruleGSSIfacePortProtocolUnit
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getUnitGSSIfaceUartProtocolUnitEnumRuleCall_4_0());
+              					newCompositeNode(grammarAccess.getGSSIfacePortProtocolAccess().getUnitGSSIfacePortProtocolUnitEnumRuleCall_4_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_5);
-            lv_unit_4_0=ruleGSSIfaceUartProtocolUnit();
+            lv_unit_4_0=ruleGSSIfacePortProtocolUnit();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+              						current = createModelElementForParent(grammarAccess.getGSSIfacePortProtocolRule());
               					}
               					set(
               						current,
               						"unit",
               						lv_unit_4_0,
-              						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocolUnit");
+              						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocolUnit");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -2246,50 +2776,50 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_35); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_37); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_5());
+              			newLeafNode(otherlv_5, grammarAccess.getGSSIfacePortProtocolAccess().getSemicolonKeyword_5());
               		
             }
-            otherlv_6=(Token)match(input,35,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            otherlv_6=(Token)match(input,39,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceUartProtocolAccess().getPowerKeyword_6());
+              			newLeafNode(otherlv_6, grammarAccess.getGSSIfacePortProtocolAccess().getPowerKeyword_6());
               		
             }
-            otherlv_7=(Token)match(input,17,FollowSets000.FOLLOW_36); if (state.failed) return current;
+            otherlv_7=(Token)match(input,17,FollowSets000.FOLLOW_38); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceUartProtocolAccess().getColonEqualsSignKeyword_7());
+              			newLeafNode(otherlv_7, grammarAccess.getGSSIfacePortProtocolAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalIFACE.g:946:3: ( (lv_power_8_0= ruleGSSIfaceUartProtocolPower ) )
-            // InternalIFACE.g:947:4: (lv_power_8_0= ruleGSSIfaceUartProtocolPower )
+            // InternalIFACE.g:1170:3: ( (lv_power_8_0= ruleGSSIfacePortProtocolPower ) )
+            // InternalIFACE.g:1171:4: (lv_power_8_0= ruleGSSIfacePortProtocolPower )
             {
-            // InternalIFACE.g:947:4: (lv_power_8_0= ruleGSSIfaceUartProtocolPower )
-            // InternalIFACE.g:948:5: lv_power_8_0= ruleGSSIfaceUartProtocolPower
+            // InternalIFACE.g:1171:4: (lv_power_8_0= ruleGSSIfacePortProtocolPower )
+            // InternalIFACE.g:1172:5: lv_power_8_0= ruleGSSIfacePortProtocolPower
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getPowerGSSIfaceUartProtocolPowerEnumRuleCall_8_0());
+              					newCompositeNode(grammarAccess.getGSSIfacePortProtocolAccess().getPowerGSSIfacePortProtocolPowerEnumRuleCall_8_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_5);
-            lv_power_8_0=ruleGSSIfaceUartProtocolPower();
+            lv_power_8_0=ruleGSSIfacePortProtocolPower();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+              						current = createModelElementForParent(grammarAccess.getGSSIfacePortProtocolRule());
               					}
               					set(
               						current,
               						"power",
               						lv_power_8_0,
-              						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfaceUartProtocolPower");
+              						"es.uah.aut.srg.gss.lang.iface.IFACE.GSSIfacePortProtocolPower");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -2299,24 +2829,24 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_37); if (state.failed) return current;
+            otherlv_9=(Token)match(input,13,FollowSets000.FOLLOW_39); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_9, grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_9());
+              			newLeafNode(otherlv_9, grammarAccess.getGSSIfacePortProtocolAccess().getSemicolonKeyword_9());
               		
             }
-            // InternalIFACE.g:969:3: ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) )
-            // InternalIFACE.g:970:4: (lv_constSize_10_0= ruleGSSIfaceConstSize )
+            // InternalIFACE.g:1193:3: ( (lv_constSize_10_0= ruleGSSIfaceConstSize ) )
+            // InternalIFACE.g:1194:4: (lv_constSize_10_0= ruleGSSIfaceConstSize )
             {
-            // InternalIFACE.g:970:4: (lv_constSize_10_0= ruleGSSIfaceConstSize )
-            // InternalIFACE.g:971:5: lv_constSize_10_0= ruleGSSIfaceConstSize
+            // InternalIFACE.g:1194:4: (lv_constSize_10_0= ruleGSSIfaceConstSize )
+            // InternalIFACE.g:1195:5: lv_constSize_10_0= ruleGSSIfaceConstSize
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getConstSizeGSSIfaceConstSizeParserRuleCall_10_0());
+              					newCompositeNode(grammarAccess.getGSSIfacePortProtocolAccess().getConstSizeGSSIfaceConstSizeParserRuleCall_10_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_38);
+            pushFollow(FollowSets000.FOLLOW_40);
             lv_constSize_10_0=ruleGSSIfaceConstSize();
 
             state._fsp--;
@@ -2324,7 +2854,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
 
               					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+              						current = createModelElementForParent(grammarAccess.getGSSIfacePortProtocolRule());
               					}
               					set(
               						current,
@@ -2340,18 +2870,18 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalIFACE.g:988:3: ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) )
-            // InternalIFACE.g:989:4: (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset )
+            // InternalIFACE.g:1212:3: ( (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset ) )
+            // InternalIFACE.g:1213:4: (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset )
             {
-            // InternalIFACE.g:989:4: (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset )
-            // InternalIFACE.g:990:5: lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset
+            // InternalIFACE.g:1213:4: (lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset )
+            // InternalIFACE.g:1214:5: lv_sizeFieldOffset_11_0= ruleGSSIfaceSizeFieldOffset
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldOffsetGSSIfaceSizeFieldOffsetParserRuleCall_11_0());
+              					newCompositeNode(grammarAccess.getGSSIfacePortProtocolAccess().getSizeFieldOffsetGSSIfaceSizeFieldOffsetParserRuleCall_11_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_39);
+            pushFollow(FollowSets000.FOLLOW_41);
             lv_sizeFieldOffset_11_0=ruleGSSIfaceSizeFieldOffset();
 
             state._fsp--;
@@ -2359,7 +2889,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
 
               					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+              						current = createModelElementForParent(grammarAccess.getGSSIfacePortProtocolRule());
               					}
               					set(
               						current,
@@ -2375,18 +2905,18 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalIFACE.g:1007:3: ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) )
-            // InternalIFACE.g:1008:4: (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim )
+            // InternalIFACE.g:1231:3: ( (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim ) )
+            // InternalIFACE.g:1232:4: (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim )
             {
-            // InternalIFACE.g:1008:4: (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim )
-            // InternalIFACE.g:1009:5: lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim
+            // InternalIFACE.g:1232:4: (lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim )
+            // InternalIFACE.g:1233:5: lv_sizeFieldTrim_12_0= ruleGSSIfaceSizeFieldTrim
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSizeFieldTrimGSSIfaceSizeFieldTrimParserRuleCall_12_0());
+              					newCompositeNode(grammarAccess.getGSSIfacePortProtocolAccess().getSizeFieldTrimGSSIfaceSizeFieldTrimParserRuleCall_12_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_40);
+            pushFollow(FollowSets000.FOLLOW_42);
             lv_sizeFieldTrim_12_0=ruleGSSIfaceSizeFieldTrim();
 
             state._fsp--;
@@ -2394,7 +2924,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
 
               					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+              						current = createModelElementForParent(grammarAccess.getGSSIfacePortProtocolRule());
               					}
               					set(
               						current,
@@ -2410,23 +2940,23 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalIFACE.g:1026:3: ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )?
+            // InternalIFACE.g:1250:3: ( (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern ) )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==41) ) {
+            if ( (LA5_0==45) ) {
                 alt5=1;
             }
             switch (alt5) {
                 case 1 :
-                    // InternalIFACE.g:1027:4: (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern )
+                    // InternalIFACE.g:1251:4: (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern )
                     {
-                    // InternalIFACE.g:1027:4: (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern )
-                    // InternalIFACE.g:1028:5: lv_syncPattern_13_0= ruleGSSIfaceSyncPattern
+                    // InternalIFACE.g:1251:4: (lv_syncPattern_13_0= ruleGSSIfaceSyncPattern )
+                    // InternalIFACE.g:1252:5: lv_syncPattern_13_0= ruleGSSIfaceSyncPattern
                     {
                     if ( state.backtracking==0 ) {
 
-                      					newCompositeNode(grammarAccess.getGSSIfaceUartProtocolAccess().getSyncPatternGSSIfaceSyncPatternParserRuleCall_13_0());
+                      					newCompositeNode(grammarAccess.getGSSIfacePortProtocolAccess().getSyncPatternGSSIfaceSyncPatternParserRuleCall_13_0());
                       				
                     }
                     pushFollow(FollowSets000.FOLLOW_12);
@@ -2437,7 +2967,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     if ( state.backtracking==0 ) {
 
                       					if (current==null) {
-                      						current = createModelElementForParent(grammarAccess.getGSSIfaceUartProtocolRule());
+                      						current = createModelElementForParent(grammarAccess.getGSSIfacePortProtocolRule());
                       					}
                       					set(
                       						current,
@@ -2459,13 +2989,13 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             otherlv_14=(Token)match(input,19,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_14, grammarAccess.getGSSIfaceUartProtocolAccess().getRightCurlyBracketKeyword_14());
+              			newLeafNode(otherlv_14, grammarAccess.getGSSIfacePortProtocolAccess().getRightCurlyBracketKeyword_14());
               		
             }
             otherlv_15=(Token)match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_15, grammarAccess.getGSSIfaceUartProtocolAccess().getSemicolonKeyword_15());
+              			newLeafNode(otherlv_15, grammarAccess.getGSSIfacePortProtocolAccess().getSemicolonKeyword_15());
               		
             }
 
@@ -2489,11 +3019,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleGSSIfaceUartProtocol"
+    // $ANTLR end "ruleGSSIfacePortProtocol"
 
 
     // $ANTLR start "entryRuleGSSIfaceConstSize"
-    // InternalIFACE.g:1057:1: entryRuleGSSIfaceConstSize returns [EObject current=null] : iv_ruleGSSIfaceConstSize= ruleGSSIfaceConstSize EOF ;
+    // InternalIFACE.g:1281:1: entryRuleGSSIfaceConstSize returns [EObject current=null] : iv_ruleGSSIfaceConstSize= ruleGSSIfaceConstSize EOF ;
     public final EObject entryRuleGSSIfaceConstSize() throws RecognitionException {
         EObject current = null;
 
@@ -2501,8 +3031,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:1057:58: (iv_ruleGSSIfaceConstSize= ruleGSSIfaceConstSize EOF )
-            // InternalIFACE.g:1058:2: iv_ruleGSSIfaceConstSize= ruleGSSIfaceConstSize EOF
+            // InternalIFACE.g:1281:58: (iv_ruleGSSIfaceConstSize= ruleGSSIfaceConstSize EOF )
+            // InternalIFACE.g:1282:2: iv_ruleGSSIfaceConstSize= ruleGSSIfaceConstSize EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSIfaceConstSizeRule()); 
@@ -2533,7 +3063,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceConstSize"
-    // InternalIFACE.g:1064:1: ruleGSSIfaceConstSize returns [EObject current=null] : (otherlv_0= 'constSize' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalIFACE.g:1288:1: ruleGSSIfaceConstSize returns [EObject current=null] : (otherlv_0= 'constSize' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSIfaceConstSize() throws RecognitionException {
         EObject current = null;
 
@@ -2556,25 +3086,25 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1070:2: ( (otherlv_0= 'constSize' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalIFACE.g:1071:2: (otherlv_0= 'constSize' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalIFACE.g:1294:2: ( (otherlv_0= 'constSize' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalIFACE.g:1295:2: (otherlv_0= 'constSize' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalIFACE.g:1071:2: (otherlv_0= 'constSize' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalIFACE.g:1072:3: otherlv_0= 'constSize' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalIFACE.g:1295:2: (otherlv_0= 'constSize' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalIFACE.g:1296:3: otherlv_0= 'constSize' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
             {
-            otherlv_0=(Token)match(input,36,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,40,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSIfaceConstSizeAccess().getConstSizeKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_41); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_43); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceConstSizeAccess().getLeftCurlyBracketKeyword_1());
               		
             }
-            otherlv_2=(Token)match(input,37,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            otherlv_2=(Token)match(input,41,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceConstSizeAccess().getBytesKeyword_2());
@@ -2586,11 +3116,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceConstSizeAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalIFACE.g:1088:3: ( (lv_bytes_4_0= ruleINTEGER ) )
-            // InternalIFACE.g:1089:4: (lv_bytes_4_0= ruleINTEGER )
+            // InternalIFACE.g:1312:3: ( (lv_bytes_4_0= ruleINTEGER ) )
+            // InternalIFACE.g:1313:4: (lv_bytes_4_0= ruleINTEGER )
             {
-            // InternalIFACE.g:1089:4: (lv_bytes_4_0= ruleINTEGER )
-            // InternalIFACE.g:1090:5: lv_bytes_4_0= ruleINTEGER
+            // InternalIFACE.g:1313:4: (lv_bytes_4_0= ruleINTEGER )
+            // InternalIFACE.g:1314:5: lv_bytes_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -2621,13 +3151,13 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_42); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_44); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceConstSizeAccess().getSemicolonKeyword_5());
               		
             }
-            otherlv_6=(Token)match(input,38,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            otherlv_6=(Token)match(input,42,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceConstSizeAccess().getBitsKeyword_6());
@@ -2639,11 +3169,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceConstSizeAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalIFACE.g:1119:3: ( (lv_bits_8_0= ruleINTEGER ) )
-            // InternalIFACE.g:1120:4: (lv_bits_8_0= ruleINTEGER )
+            // InternalIFACE.g:1343:3: ( (lv_bits_8_0= ruleINTEGER ) )
+            // InternalIFACE.g:1344:4: (lv_bits_8_0= ruleINTEGER )
             {
-            // InternalIFACE.g:1120:4: (lv_bits_8_0= ruleINTEGER )
-            // InternalIFACE.g:1121:5: lv_bits_8_0= ruleINTEGER
+            // InternalIFACE.g:1344:4: (lv_bits_8_0= ruleINTEGER )
+            // InternalIFACE.g:1345:5: lv_bits_8_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -2717,7 +3247,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSIfaceSizeFieldOffset"
-    // InternalIFACE.g:1154:1: entryRuleGSSIfaceSizeFieldOffset returns [EObject current=null] : iv_ruleGSSIfaceSizeFieldOffset= ruleGSSIfaceSizeFieldOffset EOF ;
+    // InternalIFACE.g:1378:1: entryRuleGSSIfaceSizeFieldOffset returns [EObject current=null] : iv_ruleGSSIfaceSizeFieldOffset= ruleGSSIfaceSizeFieldOffset EOF ;
     public final EObject entryRuleGSSIfaceSizeFieldOffset() throws RecognitionException {
         EObject current = null;
 
@@ -2725,8 +3255,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:1154:64: (iv_ruleGSSIfaceSizeFieldOffset= ruleGSSIfaceSizeFieldOffset EOF )
-            // InternalIFACE.g:1155:2: iv_ruleGSSIfaceSizeFieldOffset= ruleGSSIfaceSizeFieldOffset EOF
+            // InternalIFACE.g:1378:64: (iv_ruleGSSIfaceSizeFieldOffset= ruleGSSIfaceSizeFieldOffset EOF )
+            // InternalIFACE.g:1379:2: iv_ruleGSSIfaceSizeFieldOffset= ruleGSSIfaceSizeFieldOffset EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSIfaceSizeFieldOffsetRule()); 
@@ -2757,7 +3287,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceSizeFieldOffset"
-    // InternalIFACE.g:1161:1: ruleGSSIfaceSizeFieldOffset returns [EObject current=null] : (otherlv_0= 'sizeFieldOffset' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalIFACE.g:1385:1: ruleGSSIfaceSizeFieldOffset returns [EObject current=null] : (otherlv_0= 'sizeFieldOffset' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSIfaceSizeFieldOffset() throws RecognitionException {
         EObject current = null;
 
@@ -2780,25 +3310,25 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1167:2: ( (otherlv_0= 'sizeFieldOffset' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalIFACE.g:1168:2: (otherlv_0= 'sizeFieldOffset' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalIFACE.g:1391:2: ( (otherlv_0= 'sizeFieldOffset' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalIFACE.g:1392:2: (otherlv_0= 'sizeFieldOffset' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalIFACE.g:1168:2: (otherlv_0= 'sizeFieldOffset' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalIFACE.g:1169:3: otherlv_0= 'sizeFieldOffset' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalIFACE.g:1392:2: (otherlv_0= 'sizeFieldOffset' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalIFACE.g:1393:3: otherlv_0= 'sizeFieldOffset' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
             {
-            otherlv_0=(Token)match(input,39,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,43,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSizeFieldOffsetKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_41); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_43); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getLeftCurlyBracketKeyword_1());
               		
             }
-            otherlv_2=(Token)match(input,37,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            otherlv_2=(Token)match(input,41,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBytesKeyword_2());
@@ -2810,11 +3340,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalIFACE.g:1185:3: ( (lv_bytes_4_0= ruleINTEGER ) )
-            // InternalIFACE.g:1186:4: (lv_bytes_4_0= ruleINTEGER )
+            // InternalIFACE.g:1409:3: ( (lv_bytes_4_0= ruleINTEGER ) )
+            // InternalIFACE.g:1410:4: (lv_bytes_4_0= ruleINTEGER )
             {
-            // InternalIFACE.g:1186:4: (lv_bytes_4_0= ruleINTEGER )
-            // InternalIFACE.g:1187:5: lv_bytes_4_0= ruleINTEGER
+            // InternalIFACE.g:1410:4: (lv_bytes_4_0= ruleINTEGER )
+            // InternalIFACE.g:1411:5: lv_bytes_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -2845,13 +3375,13 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_42); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_44); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getSemicolonKeyword_5());
               		
             }
-            otherlv_6=(Token)match(input,38,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            otherlv_6=(Token)match(input,42,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getBitsKeyword_6());
@@ -2863,11 +3393,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSizeFieldOffsetAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalIFACE.g:1216:3: ( (lv_bits_8_0= ruleINTEGER ) )
-            // InternalIFACE.g:1217:4: (lv_bits_8_0= ruleINTEGER )
+            // InternalIFACE.g:1440:3: ( (lv_bits_8_0= ruleINTEGER ) )
+            // InternalIFACE.g:1441:4: (lv_bits_8_0= ruleINTEGER )
             {
-            // InternalIFACE.g:1217:4: (lv_bits_8_0= ruleINTEGER )
-            // InternalIFACE.g:1218:5: lv_bits_8_0= ruleINTEGER
+            // InternalIFACE.g:1441:4: (lv_bits_8_0= ruleINTEGER )
+            // InternalIFACE.g:1442:5: lv_bits_8_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -2941,7 +3471,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSIfaceSizeFieldTrim"
-    // InternalIFACE.g:1251:1: entryRuleGSSIfaceSizeFieldTrim returns [EObject current=null] : iv_ruleGSSIfaceSizeFieldTrim= ruleGSSIfaceSizeFieldTrim EOF ;
+    // InternalIFACE.g:1475:1: entryRuleGSSIfaceSizeFieldTrim returns [EObject current=null] : iv_ruleGSSIfaceSizeFieldTrim= ruleGSSIfaceSizeFieldTrim EOF ;
     public final EObject entryRuleGSSIfaceSizeFieldTrim() throws RecognitionException {
         EObject current = null;
 
@@ -2949,8 +3479,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:1251:62: (iv_ruleGSSIfaceSizeFieldTrim= ruleGSSIfaceSizeFieldTrim EOF )
-            // InternalIFACE.g:1252:2: iv_ruleGSSIfaceSizeFieldTrim= ruleGSSIfaceSizeFieldTrim EOF
+            // InternalIFACE.g:1475:62: (iv_ruleGSSIfaceSizeFieldTrim= ruleGSSIfaceSizeFieldTrim EOF )
+            // InternalIFACE.g:1476:2: iv_ruleGSSIfaceSizeFieldTrim= ruleGSSIfaceSizeFieldTrim EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSIfaceSizeFieldTrimRule()); 
@@ -2981,7 +3511,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceSizeFieldTrim"
-    // InternalIFACE.g:1258:1: ruleGSSIfaceSizeFieldTrim returns [EObject current=null] : (otherlv_0= 'sizeFieldTrim' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
+    // InternalIFACE.g:1482:1: ruleGSSIfaceSizeFieldTrim returns [EObject current=null] : (otherlv_0= 'sizeFieldTrim' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) ;
     public final EObject ruleGSSIfaceSizeFieldTrim() throws RecognitionException {
         EObject current = null;
 
@@ -3004,25 +3534,25 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1264:2: ( (otherlv_0= 'sizeFieldTrim' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
-            // InternalIFACE.g:1265:2: (otherlv_0= 'sizeFieldTrim' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalIFACE.g:1488:2: ( (otherlv_0= 'sizeFieldTrim' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' ) )
+            // InternalIFACE.g:1489:2: (otherlv_0= 'sizeFieldTrim' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
             {
-            // InternalIFACE.g:1265:2: (otherlv_0= 'sizeFieldTrim' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
-            // InternalIFACE.g:1266:3: otherlv_0= 'sizeFieldTrim' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
+            // InternalIFACE.g:1489:2: (otherlv_0= 'sizeFieldTrim' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';' )
+            // InternalIFACE.g:1490:3: otherlv_0= 'sizeFieldTrim' otherlv_1= '{' otherlv_2= 'bytes' otherlv_3= ':=' ( (lv_bytes_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= 'bits' otherlv_7= ':=' ( (lv_bits_8_0= ruleINTEGER ) ) otherlv_9= ';' otherlv_10= '}' otherlv_11= ';'
             {
-            otherlv_0=(Token)match(input,40,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,44,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSizeFieldTrimKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_41); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_43); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getLeftCurlyBracketKeyword_1());
               		
             }
-            otherlv_2=(Token)match(input,37,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            otherlv_2=(Token)match(input,41,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBytesKeyword_2());
@@ -3034,11 +3564,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalIFACE.g:1282:3: ( (lv_bytes_4_0= ruleINTEGER ) )
-            // InternalIFACE.g:1283:4: (lv_bytes_4_0= ruleINTEGER )
+            // InternalIFACE.g:1506:3: ( (lv_bytes_4_0= ruleINTEGER ) )
+            // InternalIFACE.g:1507:4: (lv_bytes_4_0= ruleINTEGER )
             {
-            // InternalIFACE.g:1283:4: (lv_bytes_4_0= ruleINTEGER )
-            // InternalIFACE.g:1284:5: lv_bytes_4_0= ruleINTEGER
+            // InternalIFACE.g:1507:4: (lv_bytes_4_0= ruleINTEGER )
+            // InternalIFACE.g:1508:5: lv_bytes_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -3069,13 +3599,13 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_42); if (state.failed) return current;
+            otherlv_5=(Token)match(input,13,FollowSets000.FOLLOW_44); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_5, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getSemicolonKeyword_5());
               		
             }
-            otherlv_6=(Token)match(input,38,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            otherlv_6=(Token)match(input,42,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_6, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getBitsKeyword_6());
@@ -3087,11 +3617,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getGSSIfaceSizeFieldTrimAccess().getColonEqualsSignKeyword_7());
               		
             }
-            // InternalIFACE.g:1313:3: ( (lv_bits_8_0= ruleINTEGER ) )
-            // InternalIFACE.g:1314:4: (lv_bits_8_0= ruleINTEGER )
+            // InternalIFACE.g:1537:3: ( (lv_bits_8_0= ruleINTEGER ) )
+            // InternalIFACE.g:1538:4: (lv_bits_8_0= ruleINTEGER )
             {
-            // InternalIFACE.g:1314:4: (lv_bits_8_0= ruleINTEGER )
-            // InternalIFACE.g:1315:5: lv_bits_8_0= ruleINTEGER
+            // InternalIFACE.g:1538:4: (lv_bits_8_0= ruleINTEGER )
+            // InternalIFACE.g:1539:5: lv_bits_8_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -3165,7 +3695,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSIfaceSyncPattern"
-    // InternalIFACE.g:1348:1: entryRuleGSSIfaceSyncPattern returns [EObject current=null] : iv_ruleGSSIfaceSyncPattern= ruleGSSIfaceSyncPattern EOF ;
+    // InternalIFACE.g:1572:1: entryRuleGSSIfaceSyncPattern returns [EObject current=null] : iv_ruleGSSIfaceSyncPattern= ruleGSSIfaceSyncPattern EOF ;
     public final EObject entryRuleGSSIfaceSyncPattern() throws RecognitionException {
         EObject current = null;
 
@@ -3173,8 +3703,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:1348:60: (iv_ruleGSSIfaceSyncPattern= ruleGSSIfaceSyncPattern EOF )
-            // InternalIFACE.g:1349:2: iv_ruleGSSIfaceSyncPattern= ruleGSSIfaceSyncPattern EOF
+            // InternalIFACE.g:1572:60: (iv_ruleGSSIfaceSyncPattern= ruleGSSIfaceSyncPattern EOF )
+            // InternalIFACE.g:1573:2: iv_ruleGSSIfaceSyncPattern= ruleGSSIfaceSyncPattern EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSIfaceSyncPatternRule()); 
@@ -3205,7 +3735,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceSyncPattern"
-    // InternalIFACE.g:1355:1: ruleGSSIfaceSyncPattern returns [EObject current=null] : (otherlv_0= 'syncPattern' otherlv_1= '{' otherlv_2= 'hexValue' otherlv_3= ':=' ( (lv_hexValue_4_0= RULE_HEXADECIMAL ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
+    // InternalIFACE.g:1579:1: ruleGSSIfaceSyncPattern returns [EObject current=null] : (otherlv_0= 'syncPattern' otherlv_1= '{' otherlv_2= 'hexValue' otherlv_3= ':=' ( (lv_hexValue_4_0= RULE_HEXADECIMAL ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
     public final EObject ruleGSSIfaceSyncPattern() throws RecognitionException {
         EObject current = null;
 
@@ -3222,41 +3752,41 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1361:2: ( (otherlv_0= 'syncPattern' otherlv_1= '{' otherlv_2= 'hexValue' otherlv_3= ':=' ( (lv_hexValue_4_0= RULE_HEXADECIMAL ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
-            // InternalIFACE.g:1362:2: (otherlv_0= 'syncPattern' otherlv_1= '{' otherlv_2= 'hexValue' otherlv_3= ':=' ( (lv_hexValue_4_0= RULE_HEXADECIMAL ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalIFACE.g:1585:2: ( (otherlv_0= 'syncPattern' otherlv_1= '{' otherlv_2= 'hexValue' otherlv_3= ':=' ( (lv_hexValue_4_0= RULE_HEXADECIMAL ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
+            // InternalIFACE.g:1586:2: (otherlv_0= 'syncPattern' otherlv_1= '{' otherlv_2= 'hexValue' otherlv_3= ':=' ( (lv_hexValue_4_0= RULE_HEXADECIMAL ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
             {
-            // InternalIFACE.g:1362:2: (otherlv_0= 'syncPattern' otherlv_1= '{' otherlv_2= 'hexValue' otherlv_3= ':=' ( (lv_hexValue_4_0= RULE_HEXADECIMAL ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
-            // InternalIFACE.g:1363:3: otherlv_0= 'syncPattern' otherlv_1= '{' otherlv_2= 'hexValue' otherlv_3= ':=' ( (lv_hexValue_4_0= RULE_HEXADECIMAL ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
+            // InternalIFACE.g:1586:2: (otherlv_0= 'syncPattern' otherlv_1= '{' otherlv_2= 'hexValue' otherlv_3= ':=' ( (lv_hexValue_4_0= RULE_HEXADECIMAL ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalIFACE.g:1587:3: otherlv_0= 'syncPattern' otherlv_1= '{' otherlv_2= 'hexValue' otherlv_3= ':=' ( (lv_hexValue_4_0= RULE_HEXADECIMAL ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
             {
-            otherlv_0=(Token)match(input,41,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,45,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSIfaceSyncPatternAccess().getSyncPatternKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_43); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_45); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSyncPatternAccess().getLeftCurlyBracketKeyword_1());
               		
             }
-            otherlv_2=(Token)match(input,42,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            otherlv_2=(Token)match(input,46,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSyncPatternAccess().getHexValueKeyword_2());
               		
             }
-            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_44); if (state.failed) return current;
+            otherlv_3=(Token)match(input,17,FollowSets000.FOLLOW_46); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSyncPatternAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalIFACE.g:1379:3: ( (lv_hexValue_4_0= RULE_HEXADECIMAL ) )
-            // InternalIFACE.g:1380:4: (lv_hexValue_4_0= RULE_HEXADECIMAL )
+            // InternalIFACE.g:1603:3: ( (lv_hexValue_4_0= RULE_HEXADECIMAL ) )
+            // InternalIFACE.g:1604:4: (lv_hexValue_4_0= RULE_HEXADECIMAL )
             {
-            // InternalIFACE.g:1380:4: (lv_hexValue_4_0= RULE_HEXADECIMAL )
-            // InternalIFACE.g:1381:5: lv_hexValue_4_0= RULE_HEXADECIMAL
+            // InternalIFACE.g:1604:4: (lv_hexValue_4_0= RULE_HEXADECIMAL )
+            // InternalIFACE.g:1605:5: lv_hexValue_4_0= RULE_HEXADECIMAL
             {
             lv_hexValue_4_0=(Token)match(input,RULE_HEXADECIMAL,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3325,7 +3855,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSIfaceSpWTCPort"
-    // InternalIFACE.g:1413:1: entryRuleGSSIfaceSpWTCPort returns [EObject current=null] : iv_ruleGSSIfaceSpWTCPort= ruleGSSIfaceSpWTCPort EOF ;
+    // InternalIFACE.g:1637:1: entryRuleGSSIfaceSpWTCPort returns [EObject current=null] : iv_ruleGSSIfaceSpWTCPort= ruleGSSIfaceSpWTCPort EOF ;
     public final EObject entryRuleGSSIfaceSpWTCPort() throws RecognitionException {
         EObject current = null;
 
@@ -3333,8 +3863,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:1413:58: (iv_ruleGSSIfaceSpWTCPort= ruleGSSIfaceSpWTCPort EOF )
-            // InternalIFACE.g:1414:2: iv_ruleGSSIfaceSpWTCPort= ruleGSSIfaceSpWTCPort EOF
+            // InternalIFACE.g:1637:58: (iv_ruleGSSIfaceSpWTCPort= ruleGSSIfaceSpWTCPort EOF )
+            // InternalIFACE.g:1638:2: iv_ruleGSSIfaceSpWTCPort= ruleGSSIfaceSpWTCPort EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSIfaceSpWTCPortRule()); 
@@ -3365,7 +3895,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceSpWTCPort"
-    // InternalIFACE.g:1420:1: ruleGSSIfaceSpWTCPort returns [EObject current=null] : (otherlv_0= 'spwTCPort' otherlv_1= '{' otherlv_2= 'spwPortRef' otherlv_3= ':=' ( (lv_spwPortRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
+    // InternalIFACE.g:1644:1: ruleGSSIfaceSpWTCPort returns [EObject current=null] : (otherlv_0= 'spwTCPort' otherlv_1= '{' otherlv_2= 'spwPortRef' otherlv_3= ':=' ( (lv_spwPortRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) ;
     public final EObject ruleGSSIfaceSpWTCPort() throws RecognitionException {
         EObject current = null;
 
@@ -3383,25 +3913,25 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1426:2: ( (otherlv_0= 'spwTCPort' otherlv_1= '{' otherlv_2= 'spwPortRef' otherlv_3= ':=' ( (lv_spwPortRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
-            // InternalIFACE.g:1427:2: (otherlv_0= 'spwTCPort' otherlv_1= '{' otherlv_2= 'spwPortRef' otherlv_3= ':=' ( (lv_spwPortRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalIFACE.g:1650:2: ( (otherlv_0= 'spwTCPort' otherlv_1= '{' otherlv_2= 'spwPortRef' otherlv_3= ':=' ( (lv_spwPortRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' ) )
+            // InternalIFACE.g:1651:2: (otherlv_0= 'spwTCPort' otherlv_1= '{' otherlv_2= 'spwPortRef' otherlv_3= ':=' ( (lv_spwPortRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
             {
-            // InternalIFACE.g:1427:2: (otherlv_0= 'spwTCPort' otherlv_1= '{' otherlv_2= 'spwPortRef' otherlv_3= ':=' ( (lv_spwPortRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
-            // InternalIFACE.g:1428:3: otherlv_0= 'spwTCPort' otherlv_1= '{' otherlv_2= 'spwPortRef' otherlv_3= ':=' ( (lv_spwPortRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
+            // InternalIFACE.g:1651:2: (otherlv_0= 'spwTCPort' otherlv_1= '{' otherlv_2= 'spwPortRef' otherlv_3= ':=' ( (lv_spwPortRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';' )
+            // InternalIFACE.g:1652:3: otherlv_0= 'spwTCPort' otherlv_1= '{' otherlv_2= 'spwPortRef' otherlv_3= ':=' ( (lv_spwPortRef_4_0= ruleINTEGER ) ) otherlv_5= ';' otherlv_6= '}' otherlv_7= ';'
             {
-            otherlv_0=(Token)match(input,43,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_0=(Token)match(input,47,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getGSSIfaceSpWTCPortAccess().getSpwTCPortKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_45); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FollowSets000.FOLLOW_47); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceSpWTCPortAccess().getLeftCurlyBracketKeyword_1());
               		
             }
-            otherlv_2=(Token)match(input,44,FollowSets000.FOLLOW_9); if (state.failed) return current;
+            otherlv_2=(Token)match(input,48,FollowSets000.FOLLOW_9); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getGSSIfaceSpWTCPortAccess().getSpwPortRefKeyword_2());
@@ -3413,11 +3943,11 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getGSSIfaceSpWTCPortAccess().getColonEqualsSignKeyword_3());
               		
             }
-            // InternalIFACE.g:1444:3: ( (lv_spwPortRef_4_0= ruleINTEGER ) )
-            // InternalIFACE.g:1445:4: (lv_spwPortRef_4_0= ruleINTEGER )
+            // InternalIFACE.g:1668:3: ( (lv_spwPortRef_4_0= ruleINTEGER ) )
+            // InternalIFACE.g:1669:4: (lv_spwPortRef_4_0= ruleINTEGER )
             {
-            // InternalIFACE.g:1445:4: (lv_spwPortRef_4_0= ruleINTEGER )
-            // InternalIFACE.g:1446:5: lv_spwPortRef_4_0= ruleINTEGER
+            // InternalIFACE.g:1669:4: (lv_spwPortRef_4_0= ruleINTEGER )
+            // InternalIFACE.g:1670:5: lv_spwPortRef_4_0= ruleINTEGER
             {
             if ( state.backtracking==0 ) {
 
@@ -3491,7 +4021,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGSSIfaceDummyPort"
-    // InternalIFACE.g:1479:1: entryRuleGSSIfaceDummyPort returns [EObject current=null] : iv_ruleGSSIfaceDummyPort= ruleGSSIfaceDummyPort EOF ;
+    // InternalIFACE.g:1703:1: entryRuleGSSIfaceDummyPort returns [EObject current=null] : iv_ruleGSSIfaceDummyPort= ruleGSSIfaceDummyPort EOF ;
     public final EObject entryRuleGSSIfaceDummyPort() throws RecognitionException {
         EObject current = null;
 
@@ -3499,8 +4029,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:1479:58: (iv_ruleGSSIfaceDummyPort= ruleGSSIfaceDummyPort EOF )
-            // InternalIFACE.g:1480:2: iv_ruleGSSIfaceDummyPort= ruleGSSIfaceDummyPort EOF
+            // InternalIFACE.g:1703:58: (iv_ruleGSSIfaceDummyPort= ruleGSSIfaceDummyPort EOF )
+            // InternalIFACE.g:1704:2: iv_ruleGSSIfaceDummyPort= ruleGSSIfaceDummyPort EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getGSSIfaceDummyPortRule()); 
@@ -3531,7 +4061,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceDummyPort"
-    // InternalIFACE.g:1486:1: ruleGSSIfaceDummyPort returns [EObject current=null] : ( () otherlv_1= 'dummyPort' otherlv_2= '{' otherlv_3= '}' otherlv_4= ';' ) ;
+    // InternalIFACE.g:1710:1: ruleGSSIfaceDummyPort returns [EObject current=null] : ( () otherlv_1= 'dummyPort' otherlv_2= '{' otherlv_3= '}' otherlv_4= ';' ) ;
     public final EObject ruleGSSIfaceDummyPort() throws RecognitionException {
         EObject current = null;
 
@@ -3544,14 +4074,14 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1492:2: ( ( () otherlv_1= 'dummyPort' otherlv_2= '{' otherlv_3= '}' otherlv_4= ';' ) )
-            // InternalIFACE.g:1493:2: ( () otherlv_1= 'dummyPort' otherlv_2= '{' otherlv_3= '}' otherlv_4= ';' )
+            // InternalIFACE.g:1716:2: ( ( () otherlv_1= 'dummyPort' otherlv_2= '{' otherlv_3= '}' otherlv_4= ';' ) )
+            // InternalIFACE.g:1717:2: ( () otherlv_1= 'dummyPort' otherlv_2= '{' otherlv_3= '}' otherlv_4= ';' )
             {
-            // InternalIFACE.g:1493:2: ( () otherlv_1= 'dummyPort' otherlv_2= '{' otherlv_3= '}' otherlv_4= ';' )
-            // InternalIFACE.g:1494:3: () otherlv_1= 'dummyPort' otherlv_2= '{' otherlv_3= '}' otherlv_4= ';'
+            // InternalIFACE.g:1717:2: ( () otherlv_1= 'dummyPort' otherlv_2= '{' otherlv_3= '}' otherlv_4= ';' )
+            // InternalIFACE.g:1718:3: () otherlv_1= 'dummyPort' otherlv_2= '{' otherlv_3= '}' otherlv_4= ';'
             {
-            // InternalIFACE.g:1494:3: ()
-            // InternalIFACE.g:1495:4: 
+            // InternalIFACE.g:1718:3: ()
+            // InternalIFACE.g:1719:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -3568,7 +4098,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,45,FollowSets000.FOLLOW_7); if (state.failed) return current;
+            otherlv_1=(Token)match(input,49,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getGSSIfaceDummyPortAccess().getDummyPortKeyword_1());
@@ -3617,7 +4147,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalIFACE.g:1524:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalIFACE.g:1748:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -3625,8 +4155,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:1524:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalIFACE.g:1525:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalIFACE.g:1748:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalIFACE.g:1749:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
@@ -3657,7 +4187,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalIFACE.g:1531:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalIFACE.g:1755:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3669,13 +4199,13 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1537:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalIFACE.g:1538:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalIFACE.g:1761:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalIFACE.g:1762:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalIFACE.g:1538:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalIFACE.g:1539:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalIFACE.g:1762:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalIFACE.g:1763:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_46); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_48); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_0);
@@ -3686,29 +4216,29 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
               		
             }
-            // InternalIFACE.g:1546:3: (kw= '.' this_ID_2= RULE_ID )*
+            // InternalIFACE.g:1770:3: (kw= '.' this_ID_2= RULE_ID )*
             loop6:
             do {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
-                if ( (LA6_0==46) ) {
+                if ( (LA6_0==50) ) {
                     alt6=1;
                 }
 
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalIFACE.g:1547:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalIFACE.g:1771:4: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,46,FollowSets000.FOLLOW_6); if (state.failed) return current;
+            	    kw=(Token)match(input,50,FollowSets000.FOLLOW_6); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
             	      				newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_46); if (state.failed) return current;
+            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_48); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_2);
@@ -3753,7 +4283,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersion"
-    // InternalIFACE.g:1564:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
+    // InternalIFACE.g:1788:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
     public final String entryRuleVersion() throws RecognitionException {
         String current = null;
 
@@ -3761,8 +4291,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:1564:47: (iv_ruleVersion= ruleVersion EOF )
-            // InternalIFACE.g:1565:2: iv_ruleVersion= ruleVersion EOF
+            // InternalIFACE.g:1788:47: (iv_ruleVersion= ruleVersion EOF )
+            // InternalIFACE.g:1789:2: iv_ruleVersion= ruleVersion EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionRule()); 
@@ -3793,7 +4323,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersion"
-    // InternalIFACE.g:1571:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
+    // InternalIFACE.g:1795:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
     public final AntlrDatatypeRuleToken ruleVersion() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3809,24 +4339,24 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1577:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
-            // InternalIFACE.g:1578:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalIFACE.g:1801:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
+            // InternalIFACE.g:1802:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
             {
-            // InternalIFACE.g:1578:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
-            // InternalIFACE.g:1579:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalIFACE.g:1802:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalIFACE.g:1803:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             {
-            // InternalIFACE.g:1579:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
+            // InternalIFACE.g:1803:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
             if ( (LA8_0==RULE_INT) ) {
                 int LA8_1 = input.LA(2);
 
-                if ( (LA8_1==EOF||LA8_1==13||LA8_1==46||LA8_1==48) ) {
-                    alt8=1;
-                }
-                else if ( (LA8_1==RULE_ID) ) {
+                if ( (LA8_1==RULE_ID) ) {
                     alt8=2;
+                }
+                else if ( (LA8_1==EOF||LA8_1==13||LA8_1==50||LA8_1==52) ) {
+                    alt8=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
@@ -3848,9 +4378,9 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             }
             switch (alt8) {
                 case 1 :
-                    // InternalIFACE.g:1580:4: this_INT_0= RULE_INT
+                    // InternalIFACE.g:1804:4: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_46); if (state.failed) return current;
+                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_48); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current.merge(this_INT_0);
@@ -3865,12 +4395,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:1588:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalIFACE.g:1812:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
                     {
-                    // InternalIFACE.g:1588:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
-                    // InternalIFACE.g:1589:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
+                    // InternalIFACE.g:1812:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalIFACE.g:1813:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
                     {
-                    // InternalIFACE.g:1589:5: (this_INT_1= RULE_INT )?
+                    // InternalIFACE.g:1813:5: (this_INT_1= RULE_INT )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -3879,7 +4409,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt7) {
                         case 1 :
-                            // InternalIFACE.g:1590:6: this_INT_1= RULE_INT
+                            // InternalIFACE.g:1814:6: this_INT_1= RULE_INT
                             {
                             this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_6); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -3898,7 +4428,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_46); if (state.failed) return current;
+                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_48); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					current.merge(this_ID_2);
@@ -3918,40 +4448,40 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalIFACE.g:1607:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalIFACE.g:1831:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             loop11:
             do {
                 int alt11=2;
                 int LA11_0 = input.LA(1);
 
-                if ( (LA11_0==46) ) {
+                if ( (LA11_0==50) ) {
                     alt11=1;
                 }
 
 
                 switch (alt11) {
             	case 1 :
-            	    // InternalIFACE.g:1608:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalIFACE.g:1832:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
-            	    kw=(Token)match(input,46,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            	    kw=(Token)match(input,50,FollowSets000.FOLLOW_11); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
             	      				newLeafNode(kw, grammarAccess.getVersionAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    // InternalIFACE.g:1613:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalIFACE.g:1837:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    int alt10=2;
             	    int LA10_0 = input.LA(1);
 
             	    if ( (LA10_0==RULE_INT) ) {
             	        int LA10_1 = input.LA(2);
 
-            	        if ( (LA10_1==RULE_ID) ) {
-            	            alt10=2;
-            	        }
-            	        else if ( (LA10_1==EOF||LA10_1==13||LA10_1==46||LA10_1==48) ) {
+            	        if ( (LA10_1==EOF||LA10_1==13||LA10_1==50||LA10_1==52) ) {
             	            alt10=1;
+            	        }
+            	        else if ( (LA10_1==RULE_ID) ) {
+            	            alt10=2;
             	        }
             	        else {
             	            if (state.backtracking>0) {state.failed=true; return current;}
@@ -3973,9 +4503,9 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt10) {
             	        case 1 :
-            	            // InternalIFACE.g:1614:5: this_INT_4= RULE_INT
+            	            // InternalIFACE.g:1838:5: this_INT_4= RULE_INT
             	            {
-            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_46); if (state.failed) return current;
+            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_48); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              					current.merge(this_INT_4);
@@ -3990,12 +4520,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalIFACE.g:1622:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalIFACE.g:1846:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
             	            {
-            	            // InternalIFACE.g:1622:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
-            	            // InternalIFACE.g:1623:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
+            	            // InternalIFACE.g:1846:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalIFACE.g:1847:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
             	            {
-            	            // InternalIFACE.g:1623:6: (this_INT_5= RULE_INT )?
+            	            // InternalIFACE.g:1847:6: (this_INT_5= RULE_INT )?
             	            int alt9=2;
             	            int LA9_0 = input.LA(1);
 
@@ -4004,7 +4534,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             	            }
             	            switch (alt9) {
             	                case 1 :
-            	                    // InternalIFACE.g:1624:7: this_INT_5= RULE_INT
+            	                    // InternalIFACE.g:1848:7: this_INT_5= RULE_INT
             	                    {
             	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_6); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
@@ -4023,7 +4553,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_46); if (state.failed) return current;
+            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_48); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              						current.merge(this_ID_6);
@@ -4077,7 +4607,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersionedQualifiedName"
-    // InternalIFACE.g:1646:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
+    // InternalIFACE.g:1870:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
     public final String entryRuleVersionedQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -4085,8 +4615,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:1646:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
-            // InternalIFACE.g:1647:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
+            // InternalIFACE.g:1870:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
+            // InternalIFACE.g:1871:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionedQualifiedNameRule()); 
@@ -4117,7 +4647,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersionedQualifiedName"
-    // InternalIFACE.g:1653:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
+    // InternalIFACE.g:1877:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
     public final AntlrDatatypeRuleToken ruleVersionedQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4131,18 +4661,18 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1659:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
-            // InternalIFACE.g:1660:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalIFACE.g:1883:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
+            // InternalIFACE.g:1884:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
             {
-            // InternalIFACE.g:1660:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
-            // InternalIFACE.g:1661:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
+            // InternalIFACE.g:1884:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalIFACE.g:1885:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
             {
             if ( state.backtracking==0 ) {
 
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_47);
+            pushFollow(FollowSets000.FOLLOW_49);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -4157,7 +4687,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            kw=(Token)match(input,47,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            kw=(Token)match(input,51,FollowSets000.FOLLOW_11); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(kw);
@@ -4169,7 +4699,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_48);
+            pushFollow(FollowSets000.FOLLOW_50);
             this_Version_2=ruleVersion();
 
             state._fsp--;
@@ -4184,7 +4714,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            kw=(Token)match(input,48,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            kw=(Token)match(input,52,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(kw);
@@ -4216,7 +4746,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleINTEGER"
-    // InternalIFACE.g:1695:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
+    // InternalIFACE.g:1919:1: entryRuleINTEGER returns [String current=null] : iv_ruleINTEGER= ruleINTEGER EOF ;
     public final String entryRuleINTEGER() throws RecognitionException {
         String current = null;
 
@@ -4224,8 +4754,8 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalIFACE.g:1695:47: (iv_ruleINTEGER= ruleINTEGER EOF )
-            // InternalIFACE.g:1696:2: iv_ruleINTEGER= ruleINTEGER EOF
+            // InternalIFACE.g:1919:47: (iv_ruleINTEGER= ruleINTEGER EOF )
+            // InternalIFACE.g:1920:2: iv_ruleINTEGER= ruleINTEGER EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getINTEGERRule()); 
@@ -4256,7 +4786,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleINTEGER"
-    // InternalIFACE.g:1702:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
+    // InternalIFACE.g:1926:1: ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) ;
     public final AntlrDatatypeRuleToken ruleINTEGER() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4268,14 +4798,14 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1708:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
-            // InternalIFACE.g:1709:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            // InternalIFACE.g:1932:2: ( ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL ) )
+            // InternalIFACE.g:1933:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             {
-            // InternalIFACE.g:1709:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
+            // InternalIFACE.g:1933:2: ( ( (kw= '-' )? this_INT_1= RULE_INT ) | this_HEXADECIMAL_2= RULE_HEXADECIMAL )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==RULE_INT||LA13_0==49) ) {
+            if ( (LA13_0==RULE_INT||LA13_0==53) ) {
                 alt13=1;
             }
             else if ( (LA13_0==RULE_HEXADECIMAL) ) {
@@ -4290,23 +4820,23 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             }
             switch (alt13) {
                 case 1 :
-                    // InternalIFACE.g:1710:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalIFACE.g:1934:3: ( (kw= '-' )? this_INT_1= RULE_INT )
                     {
-                    // InternalIFACE.g:1710:3: ( (kw= '-' )? this_INT_1= RULE_INT )
-                    // InternalIFACE.g:1711:4: (kw= '-' )? this_INT_1= RULE_INT
+                    // InternalIFACE.g:1934:3: ( (kw= '-' )? this_INT_1= RULE_INT )
+                    // InternalIFACE.g:1935:4: (kw= '-' )? this_INT_1= RULE_INT
                     {
-                    // InternalIFACE.g:1711:4: (kw= '-' )?
+                    // InternalIFACE.g:1935:4: (kw= '-' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
-                    if ( (LA12_0==49) ) {
+                    if ( (LA12_0==53) ) {
                         alt12=1;
                     }
                     switch (alt12) {
                         case 1 :
-                            // InternalIFACE.g:1712:5: kw= '-'
+                            // InternalIFACE.g:1936:5: kw= '-'
                             {
-                            kw=(Token)match(input,49,FollowSets000.FOLLOW_49); if (state.failed) return current;
+                            kw=(Token)match(input,53,FollowSets000.FOLLOW_51); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               					current.merge(kw);
@@ -4337,7 +4867,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:1727:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
+                    // InternalIFACE.g:1951:3: this_HEXADECIMAL_2= RULE_HEXADECIMAL
                     {
                     this_HEXADECIMAL_2=(Token)match(input,RULE_HEXADECIMAL,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -4378,7 +4908,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceSpWPortType"
-    // InternalIFACE.g:1738:1: ruleGSSIfaceSpWPortType returns [Enumerator current=null] : ( (enumLiteral_0= 'usb' ) | (enumLiteral_1= 'mk2' ) | (enumLiteral_2= 'pci' ) ) ;
+    // InternalIFACE.g:1962:1: ruleGSSIfaceSpWPortType returns [Enumerator current=null] : ( (enumLiteral_0= 'usb' ) | (enumLiteral_1= 'mk2' ) | (enumLiteral_2= 'pci' ) ) ;
     public final Enumerator ruleGSSIfaceSpWPortType() throws RecognitionException {
         Enumerator current = null;
 
@@ -4390,23 +4920,23 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1744:2: ( ( (enumLiteral_0= 'usb' ) | (enumLiteral_1= 'mk2' ) | (enumLiteral_2= 'pci' ) ) )
-            // InternalIFACE.g:1745:2: ( (enumLiteral_0= 'usb' ) | (enumLiteral_1= 'mk2' ) | (enumLiteral_2= 'pci' ) )
+            // InternalIFACE.g:1968:2: ( ( (enumLiteral_0= 'usb' ) | (enumLiteral_1= 'mk2' ) | (enumLiteral_2= 'pci' ) ) )
+            // InternalIFACE.g:1969:2: ( (enumLiteral_0= 'usb' ) | (enumLiteral_1= 'mk2' ) | (enumLiteral_2= 'pci' ) )
             {
-            // InternalIFACE.g:1745:2: ( (enumLiteral_0= 'usb' ) | (enumLiteral_1= 'mk2' ) | (enumLiteral_2= 'pci' ) )
+            // InternalIFACE.g:1969:2: ( (enumLiteral_0= 'usb' ) | (enumLiteral_1= 'mk2' ) | (enumLiteral_2= 'pci' ) )
             int alt14=3;
             switch ( input.LA(1) ) {
-            case 50:
+            case 54:
                 {
                 alt14=1;
                 }
                 break;
-            case 51:
+            case 55:
                 {
                 alt14=2;
                 }
                 break;
-            case 52:
+            case 56:
                 {
                 alt14=3;
                 }
@@ -4421,12 +4951,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             switch (alt14) {
                 case 1 :
-                    // InternalIFACE.g:1746:3: (enumLiteral_0= 'usb' )
+                    // InternalIFACE.g:1970:3: (enumLiteral_0= 'usb' )
                     {
-                    // InternalIFACE.g:1746:3: (enumLiteral_0= 'usb' )
-                    // InternalIFACE.g:1747:4: enumLiteral_0= 'usb'
+                    // InternalIFACE.g:1970:3: (enumLiteral_0= 'usb' )
+                    // InternalIFACE.g:1971:4: enumLiteral_0= 'usb'
                     {
-                    enumLiteral_0=(Token)match(input,50,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,54,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceSpWPortTypeAccess().getUsbEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -4440,12 +4970,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:1754:3: (enumLiteral_1= 'mk2' )
+                    // InternalIFACE.g:1978:3: (enumLiteral_1= 'mk2' )
                     {
-                    // InternalIFACE.g:1754:3: (enumLiteral_1= 'mk2' )
-                    // InternalIFACE.g:1755:4: enumLiteral_1= 'mk2'
+                    // InternalIFACE.g:1978:3: (enumLiteral_1= 'mk2' )
+                    // InternalIFACE.g:1979:4: enumLiteral_1= 'mk2'
                     {
-                    enumLiteral_1=(Token)match(input,51,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,55,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceSpWPortTypeAccess().getMk2EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -4459,12 +4989,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalIFACE.g:1762:3: (enumLiteral_2= 'pci' )
+                    // InternalIFACE.g:1986:3: (enumLiteral_2= 'pci' )
                     {
-                    // InternalIFACE.g:1762:3: (enumLiteral_2= 'pci' )
-                    // InternalIFACE.g:1763:4: enumLiteral_2= 'pci'
+                    // InternalIFACE.g:1986:3: (enumLiteral_2= 'pci' )
+                    // InternalIFACE.g:1987:4: enumLiteral_2= 'pci'
                     {
-                    enumLiteral_2=(Token)match(input,52,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,56,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceSpWPortTypeAccess().getPciEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -4502,7 +5032,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceUartPortBaudRate"
-    // InternalIFACE.g:1773:1: ruleGSSIfaceUartPortBaudRate returns [Enumerator current=null] : ( (enumLiteral_0= '38400bauds' ) | (enumLiteral_1= '115200bauds' ) ) ;
+    // InternalIFACE.g:1997:1: ruleGSSIfaceUartPortBaudRate returns [Enumerator current=null] : ( (enumLiteral_0= '38400bauds' ) | (enumLiteral_1= '115200bauds' ) ) ;
     public final Enumerator ruleGSSIfaceUartPortBaudRate() throws RecognitionException {
         Enumerator current = null;
 
@@ -4513,17 +5043,17 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1779:2: ( ( (enumLiteral_0= '38400bauds' ) | (enumLiteral_1= '115200bauds' ) ) )
-            // InternalIFACE.g:1780:2: ( (enumLiteral_0= '38400bauds' ) | (enumLiteral_1= '115200bauds' ) )
+            // InternalIFACE.g:2003:2: ( ( (enumLiteral_0= '38400bauds' ) | (enumLiteral_1= '115200bauds' ) ) )
+            // InternalIFACE.g:2004:2: ( (enumLiteral_0= '38400bauds' ) | (enumLiteral_1= '115200bauds' ) )
             {
-            // InternalIFACE.g:1780:2: ( (enumLiteral_0= '38400bauds' ) | (enumLiteral_1= '115200bauds' ) )
+            // InternalIFACE.g:2004:2: ( (enumLiteral_0= '38400bauds' ) | (enumLiteral_1= '115200bauds' ) )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
-            if ( (LA15_0==53) ) {
+            if ( (LA15_0==57) ) {
                 alt15=1;
             }
-            else if ( (LA15_0==54) ) {
+            else if ( (LA15_0==58) ) {
                 alt15=2;
             }
             else {
@@ -4535,12 +5065,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             }
             switch (alt15) {
                 case 1 :
-                    // InternalIFACE.g:1781:3: (enumLiteral_0= '38400bauds' )
+                    // InternalIFACE.g:2005:3: (enumLiteral_0= '38400bauds' )
                     {
-                    // InternalIFACE.g:1781:3: (enumLiteral_0= '38400bauds' )
-                    // InternalIFACE.g:1782:4: enumLiteral_0= '38400bauds'
+                    // InternalIFACE.g:2005:3: (enumLiteral_0= '38400bauds' )
+                    // InternalIFACE.g:2006:4: enumLiteral_0= '38400bauds'
                     {
-                    enumLiteral_0=(Token)match(input,53,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,57,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortBaudRateAccess().get_38400EnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -4554,12 +5084,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:1789:3: (enumLiteral_1= '115200bauds' )
+                    // InternalIFACE.g:2013:3: (enumLiteral_1= '115200bauds' )
                     {
-                    // InternalIFACE.g:1789:3: (enumLiteral_1= '115200bauds' )
-                    // InternalIFACE.g:1790:4: enumLiteral_1= '115200bauds'
+                    // InternalIFACE.g:2013:3: (enumLiteral_1= '115200bauds' )
+                    // InternalIFACE.g:2014:4: enumLiteral_1= '115200bauds'
                     {
-                    enumLiteral_1=(Token)match(input,54,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,58,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortBaudRateAccess().get_115200EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -4597,7 +5127,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceUartPortParity"
-    // InternalIFACE.g:1800:1: ruleGSSIfaceUartPortParity returns [Enumerator current=null] : ( (enumLiteral_0= 'NO' ) | (enumLiteral_1= 'ODD' ) | (enumLiteral_2= 'EVEN' ) | (enumLiteral_3= 'MARK' ) | (enumLiteral_4= 'SPACE' ) ) ;
+    // InternalIFACE.g:2024:1: ruleGSSIfaceUartPortParity returns [Enumerator current=null] : ( (enumLiteral_0= 'NO' ) | (enumLiteral_1= 'ODD' ) | (enumLiteral_2= 'EVEN' ) | (enumLiteral_3= 'MARK' ) | (enumLiteral_4= 'SPACE' ) ) ;
     public final Enumerator ruleGSSIfaceUartPortParity() throws RecognitionException {
         Enumerator current = null;
 
@@ -4611,33 +5141,33 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1806:2: ( ( (enumLiteral_0= 'NO' ) | (enumLiteral_1= 'ODD' ) | (enumLiteral_2= 'EVEN' ) | (enumLiteral_3= 'MARK' ) | (enumLiteral_4= 'SPACE' ) ) )
-            // InternalIFACE.g:1807:2: ( (enumLiteral_0= 'NO' ) | (enumLiteral_1= 'ODD' ) | (enumLiteral_2= 'EVEN' ) | (enumLiteral_3= 'MARK' ) | (enumLiteral_4= 'SPACE' ) )
+            // InternalIFACE.g:2030:2: ( ( (enumLiteral_0= 'NO' ) | (enumLiteral_1= 'ODD' ) | (enumLiteral_2= 'EVEN' ) | (enumLiteral_3= 'MARK' ) | (enumLiteral_4= 'SPACE' ) ) )
+            // InternalIFACE.g:2031:2: ( (enumLiteral_0= 'NO' ) | (enumLiteral_1= 'ODD' ) | (enumLiteral_2= 'EVEN' ) | (enumLiteral_3= 'MARK' ) | (enumLiteral_4= 'SPACE' ) )
             {
-            // InternalIFACE.g:1807:2: ( (enumLiteral_0= 'NO' ) | (enumLiteral_1= 'ODD' ) | (enumLiteral_2= 'EVEN' ) | (enumLiteral_3= 'MARK' ) | (enumLiteral_4= 'SPACE' ) )
+            // InternalIFACE.g:2031:2: ( (enumLiteral_0= 'NO' ) | (enumLiteral_1= 'ODD' ) | (enumLiteral_2= 'EVEN' ) | (enumLiteral_3= 'MARK' ) | (enumLiteral_4= 'SPACE' ) )
             int alt16=5;
             switch ( input.LA(1) ) {
-            case 55:
+            case 59:
                 {
                 alt16=1;
                 }
                 break;
-            case 56:
+            case 60:
                 {
                 alt16=2;
                 }
                 break;
-            case 57:
+            case 61:
                 {
                 alt16=3;
                 }
                 break;
-            case 58:
+            case 62:
                 {
                 alt16=4;
                 }
                 break;
-            case 59:
+            case 63:
                 {
                 alt16=5;
                 }
@@ -4652,12 +5182,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             switch (alt16) {
                 case 1 :
-                    // InternalIFACE.g:1808:3: (enumLiteral_0= 'NO' )
+                    // InternalIFACE.g:2032:3: (enumLiteral_0= 'NO' )
                     {
-                    // InternalIFACE.g:1808:3: (enumLiteral_0= 'NO' )
-                    // InternalIFACE.g:1809:4: enumLiteral_0= 'NO'
+                    // InternalIFACE.g:2032:3: (enumLiteral_0= 'NO' )
+                    // InternalIFACE.g:2033:4: enumLiteral_0= 'NO'
                     {
-                    enumLiteral_0=(Token)match(input,55,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,59,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortParityAccess().getNOEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -4671,12 +5201,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:1816:3: (enumLiteral_1= 'ODD' )
+                    // InternalIFACE.g:2040:3: (enumLiteral_1= 'ODD' )
                     {
-                    // InternalIFACE.g:1816:3: (enumLiteral_1= 'ODD' )
-                    // InternalIFACE.g:1817:4: enumLiteral_1= 'ODD'
+                    // InternalIFACE.g:2040:3: (enumLiteral_1= 'ODD' )
+                    // InternalIFACE.g:2041:4: enumLiteral_1= 'ODD'
                     {
-                    enumLiteral_1=(Token)match(input,56,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,60,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortParityAccess().getODDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -4690,12 +5220,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalIFACE.g:1824:3: (enumLiteral_2= 'EVEN' )
+                    // InternalIFACE.g:2048:3: (enumLiteral_2= 'EVEN' )
                     {
-                    // InternalIFACE.g:1824:3: (enumLiteral_2= 'EVEN' )
-                    // InternalIFACE.g:1825:4: enumLiteral_2= 'EVEN'
+                    // InternalIFACE.g:2048:3: (enumLiteral_2= 'EVEN' )
+                    // InternalIFACE.g:2049:4: enumLiteral_2= 'EVEN'
                     {
-                    enumLiteral_2=(Token)match(input,57,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,61,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortParityAccess().getEVENEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -4709,12 +5239,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalIFACE.g:1832:3: (enumLiteral_3= 'MARK' )
+                    // InternalIFACE.g:2056:3: (enumLiteral_3= 'MARK' )
                     {
-                    // InternalIFACE.g:1832:3: (enumLiteral_3= 'MARK' )
-                    // InternalIFACE.g:1833:4: enumLiteral_3= 'MARK'
+                    // InternalIFACE.g:2056:3: (enumLiteral_3= 'MARK' )
+                    // InternalIFACE.g:2057:4: enumLiteral_3= 'MARK'
                     {
-                    enumLiteral_3=(Token)match(input,58,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,62,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortParityAccess().getMARKEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -4728,12 +5258,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalIFACE.g:1840:3: (enumLiteral_4= 'SPACE' )
+                    // InternalIFACE.g:2064:3: (enumLiteral_4= 'SPACE' )
                     {
-                    // InternalIFACE.g:1840:3: (enumLiteral_4= 'SPACE' )
-                    // InternalIFACE.g:1841:4: enumLiteral_4= 'SPACE'
+                    // InternalIFACE.g:2064:3: (enumLiteral_4= 'SPACE' )
+                    // InternalIFACE.g:2065:4: enumLiteral_4= 'SPACE'
                     {
-                    enumLiteral_4=(Token)match(input,59,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,63,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortParityAccess().getSPACEEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -4771,7 +5301,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceUartPortDataBits"
-    // InternalIFACE.g:1851:1: ruleGSSIfaceUartPortDataBits returns [Enumerator current=null] : ( (enumLiteral_0= '5bits' ) | (enumLiteral_1= '6bits' ) | (enumLiteral_2= '7bits' ) | (enumLiteral_3= '8bits' ) ) ;
+    // InternalIFACE.g:2075:1: ruleGSSIfaceUartPortDataBits returns [Enumerator current=null] : ( (enumLiteral_0= '5bits' ) | (enumLiteral_1= '6bits' ) | (enumLiteral_2= '7bits' ) | (enumLiteral_3= '8bits' ) ) ;
     public final Enumerator ruleGSSIfaceUartPortDataBits() throws RecognitionException {
         Enumerator current = null;
 
@@ -4784,28 +5314,28 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1857:2: ( ( (enumLiteral_0= '5bits' ) | (enumLiteral_1= '6bits' ) | (enumLiteral_2= '7bits' ) | (enumLiteral_3= '8bits' ) ) )
-            // InternalIFACE.g:1858:2: ( (enumLiteral_0= '5bits' ) | (enumLiteral_1= '6bits' ) | (enumLiteral_2= '7bits' ) | (enumLiteral_3= '8bits' ) )
+            // InternalIFACE.g:2081:2: ( ( (enumLiteral_0= '5bits' ) | (enumLiteral_1= '6bits' ) | (enumLiteral_2= '7bits' ) | (enumLiteral_3= '8bits' ) ) )
+            // InternalIFACE.g:2082:2: ( (enumLiteral_0= '5bits' ) | (enumLiteral_1= '6bits' ) | (enumLiteral_2= '7bits' ) | (enumLiteral_3= '8bits' ) )
             {
-            // InternalIFACE.g:1858:2: ( (enumLiteral_0= '5bits' ) | (enumLiteral_1= '6bits' ) | (enumLiteral_2= '7bits' ) | (enumLiteral_3= '8bits' ) )
+            // InternalIFACE.g:2082:2: ( (enumLiteral_0= '5bits' ) | (enumLiteral_1= '6bits' ) | (enumLiteral_2= '7bits' ) | (enumLiteral_3= '8bits' ) )
             int alt17=4;
             switch ( input.LA(1) ) {
-            case 60:
+            case 64:
                 {
                 alt17=1;
                 }
                 break;
-            case 61:
+            case 65:
                 {
                 alt17=2;
                 }
                 break;
-            case 62:
+            case 66:
                 {
                 alt17=3;
                 }
                 break;
-            case 63:
+            case 67:
                 {
                 alt17=4;
                 }
@@ -4820,12 +5350,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             switch (alt17) {
                 case 1 :
-                    // InternalIFACE.g:1859:3: (enumLiteral_0= '5bits' )
+                    // InternalIFACE.g:2083:3: (enumLiteral_0= '5bits' )
                     {
-                    // InternalIFACE.g:1859:3: (enumLiteral_0= '5bits' )
-                    // InternalIFACE.g:1860:4: enumLiteral_0= '5bits'
+                    // InternalIFACE.g:2083:3: (enumLiteral_0= '5bits' )
+                    // InternalIFACE.g:2084:4: enumLiteral_0= '5bits'
                     {
-                    enumLiteral_0=(Token)match(input,60,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,64,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortDataBitsAccess().get_5EnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -4839,12 +5369,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:1867:3: (enumLiteral_1= '6bits' )
+                    // InternalIFACE.g:2091:3: (enumLiteral_1= '6bits' )
                     {
-                    // InternalIFACE.g:1867:3: (enumLiteral_1= '6bits' )
-                    // InternalIFACE.g:1868:4: enumLiteral_1= '6bits'
+                    // InternalIFACE.g:2091:3: (enumLiteral_1= '6bits' )
+                    // InternalIFACE.g:2092:4: enumLiteral_1= '6bits'
                     {
-                    enumLiteral_1=(Token)match(input,61,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,65,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortDataBitsAccess().get_6EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -4858,12 +5388,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalIFACE.g:1875:3: (enumLiteral_2= '7bits' )
+                    // InternalIFACE.g:2099:3: (enumLiteral_2= '7bits' )
                     {
-                    // InternalIFACE.g:1875:3: (enumLiteral_2= '7bits' )
-                    // InternalIFACE.g:1876:4: enumLiteral_2= '7bits'
+                    // InternalIFACE.g:2099:3: (enumLiteral_2= '7bits' )
+                    // InternalIFACE.g:2100:4: enumLiteral_2= '7bits'
                     {
-                    enumLiteral_2=(Token)match(input,62,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,66,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortDataBitsAccess().get_7EnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -4877,12 +5407,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalIFACE.g:1883:3: (enumLiteral_3= '8bits' )
+                    // InternalIFACE.g:2107:3: (enumLiteral_3= '8bits' )
                     {
-                    // InternalIFACE.g:1883:3: (enumLiteral_3= '8bits' )
-                    // InternalIFACE.g:1884:4: enumLiteral_3= '8bits'
+                    // InternalIFACE.g:2107:3: (enumLiteral_3= '8bits' )
+                    // InternalIFACE.g:2108:4: enumLiteral_3= '8bits'
                     {
-                    enumLiteral_3=(Token)match(input,63,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,67,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortDataBitsAccess().get_8EnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -4920,7 +5450,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceUartPortStopBits"
-    // InternalIFACE.g:1894:1: ruleGSSIfaceUartPortStopBits returns [Enumerator current=null] : ( (enumLiteral_0= '1bit' ) | (enumLiteral_1= '2bits' ) ) ;
+    // InternalIFACE.g:2118:1: ruleGSSIfaceUartPortStopBits returns [Enumerator current=null] : ( (enumLiteral_0= '1bit' ) | (enumLiteral_1= '2bits' ) ) ;
     public final Enumerator ruleGSSIfaceUartPortStopBits() throws RecognitionException {
         Enumerator current = null;
 
@@ -4931,17 +5461,17 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1900:2: ( ( (enumLiteral_0= '1bit' ) | (enumLiteral_1= '2bits' ) ) )
-            // InternalIFACE.g:1901:2: ( (enumLiteral_0= '1bit' ) | (enumLiteral_1= '2bits' ) )
+            // InternalIFACE.g:2124:2: ( ( (enumLiteral_0= '1bit' ) | (enumLiteral_1= '2bits' ) ) )
+            // InternalIFACE.g:2125:2: ( (enumLiteral_0= '1bit' ) | (enumLiteral_1= '2bits' ) )
             {
-            // InternalIFACE.g:1901:2: ( (enumLiteral_0= '1bit' ) | (enumLiteral_1= '2bits' ) )
+            // InternalIFACE.g:2125:2: ( (enumLiteral_0= '1bit' ) | (enumLiteral_1= '2bits' ) )
             int alt18=2;
             int LA18_0 = input.LA(1);
 
-            if ( (LA18_0==64) ) {
+            if ( (LA18_0==68) ) {
                 alt18=1;
             }
-            else if ( (LA18_0==65) ) {
+            else if ( (LA18_0==69) ) {
                 alt18=2;
             }
             else {
@@ -4953,12 +5483,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             }
             switch (alt18) {
                 case 1 :
-                    // InternalIFACE.g:1902:3: (enumLiteral_0= '1bit' )
+                    // InternalIFACE.g:2126:3: (enumLiteral_0= '1bit' )
                     {
-                    // InternalIFACE.g:1902:3: (enumLiteral_0= '1bit' )
-                    // InternalIFACE.g:1903:4: enumLiteral_0= '1bit'
+                    // InternalIFACE.g:2126:3: (enumLiteral_0= '1bit' )
+                    // InternalIFACE.g:2127:4: enumLiteral_0= '1bit'
                     {
-                    enumLiteral_0=(Token)match(input,64,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,68,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortStopBitsAccess().get_1EnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -4972,12 +5502,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:1910:3: (enumLiteral_1= '2bits' )
+                    // InternalIFACE.g:2134:3: (enumLiteral_1= '2bits' )
                     {
-                    // InternalIFACE.g:1910:3: (enumLiteral_1= '2bits' )
-                    // InternalIFACE.g:1911:4: enumLiteral_1= '2bits'
+                    // InternalIFACE.g:2134:3: (enumLiteral_1= '2bits' )
+                    // InternalIFACE.g:2135:4: enumLiteral_1= '2bits'
                     {
-                    enumLiteral_1=(Token)match(input,65,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortStopBitsAccess().get_2EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -5015,7 +5545,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGSSIfaceUartPortFlowControl"
-    // InternalIFACE.g:1921:1: ruleGSSIfaceUartPortFlowControl returns [Enumerator current=null] : ( (enumLiteral_0= 'rts_cts' ) | (enumLiteral_1= 'xon_xoff' ) ) ;
+    // InternalIFACE.g:2145:1: ruleGSSIfaceUartPortFlowControl returns [Enumerator current=null] : ( (enumLiteral_0= 'rts_cts' ) | (enumLiteral_1= 'xon_xoff' ) ) ;
     public final Enumerator ruleGSSIfaceUartPortFlowControl() throws RecognitionException {
         Enumerator current = null;
 
@@ -5026,17 +5556,17 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1927:2: ( ( (enumLiteral_0= 'rts_cts' ) | (enumLiteral_1= 'xon_xoff' ) ) )
-            // InternalIFACE.g:1928:2: ( (enumLiteral_0= 'rts_cts' ) | (enumLiteral_1= 'xon_xoff' ) )
+            // InternalIFACE.g:2151:2: ( ( (enumLiteral_0= 'rts_cts' ) | (enumLiteral_1= 'xon_xoff' ) ) )
+            // InternalIFACE.g:2152:2: ( (enumLiteral_0= 'rts_cts' ) | (enumLiteral_1= 'xon_xoff' ) )
             {
-            // InternalIFACE.g:1928:2: ( (enumLiteral_0= 'rts_cts' ) | (enumLiteral_1= 'xon_xoff' ) )
+            // InternalIFACE.g:2152:2: ( (enumLiteral_0= 'rts_cts' ) | (enumLiteral_1= 'xon_xoff' ) )
             int alt19=2;
             int LA19_0 = input.LA(1);
 
-            if ( (LA19_0==66) ) {
+            if ( (LA19_0==70) ) {
                 alt19=1;
             }
-            else if ( (LA19_0==67) ) {
+            else if ( (LA19_0==71) ) {
                 alt19=2;
             }
             else {
@@ -5048,12 +5578,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             }
             switch (alt19) {
                 case 1 :
-                    // InternalIFACE.g:1929:3: (enumLiteral_0= 'rts_cts' )
+                    // InternalIFACE.g:2153:3: (enumLiteral_0= 'rts_cts' )
                     {
-                    // InternalIFACE.g:1929:3: (enumLiteral_0= 'rts_cts' )
-                    // InternalIFACE.g:1930:4: enumLiteral_0= 'rts_cts'
+                    // InternalIFACE.g:2153:3: (enumLiteral_0= 'rts_cts' )
+                    // InternalIFACE.g:2154:4: enumLiteral_0= 'rts_cts'
                     {
-                    enumLiteral_0=(Token)match(input,66,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,70,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortFlowControlAccess().getRts_ctsEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -5067,12 +5597,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:1937:3: (enumLiteral_1= 'xon_xoff' )
+                    // InternalIFACE.g:2161:3: (enumLiteral_1= 'xon_xoff' )
                     {
-                    // InternalIFACE.g:1937:3: (enumLiteral_1= 'xon_xoff' )
-                    // InternalIFACE.g:1938:4: enumLiteral_1= 'xon_xoff'
+                    // InternalIFACE.g:2161:3: (enumLiteral_1= 'xon_xoff' )
+                    // InternalIFACE.g:2162:4: enumLiteral_1= 'xon_xoff'
                     {
-                    enumLiteral_1=(Token)match(input,67,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,71,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getGSSIfaceUartPortFlowControlAccess().getXon_xoffEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -5109,9 +5639,9 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleGSSIfaceUartPortFlowControl"
 
 
-    // $ANTLR start "ruleGSSIfaceUartProtocolUnit"
-    // InternalIFACE.g:1948:1: ruleGSSIfaceUartProtocolUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'bytes' ) | (enumLiteral_1= 'bits' ) ) ;
-    public final Enumerator ruleGSSIfaceUartProtocolUnit() throws RecognitionException {
+    // $ANTLR start "ruleGSSIfacePortProtocolUnit"
+    // InternalIFACE.g:2172:1: ruleGSSIfacePortProtocolUnit returns [Enumerator current=null] : ( (enumLiteral_0= 'bytes' ) | (enumLiteral_1= 'bits' ) ) ;
+    public final Enumerator ruleGSSIfacePortProtocolUnit() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
@@ -5121,17 +5651,17 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1954:2: ( ( (enumLiteral_0= 'bytes' ) | (enumLiteral_1= 'bits' ) ) )
-            // InternalIFACE.g:1955:2: ( (enumLiteral_0= 'bytes' ) | (enumLiteral_1= 'bits' ) )
+            // InternalIFACE.g:2178:2: ( ( (enumLiteral_0= 'bytes' ) | (enumLiteral_1= 'bits' ) ) )
+            // InternalIFACE.g:2179:2: ( (enumLiteral_0= 'bytes' ) | (enumLiteral_1= 'bits' ) )
             {
-            // InternalIFACE.g:1955:2: ( (enumLiteral_0= 'bytes' ) | (enumLiteral_1= 'bits' ) )
+            // InternalIFACE.g:2179:2: ( (enumLiteral_0= 'bytes' ) | (enumLiteral_1= 'bits' ) )
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( (LA20_0==37) ) {
+            if ( (LA20_0==41) ) {
                 alt20=1;
             }
-            else if ( (LA20_0==38) ) {
+            else if ( (LA20_0==42) ) {
                 alt20=2;
             }
             else {
@@ -5143,16 +5673,16 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
             }
             switch (alt20) {
                 case 1 :
-                    // InternalIFACE.g:1956:3: (enumLiteral_0= 'bytes' )
+                    // InternalIFACE.g:2180:3: (enumLiteral_0= 'bytes' )
                     {
-                    // InternalIFACE.g:1956:3: (enumLiteral_0= 'bytes' )
-                    // InternalIFACE.g:1957:4: enumLiteral_0= 'bytes'
+                    // InternalIFACE.g:2180:3: (enumLiteral_0= 'bytes' )
+                    // InternalIFACE.g:2181:4: enumLiteral_0= 'bytes'
                     {
-                    enumLiteral_0=(Token)match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,41,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				current = grammarAccess.getGSSIfaceUartProtocolUnitAccess().getBytesEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_0, grammarAccess.getGSSIfaceUartProtocolUnitAccess().getBytesEnumLiteralDeclaration_0());
+                      				current = grammarAccess.getGSSIfacePortProtocolUnitAccess().getBytesEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_0, grammarAccess.getGSSIfacePortProtocolUnitAccess().getBytesEnumLiteralDeclaration_0());
                       			
                     }
 
@@ -5162,16 +5692,16 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:1964:3: (enumLiteral_1= 'bits' )
+                    // InternalIFACE.g:2188:3: (enumLiteral_1= 'bits' )
                     {
-                    // InternalIFACE.g:1964:3: (enumLiteral_1= 'bits' )
-                    // InternalIFACE.g:1965:4: enumLiteral_1= 'bits'
+                    // InternalIFACE.g:2188:3: (enumLiteral_1= 'bits' )
+                    // InternalIFACE.g:2189:4: enumLiteral_1= 'bits'
                     {
-                    enumLiteral_1=(Token)match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,42,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				current = grammarAccess.getGSSIfaceUartProtocolUnitAccess().getBitsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_1, grammarAccess.getGSSIfaceUartProtocolUnitAccess().getBitsEnumLiteralDeclaration_1());
+                      				current = grammarAccess.getGSSIfacePortProtocolUnitAccess().getBitsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_1, grammarAccess.getGSSIfacePortProtocolUnitAccess().getBitsEnumLiteralDeclaration_1());
                       			
                     }
 
@@ -5201,12 +5731,12 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleGSSIfaceUartProtocolUnit"
+    // $ANTLR end "ruleGSSIfacePortProtocolUnit"
 
 
-    // $ANTLR start "ruleGSSIfaceUartProtocolPower"
-    // InternalIFACE.g:1975:1: ruleGSSIfaceUartProtocolPower returns [Enumerator current=null] : ( (enumLiteral_0= 'no' ) | (enumLiteral_1= '2bits' ) | (enumLiteral_2= '2_with_0' ) ) ;
-    public final Enumerator ruleGSSIfaceUartProtocolPower() throws RecognitionException {
+    // $ANTLR start "ruleGSSIfacePortProtocolPower"
+    // InternalIFACE.g:2199:1: ruleGSSIfacePortProtocolPower returns [Enumerator current=null] : ( (enumLiteral_0= 'no' ) | (enumLiteral_1= '2bits' ) | (enumLiteral_2= '2_with_0' ) ) ;
+    public final Enumerator ruleGSSIfacePortProtocolPower() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
@@ -5217,23 +5747,23 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalIFACE.g:1981:2: ( ( (enumLiteral_0= 'no' ) | (enumLiteral_1= '2bits' ) | (enumLiteral_2= '2_with_0' ) ) )
-            // InternalIFACE.g:1982:2: ( (enumLiteral_0= 'no' ) | (enumLiteral_1= '2bits' ) | (enumLiteral_2= '2_with_0' ) )
+            // InternalIFACE.g:2205:2: ( ( (enumLiteral_0= 'no' ) | (enumLiteral_1= '2bits' ) | (enumLiteral_2= '2_with_0' ) ) )
+            // InternalIFACE.g:2206:2: ( (enumLiteral_0= 'no' ) | (enumLiteral_1= '2bits' ) | (enumLiteral_2= '2_with_0' ) )
             {
-            // InternalIFACE.g:1982:2: ( (enumLiteral_0= 'no' ) | (enumLiteral_1= '2bits' ) | (enumLiteral_2= '2_with_0' ) )
+            // InternalIFACE.g:2206:2: ( (enumLiteral_0= 'no' ) | (enumLiteral_1= '2bits' ) | (enumLiteral_2= '2_with_0' ) )
             int alt21=3;
             switch ( input.LA(1) ) {
-            case 68:
+            case 72:
                 {
                 alt21=1;
                 }
                 break;
-            case 65:
+            case 69:
                 {
                 alt21=2;
                 }
                 break;
-            case 69:
+            case 73:
                 {
                 alt21=3;
                 }
@@ -5248,16 +5778,16 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
 
             switch (alt21) {
                 case 1 :
-                    // InternalIFACE.g:1983:3: (enumLiteral_0= 'no' )
+                    // InternalIFACE.g:2207:3: (enumLiteral_0= 'no' )
                     {
-                    // InternalIFACE.g:1983:3: (enumLiteral_0= 'no' )
-                    // InternalIFACE.g:1984:4: enumLiteral_0= 'no'
+                    // InternalIFACE.g:2207:3: (enumLiteral_0= 'no' )
+                    // InternalIFACE.g:2208:4: enumLiteral_0= 'no'
                     {
-                    enumLiteral_0=(Token)match(input,68,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,72,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				current = grammarAccess.getGSSIfaceUartProtocolPowerAccess().getNoEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_0, grammarAccess.getGSSIfaceUartProtocolPowerAccess().getNoEnumLiteralDeclaration_0());
+                      				current = grammarAccess.getGSSIfacePortProtocolPowerAccess().getNoEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_0, grammarAccess.getGSSIfacePortProtocolPowerAccess().getNoEnumLiteralDeclaration_0());
                       			
                     }
 
@@ -5267,16 +5797,16 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalIFACE.g:1991:3: (enumLiteral_1= '2bits' )
+                    // InternalIFACE.g:2215:3: (enumLiteral_1= '2bits' )
                     {
-                    // InternalIFACE.g:1991:3: (enumLiteral_1= '2bits' )
-                    // InternalIFACE.g:1992:4: enumLiteral_1= '2bits'
+                    // InternalIFACE.g:2215:3: (enumLiteral_1= '2bits' )
+                    // InternalIFACE.g:2216:4: enumLiteral_1= '2bits'
                     {
-                    enumLiteral_1=(Token)match(input,65,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				current = grammarAccess.getGSSIfaceUartProtocolPowerAccess().get_2EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_1, grammarAccess.getGSSIfaceUartProtocolPowerAccess().get_2EnumLiteralDeclaration_1());
+                      				current = grammarAccess.getGSSIfacePortProtocolPowerAccess().get_2EnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_1, grammarAccess.getGSSIfacePortProtocolPowerAccess().get_2EnumLiteralDeclaration_1());
                       			
                     }
 
@@ -5286,16 +5816,16 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalIFACE.g:1999:3: (enumLiteral_2= '2_with_0' )
+                    // InternalIFACE.g:2223:3: (enumLiteral_2= '2_with_0' )
                     {
-                    // InternalIFACE.g:1999:3: (enumLiteral_2= '2_with_0' )
-                    // InternalIFACE.g:2000:4: enumLiteral_2= '2_with_0'
+                    // InternalIFACE.g:2223:3: (enumLiteral_2= '2_with_0' )
+                    // InternalIFACE.g:2224:4: enumLiteral_2= '2_with_0'
                     {
-                    enumLiteral_2=(Token)match(input,69,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,73,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				current = grammarAccess.getGSSIfaceUartProtocolPowerAccess().get_2_with_0EnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-                      				newLeafNode(enumLiteral_2, grammarAccess.getGSSIfaceUartProtocolPowerAccess().get_2_with_0EnumLiteralDeclaration_2());
+                      				current = grammarAccess.getGSSIfacePortProtocolPowerAccess().get_2_with_0EnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_2, grammarAccess.getGSSIfacePortProtocolPowerAccess().get_2_with_0EnumLiteralDeclaration_2());
                       			
                     }
 
@@ -5325,7 +5855,7 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleGSSIfaceUartProtocolPower"
+    // $ANTLR end "ruleGSSIfacePortProtocolPower"
 
     // $ANTLR start synpred2_InternalIFACE
     public final void synpred2_InternalIFACE_fragment() throws RecognitionException {   
@@ -5520,46 +6050,48 @@ public class InternalIFACEParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000008000L});
         public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000050000L});
         public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000280004150000L});
+        public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0002800A04150000L});
         public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x00000000000000A0L});
         public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000080000L});
         public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000200000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x001C000000000000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x01C0000000000000L});
         public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x00020000000000C0L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x00200000000000C0L});
         public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000800000L});
         public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000001000000L});
         public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000001080000L});
         public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000002000000L});
         public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000008000000L});
         public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0060000000000000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0600000000000000L});
         public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0F80000000000000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0xF800000000000000L});
         public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000040000000L});
-        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0xF000000000000000L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000000000000L,0x000000000000000FL});
         public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000003L});
+        public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000030L});
         public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000100000000L});
-        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000000000L,0x000000000000000CL});
-        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000000000000000L,0x00000000000000C0L});
+        public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000002000000000L});
         public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000000400000000L});
-        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000006000000000L});
-        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000000800000000L});
-        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000032L});
-        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000001000000000L});
-        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000008000000000L});
+        public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000001000000000L});
+        public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x0000004000000000L});
+        public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000060000000000L});
+        public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000008000000000L});
+        public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000320L});
         public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000010000000000L});
-        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000020000080000L});
-        public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000002000000000L});
-        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000004000000000L});
-        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000040000000000L});
-        public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000100000000000L});
-        public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000400000000002L});
-        public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000800000000000L});
-        public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0001000000000000L});
-        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000080L});
+        public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000080000000000L});
+        public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000100000000000L});
+        public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000200000080000L});
+        public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000020000000000L});
+        public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000040000000000L});
+        public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000400000000000L});
+        public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0001000000000000L});
+        public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0004000000000002L});
+        public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0008000000000000L});
+        public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0010000000000000L});
+        public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000000000000080L});
     }
 
 
