@@ -64,19 +64,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="portProtocol" lowerBound="1"
         eType="#//GSSIfacePortProtocol" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSocketSrvPort" eSuperTypes="#//GSSIfacePort">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSocketPort" abstract="true"
+      eSuperTypes="#//GSSIfacePort">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="portNumber" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portProtocol" lowerBound="1"
         eType="#//GSSIfacePortProtocol" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSocketCliPort" eSuperTypes="#//GSSIfacePort">
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSocketSrvPort" eSuperTypes="#//GSSIfaceSocketPort"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GSSIfaceSocketCliPort" eSuperTypes="#//GSSIfaceSocketPort">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ipAddress" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="portNumber" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="portProtocol" lowerBound="1"
-        eType="#//GSSIfacePortProtocol" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GSSIfacePortProtocol">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" lowerBound="1" eType="#//GSSIfacePortProtocolUnit"

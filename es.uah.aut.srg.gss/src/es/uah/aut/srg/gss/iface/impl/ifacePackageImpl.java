@@ -20,6 +20,7 @@ import es.uah.aut.srg.gss.iface.GSSIfacePortProtocolUnit;
 import es.uah.aut.srg.gss.iface.GSSIfaceReadingPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceSize;
 import es.uah.aut.srg.gss.iface.GSSIfaceSocketCliPort;
+import es.uah.aut.srg.gss.iface.GSSIfaceSocketPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceSocketSrvPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceSpWPort;
 import es.uah.aut.srg.gss.iface.GSSIfaceSpWPortType;
@@ -76,6 +77,13 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 	 * @generated
 	 */
 	private EClass gssIfaceUartPortEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gssIfaceSocketPortEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -402,26 +410,35 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGSSIfaceSocketPort() {
+		return gssIfaceSocketPortEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGSSIfaceSocketPort_PortNumber() {
+		return (EAttribute)gssIfaceSocketPortEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGSSIfaceSocketPort_PortProtocol() {
+		return (EReference)gssIfaceSocketPortEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGSSIfaceSocketSrvPort() {
 		return gssIfaceSocketSrvPortEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSIfaceSocketSrvPort_PortNumber() {
-		return (EAttribute)gssIfaceSocketSrvPortEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSIfaceSocketSrvPort_PortProtocol() {
-		return (EReference)gssIfaceSocketSrvPortEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -440,24 +457,6 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 	 */
 	public EAttribute getGSSIfaceSocketCliPort_IpAddress() {
 		return (EAttribute)gssIfaceSocketCliPortEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getGSSIfaceSocketCliPort_PortNumber() {
-		return (EAttribute)gssIfaceSocketCliPortEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGSSIfaceSocketCliPort_PortProtocol() {
-		return (EReference)gssIfaceSocketCliPortEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -736,14 +735,14 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 		createEAttribute(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__FLOW_CONTROL);
 		createEReference(gssIfaceUartPortEClass, GSS_IFACE_UART_PORT__PORT_PROTOCOL);
 
+		gssIfaceSocketPortEClass = createEClass(GSS_IFACE_SOCKET_PORT);
+		createEAttribute(gssIfaceSocketPortEClass, GSS_IFACE_SOCKET_PORT__PORT_NUMBER);
+		createEReference(gssIfaceSocketPortEClass, GSS_IFACE_SOCKET_PORT__PORT_PROTOCOL);
+
 		gssIfaceSocketSrvPortEClass = createEClass(GSS_IFACE_SOCKET_SRV_PORT);
-		createEAttribute(gssIfaceSocketSrvPortEClass, GSS_IFACE_SOCKET_SRV_PORT__PORT_NUMBER);
-		createEReference(gssIfaceSocketSrvPortEClass, GSS_IFACE_SOCKET_SRV_PORT__PORT_PROTOCOL);
 
 		gssIfaceSocketCliPortEClass = createEClass(GSS_IFACE_SOCKET_CLI_PORT);
 		createEAttribute(gssIfaceSocketCliPortEClass, GSS_IFACE_SOCKET_CLI_PORT__IP_ADDRESS);
-		createEAttribute(gssIfaceSocketCliPortEClass, GSS_IFACE_SOCKET_CLI_PORT__PORT_NUMBER);
-		createEReference(gssIfaceSocketCliPortEClass, GSS_IFACE_SOCKET_CLI_PORT__PORT_PROTOCOL);
 
 		gssIfacePortProtocolEClass = createEClass(GSS_IFACE_PORT_PROTOCOL);
 		createEAttribute(gssIfacePortProtocolEClass, GSS_IFACE_PORT_PROTOCOL__UNIT);
@@ -810,8 +809,9 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 		gssIfacePortConfigEClass.getESuperTypes().add(thecommonPackage.getGSSModelElement());
 		gssIfaceSpWPortEClass.getESuperTypes().add(this.getGSSIfacePort());
 		gssIfaceUartPortEClass.getESuperTypes().add(this.getGSSIfacePort());
-		gssIfaceSocketSrvPortEClass.getESuperTypes().add(this.getGSSIfacePort());
-		gssIfaceSocketCliPortEClass.getESuperTypes().add(this.getGSSIfacePort());
+		gssIfaceSocketPortEClass.getESuperTypes().add(this.getGSSIfacePort());
+		gssIfaceSocketSrvPortEClass.getESuperTypes().add(this.getGSSIfaceSocketPort());
+		gssIfaceSocketCliPortEClass.getESuperTypes().add(this.getGSSIfaceSocketPort());
 		gssIfaceSpWTCPortEClass.getESuperTypes().add(this.getGSSIfacePort());
 		gssIfaceDummyPortEClass.getESuperTypes().add(this.getGSSIfacePort());
 
@@ -839,14 +839,14 @@ public class ifacePackageImpl extends EPackageImpl implements ifacePackage {
 		initEAttribute(getGSSIfaceUartPort_FlowControl(), this.getGSSIfaceUartPortFlowControl(), "flowControl", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGSSIfaceUartPort_PortProtocol(), this.getGSSIfacePortProtocol(), null, "portProtocol", null, 1, 1, GSSIfaceUartPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(gssIfaceSocketPortEClass, GSSIfaceSocketPort.class, "GSSIfaceSocketPort", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGSSIfaceSocketPort_PortNumber(), ecorePackage.getEString(), "portNumber", null, 1, 1, GSSIfaceSocketPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGSSIfaceSocketPort_PortProtocol(), this.getGSSIfacePortProtocol(), null, "portProtocol", null, 1, 1, GSSIfaceSocketPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(gssIfaceSocketSrvPortEClass, GSSIfaceSocketSrvPort.class, "GSSIfaceSocketSrvPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGSSIfaceSocketSrvPort_PortNumber(), ecorePackage.getEString(), "portNumber", null, 1, 1, GSSIfaceSocketSrvPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSIfaceSocketSrvPort_PortProtocol(), this.getGSSIfacePortProtocol(), null, "portProtocol", null, 1, 1, GSSIfaceSocketSrvPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssIfaceSocketCliPortEClass, GSSIfaceSocketCliPort.class, "GSSIfaceSocketCliPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSIfaceSocketCliPort_IpAddress(), ecorePackage.getEString(), "ipAddress", null, 1, 1, GSSIfaceSocketCliPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getGSSIfaceSocketCliPort_PortNumber(), ecorePackage.getEString(), "portNumber", null, 1, 1, GSSIfaceSocketCliPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGSSIfaceSocketCliPort_PortProtocol(), this.getGSSIfacePortProtocol(), null, "portProtocol", null, 1, 1, GSSIfaceSocketCliPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gssIfacePortProtocolEClass, GSSIfacePortProtocol.class, "GSSIfacePortProtocol", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGSSIfacePortProtocol_Unit(), this.getGSSIfacePortProtocolUnit(), "unit", null, 1, 1, GSSIfacePortProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

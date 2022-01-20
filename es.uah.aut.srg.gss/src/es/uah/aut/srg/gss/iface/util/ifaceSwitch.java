@@ -109,9 +109,17 @@ public class ifaceSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ifacePackage.GSS_IFACE_SOCKET_PORT: {
+				GSSIfaceSocketPort gssIfaceSocketPort = (GSSIfaceSocketPort)theEObject;
+				T result = caseGSSIfaceSocketPort(gssIfaceSocketPort);
+				if (result == null) result = caseGSSIfacePort(gssIfaceSocketPort);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ifacePackage.GSS_IFACE_SOCKET_SRV_PORT: {
 				GSSIfaceSocketSrvPort gssIfaceSocketSrvPort = (GSSIfaceSocketSrvPort)theEObject;
 				T result = caseGSSIfaceSocketSrvPort(gssIfaceSocketSrvPort);
+				if (result == null) result = caseGSSIfaceSocketPort(gssIfaceSocketSrvPort);
 				if (result == null) result = caseGSSIfacePort(gssIfaceSocketSrvPort);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -119,6 +127,7 @@ public class ifaceSwitch<T> extends Switch<T> {
 			case ifacePackage.GSS_IFACE_SOCKET_CLI_PORT: {
 				GSSIfaceSocketCliPort gssIfaceSocketCliPort = (GSSIfaceSocketCliPort)theEObject;
 				T result = caseGSSIfaceSocketCliPort(gssIfaceSocketCliPort);
+				if (result == null) result = caseGSSIfaceSocketPort(gssIfaceSocketCliPort);
 				if (result == null) result = caseGSSIfacePort(gssIfaceSocketCliPort);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -216,6 +225,21 @@ public class ifaceSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGSSIfaceUartPort(GSSIfaceUartPort object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>GSS Iface Socket Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>GSS Iface Socket Port</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGSSIfaceSocketPort(GSSIfaceSocketPort object) {
 		return null;
 	}
 

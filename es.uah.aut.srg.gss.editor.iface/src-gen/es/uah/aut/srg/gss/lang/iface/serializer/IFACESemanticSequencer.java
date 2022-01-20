@@ -247,10 +247,10 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_CLI_PORT__IP_ADDRESS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_CLI_PORT__IP_ADDRESS));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_CLI_PORT__PORT_NUMBER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_CLI_PORT__PORT_NUMBER));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_CLI_PORT__PORT_PROTOCOL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_CLI_PORT__PORT_PROTOCOL));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_PORT__PORT_NUMBER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_PORT__PORT_NUMBER));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_PORT__PORT_PROTOCOL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_PORT__PORT_PROTOCOL));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSIfaceSocketCliPortAccess().getIpAddressSTRINGTerminalRuleCall_4_0(), semanticObject.getIpAddress());
@@ -270,10 +270,10 @@ public class IFACESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 */
 	protected void sequence_GSSIfaceSocketSrvPort(ISerializationContext context, GSSIfaceSocketSrvPort semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_SRV_PORT__PORT_NUMBER) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_SRV_PORT__PORT_NUMBER));
-			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_SRV_PORT__PORT_PROTOCOL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_SRV_PORT__PORT_PROTOCOL));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_PORT__PORT_NUMBER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_PORT__PORT_NUMBER));
+			if (transientValues.isValueTransient(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_PORT__PORT_PROTOCOL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ifacePackage.Literals.GSS_IFACE_SOCKET_PORT__PORT_PROTOCOL));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getGSSIfaceSocketSrvPortAccess().getPortNumberINTEGERParserRuleCall_4_0(), semanticObject.getPortNumber());

@@ -98,6 +98,10 @@ public class ifaceAdapterFactory extends AdapterFactoryImpl {
 				return createGSSIfaceUartPortAdapter();
 			}
 			@Override
+			public Adapter caseGSSIfaceSocketPort(GSSIfaceSocketPort object) {
+				return createGSSIfaceSocketPortAdapter();
+			}
+			@Override
 			public Adapter caseGSSIfaceSocketSrvPort(GSSIfaceSocketSrvPort object) {
 				return createGSSIfaceSocketSrvPortAdapter();
 			}
@@ -202,6 +206,20 @@ public class ifaceAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGSSIfaceUartPortAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.gss.iface.GSSIfaceSocketPort <em>GSS Iface Socket Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.gss.iface.GSSIfaceSocketPort
+	 * @generated
+	 */
+	public Adapter createGSSIfaceSocketPortAdapter() {
 		return null;
 	}
 
